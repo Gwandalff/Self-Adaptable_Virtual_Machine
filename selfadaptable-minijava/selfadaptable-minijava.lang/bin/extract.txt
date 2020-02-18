@@ -1,0 +1,21 @@
+open class Statement {
+	def void evaluateStatement(miniJava::State state) {} 
+}
+
+open class Expression {
+	def void evaluateStatement(miniJava::State state) {
+		self.evaluateExpression(state);
+	}
+	
+	def miniJava::Value evaluateExpression(miniJava::State state) {} 
+}
+
+open class Or {
+	def miniJava::Value evaluateExpression(miniJava::State state) {
+		miniJava::BooleanValue left := self.left.evaluateExpression(state);
+		miniJava::BooleanValue right := self.right.evaluateExpression(state);
+		miniJava::BooleanValue res := miniJava::BooleanValue.create();
+		res.value := left.isValue() or right.isValue();
+		result := tmp;
+	}
+}

@@ -1,0 +1,14 @@
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/scoping/MiniJavaResourceDescriptionsStrategy.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/formatting2/MiniJavaFormatter.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/validation/MiniJavaAccessibility.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/MiniJavaRuntimeModule.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/scoping/MiniJavaIndex.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/scoping/MiniJavaScopeProvider.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/serializer/MiniJavaSemanticSequencer.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/serializer/MiniJavaSyntacticSequencer.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/validation/MiniJavaValidator.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/MiniJavaStandaloneSetup.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/typing/MiniJavaTypeConformance.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/MiniJavaModelUtil.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/scoping/MiniJavaImportedNamespaceAwareLocalScopeProvider.java
+/home/ALE/ale-lang/languages/selfadaptable-minijava/org.tetrabox.minijava.xtext/xtend-gen/org/tetrabox/minijava/xtext/typing/MiniJavaTypeComputer.java

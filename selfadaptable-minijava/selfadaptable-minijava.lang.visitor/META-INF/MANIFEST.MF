@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Visitor
+Bundle-SymbolicName: minijava.lang.visitor
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: minijava.lang.visitor
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.tetrabox.minijava.lang.services;bundle-version="1.0.0";resolution:=optional,
+ minijava.lang.services;bundle-version="1.0.0",
+ org.eclipse.emf.ecoretools.ale.compiler.lib;bundle-version="1.0.0",
+ org.eclipse.emf.ecore
+Export-Package: miniJava.visitor.miniJava,
+ miniJava.visitor.miniJava.impl,
+ visitor,
+ visitor.operation.miniJava,
+ visitor.operation.miniJava.impl
