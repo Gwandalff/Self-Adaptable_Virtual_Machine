@@ -20,7 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see miniJava.MiniJavaPackage#getObjectInstance()
- * @model
+ * @model annotation="aspect"
+ *        annotation="RuntimeData"
  * @generated
  */
 public interface ObjectInstance extends EObject {
@@ -28,10 +29,6 @@ public interface ObjectInstance extends EObject {
 	 * Returns the value of the '<em><b>Fieldbindings</b></em>' containment reference list.
 	 * The list contents are of type {@link miniJava.FieldBinding}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Fieldbindings</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fieldbindings</em>' containment reference list.
 	 * @see miniJava.MiniJavaPackage#getObjectInstance_Fieldbindings()
@@ -43,10 +40,6 @@ public interface ObjectInstance extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
 	 * @see #setType(Clazz)

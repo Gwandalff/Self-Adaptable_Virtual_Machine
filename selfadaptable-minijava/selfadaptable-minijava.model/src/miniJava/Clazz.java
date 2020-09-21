@@ -24,10 +24,6 @@ public interface Clazz extends TypeDeclaration {
 	/**
 	 * Returns the value of the '<em><b>Isabstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Isabstract</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Isabstract</em>' attribute.
 	 * @see #setIsabstract(boolean)
@@ -50,10 +46,6 @@ public interface Clazz extends TypeDeclaration {
 	/**
 	 * Returns the value of the '<em><b>Super Class</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Super Class</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Super Class</em>' reference.
 	 * @see #setSuperClass(Clazz)

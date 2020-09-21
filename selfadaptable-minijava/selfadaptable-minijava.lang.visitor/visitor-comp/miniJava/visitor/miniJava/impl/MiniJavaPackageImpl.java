@@ -62,6 +62,7 @@ import miniJava.visitor.miniJava.PrintStatement;
 import miniJava.visitor.miniJava.Program;
 import miniJava.visitor.miniJava.Return;
 import miniJava.visitor.miniJava.SingleTypeRef;
+import miniJava.visitor.miniJava.Sqrt;
 import miniJava.visitor.miniJava.State;
 import miniJava.visitor.miniJava.Statement;
 import miniJava.visitor.miniJava.StringConstant;
@@ -250,6 +251,8 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	private EClass clazzToMethodMapEClass = null;
 
 	private EClass moduloEClass = null;
+
+	private EClass sqrtEClass = null;
 
 	private boolean isCreated = false;
 
@@ -1065,6 +1068,14 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		return (EReference) moduloEClass.getEStructuralFeatures().get(1);
 	}
 
+	public EClass getSqrt() {
+		return sqrtEClass;
+	}
+
+	public EReference getSqrt_Expression() {
+		return (EReference) sqrtEClass.getEStructuralFeatures().get(0);
+	}
+
 	public MiniJavaFactory getMiniJavaFactory() {
 		return (MiniJavaFactory) getEFactoryInstance();
 	}
@@ -1348,6 +1359,9 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		createEReference(moduloEClass, MODULO__LEFT);
 		createEReference(moduloEClass, MODULO__RIGHT);
 
+		sqrtEClass = createEClass(SQRT);
+		createEReference(sqrtEClass, SQRT__EXPRESSION);
+
 		// Create enums
 		accessLevelEEnum = createEEnum(ACCESS_LEVEL);
 	}
@@ -1389,7 +1403,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		assignmentEClass.getESuperTypes().add(this.getStatement());
 		expressionEClass.getESuperTypes().add(this.getStatement());
 		expressionEClass.getESuperTypes().add(this.getAssignee());
-		arrayTypeRefEClass.getESuperTypes().add(this.getTypeRef());
+		arrayTypeRefEClass.getESuperTypes().add(this.getSingleTypeRef());
 		integerTypeRefEClass.getESuperTypes().add(this.getSingleTypeRef());
 		booleanTypeRefEClass.getESuperTypes().add(this.getSingleTypeRef());
 		stringTypeRefEClass.getESuperTypes().add(this.getSingleTypeRef());
@@ -1430,6 +1444,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		objectRefValueEClass.getESuperTypes().add(this.getValue());
 		arrayRefValueEClass.getESuperTypes().add(this.getValue());
 		moduloEClass.getESuperTypes().add(this.getExpression());
+		sqrtEClass.getESuperTypes().add(this.getExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1704,6 +1719,9 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		initEClass(moduloEClass, Modulo.class, "Modulo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModulo_Left(), this.getExpression(), null, "left", null, 0, 1, Modulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModulo_Right(), this.getExpression(), null, "right", null, 0, 1, Modulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sqrtEClass, Sqrt.class, "Sqrt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSqrt_Expression(), this.getExpression(), null, "expression", null, 0, 1, Sqrt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(accessLevelEEnum, AccessLevel.class, "AccessLevel");

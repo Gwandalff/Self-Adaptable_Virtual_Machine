@@ -706,6 +706,15 @@ public interface MiniJavaFactory extends EFactory {
 	Modulo createModulo();
 
 	/**
+	 * Returns a new object of class '<em>Sqrt</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sqrt</em>'.
+	 * @generated
+	 */
+	Sqrt createSqrt();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

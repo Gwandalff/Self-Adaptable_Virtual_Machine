@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see miniJava.MiniJavaPackage#getCall()
  * @model abstract="true"
+ *        annotation="aspect"
+ *        annotation="RuntimeData"
  * @generated
  */
 public interface Call extends EObject {

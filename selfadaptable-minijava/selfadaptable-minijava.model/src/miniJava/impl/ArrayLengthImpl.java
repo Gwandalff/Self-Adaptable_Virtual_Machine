@@ -62,6 +62,7 @@ public class ArrayLengthImpl extends ExpressionImpl implements ArrayLength {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getArray() {
 		return array;
 	}
@@ -86,6 +87,7 @@ public class ArrayLengthImpl extends ExpressionImpl implements ArrayLength {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setArray(Expression newArray) {
 		if (newArray != array) {
 			NotificationChain msgs = null;

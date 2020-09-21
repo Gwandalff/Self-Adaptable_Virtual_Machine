@@ -158,5 +158,7 @@ public interface MiniJavaFactory extends EFactory {
 
 	Modulo createModulo();
 
+	Sqrt createSqrt();
+
 	MiniJavaPackage getMiniJavaPackage();
 }

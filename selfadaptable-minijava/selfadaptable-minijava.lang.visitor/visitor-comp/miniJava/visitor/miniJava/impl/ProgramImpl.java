@@ -4,9 +4,6 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-
 import miniJava.visitor.miniJava.Import;
 import miniJava.visitor.miniJava.MiniJavaPackage;
 import miniJava.visitor.miniJava.Program;
@@ -21,13 +18,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import visitor.IDynamicModule;
 import visitor.VisitorInterface;
 
 public class ProgramImpl extends MinimalEObjectImpl.Container implements Program {
-	protected Set<IDynamicModule> modules;
-	
 	protected static final String NAME_EDEFAULT = null;
 
 	protected String name = NAME_EDEFAULT;
@@ -40,7 +33,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 
 	protected ProgramImpl() {
 		super();
-		modules = new HashSet<IDynamicModule>();
 	}
 
 	@Override
@@ -183,33 +175,5 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 	@Override
 	public Object accept(VisitorInterface visitor) {
 		return visitor.visitminiJava__Program(this);
-	}
-
-	@Override
-	public void attach(IDynamicModule dm) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void detach(IDynamicModule dm) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean notifyDynamicModulesBefore() {
-		boolean out = true;
-		for (IDynamicModule dm : modules) {
-			out = out && dm.updateBefore(this);
-		}
-		return out;
-	}
-
-	@Override
-	public void notifyDynamicModulesAfter() {
-		for (IDynamicModule dm : modules) {
-			dm.updateAfter(this);
-		}
 	}
 }

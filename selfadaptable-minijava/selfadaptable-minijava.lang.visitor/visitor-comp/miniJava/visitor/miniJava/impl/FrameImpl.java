@@ -3,9 +3,6 @@ package miniJava.visitor.miniJava.impl;
 import java.lang.IllegalArgumentException;
 import java.lang.Object;
 import java.lang.Override;
-import java.util.HashSet;
-import java.util.Set;
-
 import miniJava.visitor.miniJava.Call;
 import miniJava.visitor.miniJava.Context;
 import miniJava.visitor.miniJava.Frame;
@@ -19,13 +16,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
-import visitor.IDynamicModule;
 import visitor.VisitorInterface;
 
 public class FrameImpl extends MinimalEObjectImpl.Container implements Frame {
-	protected Set<IDynamicModule> modules;
-	
 	protected Call call;
 
 	protected ObjectInstance instance;
@@ -38,7 +31,6 @@ public class FrameImpl extends MinimalEObjectImpl.Container implements Frame {
 
 	protected FrameImpl() {
 		super();
-		modules = new HashSet<IDynamicModule>();
 	}
 
 	@Override
@@ -356,33 +348,5 @@ public class FrameImpl extends MinimalEObjectImpl.Container implements Frame {
 	@Override
 	public Object accept(VisitorInterface visitor) {
 		return visitor.visitminiJava__Frame(this);
-	}
-
-	@Override
-	public void attach(IDynamicModule dm) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void detach(IDynamicModule dm) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean notifyDynamicModulesBefore() {
-		boolean out = true;
-		for (IDynamicModule dm : modules) {
-			out = out && dm.updateBefore(this);
-		}
-		return out;
-	}
-
-	@Override
-	public void notifyDynamicModulesAfter() {
-		for (IDynamicModule dm : modules) {
-			dm.updateAfter(this);
-		}
 	}
 }

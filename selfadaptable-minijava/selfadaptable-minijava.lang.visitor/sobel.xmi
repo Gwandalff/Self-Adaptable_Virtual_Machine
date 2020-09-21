@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="20131001"
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    xmlns:miniJava="http://www.example.org/minijava/MiniJava">
+  <miniJava:Program/>
+</xmi:XMI>

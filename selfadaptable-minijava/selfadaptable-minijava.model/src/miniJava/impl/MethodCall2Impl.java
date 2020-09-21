@@ -61,6 +61,7 @@ public class MethodCall2Impl extends CallImpl implements MethodCall2 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MethodCall getMethodcall() {
 		if (methodcall != null && methodcall.eIsProxy()) {
 			InternalEObject oldMethodcall = (InternalEObject)methodcall;
@@ -87,6 +88,7 @@ public class MethodCall2Impl extends CallImpl implements MethodCall2 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethodcall(MethodCall newMethodcall) {
 		MethodCall oldMethodcall = methodcall;
 		methodcall = newMethodcall;

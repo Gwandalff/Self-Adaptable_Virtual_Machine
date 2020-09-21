@@ -3,6 +3,7 @@ package visitor.operation.miniJava.impl;
 import java.lang.Integer;
 import miniJava.visitor.miniJava.ArrayInstance;
 import miniJava.visitor.miniJava.ArrayRefValue;
+import miniJava.visitor.miniJava.ArrayTypeRef;
 import miniJava.visitor.miniJava.BooleanTypeRef;
 import miniJava.visitor.miniJava.BooleanValue;
 import miniJava.visitor.miniJava.ClassRef;
@@ -54,7 +55,7 @@ public class NewArrayOperationImpl extends ExpressionOperationImpl implements Ne
 					defaultValue = ((NullValue) (idv));
 				}
 				else {
-					if(this.it.getType() instanceof ClassRef) {
+					if(((this.it.getType() instanceof ClassRef) || (this.it.getType() instanceof ArrayTypeRef))) {
 						NullValue idv = ((NullValue) (MiniJavaFactory.eINSTANCE.createNullValue()));
 						defaultValue = ((NullValue) (idv));
 					}

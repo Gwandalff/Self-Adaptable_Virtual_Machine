@@ -92,6 +92,7 @@ public class MethodCallImpl extends ExpressionImpl implements MethodCall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getReceiver() {
 		return receiver;
 	}
@@ -116,6 +117,7 @@ public class MethodCallImpl extends ExpressionImpl implements MethodCall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReceiver(Expression newReceiver) {
 		if (newReceiver != receiver) {
 			NotificationChain msgs = null;
@@ -135,6 +137,7 @@ public class MethodCallImpl extends ExpressionImpl implements MethodCall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Method getMethod() {
 		if (method != null && method.eIsProxy()) {
 			InternalEObject oldMethod = (InternalEObject)method;
@@ -161,6 +164,7 @@ public class MethodCallImpl extends ExpressionImpl implements MethodCall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMethod(Method newMethod) {
 		Method oldMethod = method;
 		method = newMethod;
@@ -173,6 +177,7 @@ public class MethodCallImpl extends ExpressionImpl implements MethodCall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Expression> getArgs() {
 		if (args == null) {
 			args = new EObjectContainmentEList<Expression>(Expression.class, this, MiniJavaPackage.METHOD_CALL__ARGS);

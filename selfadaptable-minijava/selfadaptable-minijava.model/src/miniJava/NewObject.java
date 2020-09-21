@@ -25,10 +25,6 @@ public interface NewObject extends Expression {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
 	 * @see #setType(Clazz)
@@ -52,10 +48,6 @@ public interface NewObject extends Expression {
 	 * Returns the value of the '<em><b>Args</b></em>' containment reference list.
 	 * The list contents are of type {@link miniJava.Expression}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Args</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Args</em>' containment reference list.
 	 * @see miniJava.MiniJavaPackage#getNewObject_Args()

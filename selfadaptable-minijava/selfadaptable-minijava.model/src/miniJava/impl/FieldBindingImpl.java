@@ -75,6 +75,7 @@ public class FieldBindingImpl extends MinimalEObjectImpl.Container implements Fi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Field getField() {
 		if (field != null && field.eIsProxy()) {
 			InternalEObject oldField = (InternalEObject)field;
@@ -101,6 +102,7 @@ public class FieldBindingImpl extends MinimalEObjectImpl.Container implements Fi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setField(Field newField) {
 		Field oldField = field;
 		field = newField;
@@ -113,6 +115,7 @@ public class FieldBindingImpl extends MinimalEObjectImpl.Container implements Fi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Value getValue() {
 		return value;
 	}
@@ -137,6 +140,7 @@ public class FieldBindingImpl extends MinimalEObjectImpl.Container implements Fi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Value newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;

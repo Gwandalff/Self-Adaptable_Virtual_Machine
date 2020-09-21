@@ -18,17 +18,14 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see miniJava.MiniJavaPackage#getFieldBinding()
- * @model
+ * @model annotation="aspect"
+ *        annotation="RuntimeData"
  * @generated
  */
 public interface FieldBinding extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Field</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Field</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Field</em>' reference.
 	 * @see #setField(Field)
@@ -51,10 +48,6 @@ public interface FieldBinding extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Value</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
 	 * @see #setValue(Value)

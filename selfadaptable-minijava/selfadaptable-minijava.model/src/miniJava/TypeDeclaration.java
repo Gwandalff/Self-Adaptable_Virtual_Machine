@@ -27,10 +27,6 @@ public interface TypeDeclaration extends NamedElement {
 	 * Returns the value of the '<em><b>Access Level</b></em>' attribute.
 	 * The literals are from the enumeration {@link miniJava.AccessLevel}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Access Level</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Access Level</em>' attribute.
 	 * @see miniJava.AccessLevel
@@ -56,10 +52,6 @@ public interface TypeDeclaration extends NamedElement {
 	 * Returns the value of the '<em><b>Implementz</b></em>' reference list.
 	 * The list contents are of type {@link miniJava.Interface}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Implementz</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Implementz</em>' reference list.
 	 * @see miniJava.MiniJavaPackage#getTypeDeclaration_Implementz()
@@ -72,10 +64,6 @@ public interface TypeDeclaration extends NamedElement {
 	 * Returns the value of the '<em><b>Members</b></em>' containment reference list.
 	 * The list contents are of type {@link miniJava.Member}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Members</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Members</em>' containment reference list.
 	 * @see miniJava.MiniJavaPackage#getTypeDeclaration_Members()

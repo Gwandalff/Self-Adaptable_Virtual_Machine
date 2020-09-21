@@ -4,27 +4,19 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-
 import miniJava.visitor.miniJava.MiniJavaPackage;
 import miniJava.visitor.miniJava.OutputStream;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeEList;
-
-import visitor.IDynamicModule;
 import visitor.VisitorInterface;
 
 public class OutputStreamImpl extends MinimalEObjectImpl.Container implements OutputStream {
-	protected Set<IDynamicModule> modules;
-	
 	protected EList<String> stream;
 
 	protected OutputStreamImpl() {
 		super();
-		modules = new HashSet<IDynamicModule>();
 	}
 
 	@Override
@@ -81,33 +73,5 @@ public class OutputStreamImpl extends MinimalEObjectImpl.Container implements Ou
 	@Override
 	public Object accept(VisitorInterface visitor) {
 		return visitor.visitminiJava__OutputStream(this);
-	}
-
-	@Override
-	public void attach(IDynamicModule dm) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void detach(IDynamicModule dm) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean notifyDynamicModulesBefore() {
-		boolean out = true;
-		for (IDynamicModule dm : modules) {
-			out = out && dm.updateBefore(this);
-		}
-		return out;
-	}
-
-	@Override
-	public void notifyDynamicModulesAfter() {
-		for (IDynamicModule dm : modules) {
-			dm.updateAfter(this);
-		}
 	}
 }

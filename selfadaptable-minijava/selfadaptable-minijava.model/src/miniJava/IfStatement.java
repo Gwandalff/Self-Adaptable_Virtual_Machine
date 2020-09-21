@@ -25,10 +25,6 @@ public interface IfStatement extends Statement {
 	/**
 	 * Returns the value of the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Expression</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expression</em>' containment reference.
 	 * @see #setExpression(Expression)
@@ -51,10 +47,6 @@ public interface IfStatement extends Statement {
 	/**
 	 * Returns the value of the '<em><b>Then Block</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Then Block</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Then Block</em>' containment reference.
 	 * @see #setThenBlock(Block)
@@ -77,10 +69,6 @@ public interface IfStatement extends Statement {
 	/**
 	 * Returns the value of the '<em><b>Else Block</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Else Block</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Else Block</em>' containment reference.
 	 * @see #setElseBlock(Block)

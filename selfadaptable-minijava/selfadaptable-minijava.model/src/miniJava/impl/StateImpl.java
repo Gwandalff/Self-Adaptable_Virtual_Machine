@@ -129,6 +129,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Frame getRootFrame() {
 		return rootFrame;
 	}
@@ -153,6 +154,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRootFrame(Frame newRootFrame) {
 		if (newRootFrame != rootFrame) {
 			NotificationChain msgs = null;
@@ -172,6 +174,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ObjectInstance> getObjectsHeap() {
 		if (objectsHeap == null) {
 			objectsHeap = new EObjectContainmentEList<ObjectInstance>(ObjectInstance.class, this, MiniJavaPackage.STATE__OBJECTS_HEAP);
@@ -184,6 +187,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputStream getOutputStream() {
 		return outputStream;
 	}
@@ -208,6 +212,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOutputStream(OutputStream newOutputStream) {
 		if (newOutputStream != outputStream) {
 			NotificationChain msgs = null;
@@ -227,6 +232,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ArrayInstance> getArraysHeap() {
 		if (arraysHeap == null) {
 			arraysHeap = new EObjectContainmentEList<ArrayInstance>(ArrayInstance.class, this, MiniJavaPackage.STATE__ARRAYS_HEAP);
@@ -239,6 +245,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Context getContextCache() {
 		if (contextCache != null && contextCache.eIsProxy()) {
 			InternalEObject oldContextCache = (InternalEObject)contextCache;
@@ -265,6 +272,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContextCache(Context newContextCache) {
 		Context oldContextCache = contextCache;
 		contextCache = newContextCache;
@@ -277,6 +285,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Frame getFrameCache() {
 		if (frameCache != null && frameCache.eIsProxy()) {
 			InternalEObject oldFrameCache = (InternalEObject)frameCache;
@@ -303,6 +312,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFrameCache(Frame newFrameCache) {
 		Frame oldFrameCache = frameCache;
 		frameCache = newFrameCache;

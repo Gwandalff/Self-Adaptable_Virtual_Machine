@@ -59,6 +59,7 @@ import miniJava.visitor.miniJava.PrintStatement;
 import miniJava.visitor.miniJava.Program;
 import miniJava.visitor.miniJava.Return;
 import miniJava.visitor.miniJava.SingleTypeRef;
+import miniJava.visitor.miniJava.Sqrt;
 import miniJava.visitor.miniJava.State;
 import miniJava.visitor.miniJava.Statement;
 import miniJava.visitor.miniJava.StringConstant;
@@ -236,4 +237,6 @@ public interface VisitorInterface {
 	Object visitminiJava__ClazzToMethodMap(ClazzToMethodMap it);
 
 	Object visitminiJava__Modulo(Modulo it);
+
+	Object visitminiJava__Sqrt(Sqrt it);
 }

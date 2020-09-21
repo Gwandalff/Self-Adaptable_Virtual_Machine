@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ArrayTypeRefImpl extends TypeRefImpl implements ArrayTypeRef {
+public class ArrayTypeRefImpl extends SingleTypeRefImpl implements ArrayTypeRef {
 	/**
 	 * The cached value of the '{@link #getTypeRef() <em>Type Ref</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -62,6 +62,7 @@ public class ArrayTypeRefImpl extends TypeRefImpl implements ArrayTypeRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SingleTypeRef getTypeRef() {
 		return typeRef;
 	}
@@ -86,6 +87,7 @@ public class ArrayTypeRefImpl extends TypeRefImpl implements ArrayTypeRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTypeRef(SingleTypeRef newTypeRef) {
 		if (newTypeRef != typeRef) {
 			NotificationChain msgs = null;

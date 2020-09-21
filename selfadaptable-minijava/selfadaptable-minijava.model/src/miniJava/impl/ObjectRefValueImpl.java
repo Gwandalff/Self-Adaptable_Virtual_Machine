@@ -61,6 +61,7 @@ public class ObjectRefValueImpl extends ValueImpl implements ObjectRefValue {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObjectInstance getInstance() {
 		if (instance != null && instance.eIsProxy()) {
 			InternalEObject oldInstance = (InternalEObject)instance;
@@ -87,6 +88,7 @@ public class ObjectRefValueImpl extends ValueImpl implements ObjectRefValue {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInstance(ObjectInstance newInstance) {
 		ObjectInstance oldInstance = instance;
 		instance = newInstance;

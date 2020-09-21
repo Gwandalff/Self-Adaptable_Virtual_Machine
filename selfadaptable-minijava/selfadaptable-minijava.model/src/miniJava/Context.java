@@ -23,7 +23,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see miniJava.MiniJavaPackage#getContext()
- * @model
+ * @model annotation="aspect"
+ *        annotation="RuntimeData"
  * @generated
  */
 public interface Context extends EObject {
@@ -31,10 +32,6 @@ public interface Context extends EObject {
 	 * Returns the value of the '<em><b>Bindings</b></em>' containment reference list.
 	 * The list contents are of type {@link miniJava.SymbolBinding}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bindings</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bindings</em>' containment reference list.
 	 * @see miniJava.MiniJavaPackage#getContext_Bindings()
@@ -47,10 +44,6 @@ public interface Context extends EObject {
 	 * Returns the value of the '<em><b>Parent Context</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link miniJava.Context#getChildContext <em>Child Context</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parent Context</em>' container reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent Context</em>' container reference.
 	 * @see #setParentContext(Context)
@@ -75,10 +68,6 @@ public interface Context extends EObject {
 	 * Returns the value of the '<em><b>Child Context</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link miniJava.Context#getParentContext <em>Parent Context</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Child Context</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Child Context</em>' containment reference.
 	 * @see #setChildContext(Context)
@@ -104,10 +93,6 @@ public interface Context extends EObject {
 	 * The key is of type {@link miniJava.Symbol},
 	 * and the value is of type {@link miniJava.SymbolBinding},
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cache</em>' map isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cache</em>' map.
 	 * @see miniJava.MiniJavaPackage#getContext_Cache()

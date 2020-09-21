@@ -10,7 +10,8 @@ package miniJava;
  *
  *
  * @see miniJava.MiniJavaPackage#getNullValue()
- * @model
+ * @model annotation="aspect"
+ *        annotation="RuntimeData"
  * @generated
  */
 public interface NullValue extends Value {

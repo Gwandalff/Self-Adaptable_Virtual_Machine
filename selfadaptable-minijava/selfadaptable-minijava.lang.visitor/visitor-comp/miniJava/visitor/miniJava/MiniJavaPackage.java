@@ -293,9 +293,9 @@ public interface MiniJavaPackage extends EPackage {
 
 	int ARRAY_TYPE_REF__TYPE_REF = 0;
 
-	int ARRAY_TYPE_REF_FEATURE_COUNT = TYPE_REF_FEATURE_COUNT + 1;
+	int ARRAY_TYPE_REF_FEATURE_COUNT = SINGLE_TYPE_REF_FEATURE_COUNT + 1;
 
-	int ARRAY_TYPE_REF_OPERATION_COUNT = TYPE_REF_OPERATION_COUNT + 0;
+	int ARRAY_TYPE_REF_OPERATION_COUNT = SINGLE_TYPE_REF_OPERATION_COUNT + 0;
 
 	int INTEGER_TYPE_REF = 27;
 
@@ -769,7 +769,15 @@ public interface MiniJavaPackage extends EPackage {
 
 	int MODULO_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int ACCESS_LEVEL = 79;
+	int SQRT = 79;
+
+	int SQRT__EXPRESSION = 0;
+
+	int SQRT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	int SQRT_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	int ACCESS_LEVEL = 80;
 
 	EClass getProgram();
 
@@ -1161,6 +1169,10 @@ public interface MiniJavaPackage extends EPackage {
 
 	EReference getModulo_Right();
 
+	EClass getSqrt();
+
+	EReference getSqrt_Expression();
+
 	MiniJavaFactory getMiniJavaFactory();
 
 	interface Literals {
@@ -1551,6 +1563,10 @@ public interface MiniJavaPackage extends EPackage {
 		EReference MODULO__LEFT = eINSTANCE.getModulo_Left();
 
 		EReference MODULO__RIGHT = eINSTANCE.getModulo_Right();
+
+		EClass SQRT = eINSTANCE.getSqrt();
+
+		EReference SQRT__EXPRESSION = eINSTANCE.getSqrt_Expression();
 
 		EEnum ACCESSLEVEL = eINSTANCE.getAccessLevel();
 	}

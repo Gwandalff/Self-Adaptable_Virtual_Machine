@@ -1,16 +1,11 @@
 package miniJava.visitor.miniJava.impl;
 
-import java.util.HashSet;
+import java.lang.Deprecated;
+import java.lang.IllegalArgumentException;
+import java.lang.Object;
+import java.lang.Override;
+import java.lang.String;
 import java.util.Map;
-import java.util.Set;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.impl.EFactoryImpl;
-import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import miniJava.visitor.miniJava.AccessLevel;
 import miniJava.visitor.miniJava.And;
 import miniJava.visitor.miniJava.ArrayAccess;
@@ -71,6 +66,7 @@ import miniJava.visitor.miniJava.PrintStatement;
 import miniJava.visitor.miniJava.Program;
 import miniJava.visitor.miniJava.Return;
 import miniJava.visitor.miniJava.SingleTypeRef;
+import miniJava.visitor.miniJava.Sqrt;
 import miniJava.visitor.miniJava.State;
 import miniJava.visitor.miniJava.Statement;
 import miniJava.visitor.miniJava.StringConstant;
@@ -90,21 +86,19 @@ import miniJava.visitor.miniJava.Value;
 import miniJava.visitor.miniJava.VariableDeclaration;
 import miniJava.visitor.miniJava.VoidTypeRef;
 import miniJava.visitor.miniJava.WhileStatement;
-import visitor.IDynamicModule;
-import visitor.dynamicmodules.DynamicApproximateModule;
-import visitor.dynamicmodules.DynamicMemoizationModule;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory {
-	
-	static Set<IDynamicModule> modules = new HashSet<IDynamicModule>();
-	Set<IDynamicModule> buffer = new HashSet<IDynamicModule>();
-	
 	public MiniJavaFactoryImpl() {
 		super();
 	}
 
 	public static MiniJavaFactory init() {
-		instaciateDynamicModules();
 		try {
 			MiniJavaFactory theMiniJavaFactory = (MiniJavaFactory) EPackage.Registry.INSTANCE.getEFactory(MiniJavaPackage.eNS_URI);
 			if (theMiniJavaFactory != null) {
@@ -118,17 +112,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 
 	@Override
 	public EObject create(EClass eClass) {
-		int id = eClass.getClassifierID();
-		
-		buffer.clear();
-		for (IDynamicModule dm : modules) {
-			int[] ids = dm.targetedNodes();
-			for (int i = 0; i < ids.length; i++) {
-				if(ids[i] == id) buffer.add(dm);
-			}
-		}
-		
-		switch (id) {
+		switch (eClass.getClassifierID()) {
 			case MiniJavaPackage.PROGRAM :
 				return createProgram();
 			case MiniJavaPackage.IMPORT :
@@ -285,6 +269,8 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 				return (EObject) createClazzToMethodMap();
 			case MiniJavaPackage.MODULO :
 				return createModulo();
+			case MiniJavaPackage.SQRT :
+				return createSqrt();
 			default :
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -312,601 +298,376 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 
 	public Program createProgram() {
 		ProgramImpl program = new ProgramImpl();
-		for (IDynamicModule dm : buffer) {
-			program.attach(dm);
-		}
 		return program;
 	}
 
 	public Import createImport() {
 		ImportImpl import_ = new ImportImpl();
-		for (IDynamicModule dm : buffer) {
-			import_.attach(dm);
-		}
 		return import_;
 	}
 
 	public TypeDeclaration createTypeDeclaration() {
 		TypeDeclarationImpl typeDeclaration = new TypeDeclarationImpl();
-		for (IDynamicModule dm : buffer) {
-			typeDeclaration.attach(dm);
-		}
 		return typeDeclaration;
 	}
 
 	public Clazz createClazz() {
 		ClazzImpl clazz = new ClazzImpl();
-		for (IDynamicModule dm : buffer) {
-			clazz.attach(dm);
-		}
 		return clazz;
 	}
 
 	public Interface createInterface() {
 		InterfaceImpl interface_ = new InterfaceImpl();
-		for (IDynamicModule dm : buffer) {
-			interface_.attach(dm);
-		}
 		return interface_;
 	}
 
 	public Member createMember() {
 		MemberImpl member = new MemberImpl();
-		for (IDynamicModule dm : buffer) {
-			member.attach(dm);
-		}
 		return member;
 	}
 
 	public Method createMethod() {
 		MethodImpl method = new MethodImpl();
-		for (IDynamicModule dm : buffer) {
-			method.attach(dm);
-		}
 		return method;
 	}
 
 	public Parameter createParameter() {
 		ParameterImpl parameter = new ParameterImpl();
-		for (IDynamicModule dm : buffer) {
-			parameter.attach(dm);
-		}
 		return parameter;
 	}
 
 	public Field createField() {
 		FieldImpl field = new FieldImpl();
-		for (IDynamicModule dm : buffer) {
-			field.attach(dm);
-		}
 		return field;
 	}
 
 	public Block createBlock() {
 		BlockImpl block = new BlockImpl();
-		for (IDynamicModule dm : buffer) {
-			block.attach(dm);
-		}
 		return block;
 	}
 
 	public Statement createStatement() {
 		StatementImpl statement = new StatementImpl();
-		for (IDynamicModule dm : buffer) {
-			statement.attach(dm);
-		}
 		return statement;
 	}
 
 	public PrintStatement createPrintStatement() {
 		PrintStatementImpl printStatement = new PrintStatementImpl();
-		for (IDynamicModule dm : buffer) {
-			printStatement.attach(dm);
-		}
 		return printStatement;
 	}
 
 	public Return createReturn() {
 		ReturnImpl return_ = new ReturnImpl();
-		for (IDynamicModule dm : buffer) {
-			return_.attach(dm);
-		}
 		return return_;
 	}
 
 	public IfStatement createIfStatement() {
 		IfStatementImpl ifStatement = new IfStatementImpl();
-		for (IDynamicModule dm : buffer) {
-			ifStatement.attach(dm);
-		}
 		return ifStatement;
 	}
 
 	public WhileStatement createWhileStatement() {
 		WhileStatementImpl whileStatement = new WhileStatementImpl();
-		for (IDynamicModule dm : buffer) {
-			whileStatement.attach(dm);
-		}
 		return whileStatement;
 	}
 
 	public ForStatement createForStatement() {
 		ForStatementImpl forStatement = new ForStatementImpl();
-		for (IDynamicModule dm : buffer) {
-			forStatement.attach(dm);
-		}
 		return forStatement;
 	}
 
 	public TypeRef createTypeRef() {
 		TypeRefImpl typeRef = new TypeRefImpl();
-		for (IDynamicModule dm : buffer) {
-			typeRef.attach(dm);
-		}
 		return typeRef;
 	}
 
 	public SingleTypeRef createSingleTypeRef() {
 		SingleTypeRefImpl singleTypeRef = new SingleTypeRefImpl();
-		for (IDynamicModule dm : buffer) {
-			singleTypeRef.attach(dm);
-		}
 		return singleTypeRef;
 	}
 
 	public ClassRef createClassRef() {
 		ClassRefImpl classRef = new ClassRefImpl();
-		for (IDynamicModule dm : buffer) {
-			classRef.attach(dm);
-		}
 		return classRef;
 	}
 
 	public NamedElement createNamedElement() {
 		NamedElementImpl namedElement = new NamedElementImpl();
-		for (IDynamicModule dm : buffer) {
-			namedElement.attach(dm);
-		}
 		return namedElement;
 	}
 
 	public TypedDeclaration createTypedDeclaration() {
 		TypedDeclarationImpl typedDeclaration = new TypedDeclarationImpl();
-		for (IDynamicModule dm : buffer) {
-			typedDeclaration.attach(dm);
-		}
 		return typedDeclaration;
 	}
 
 	public Symbol createSymbol() {
 		SymbolImpl symbol = new SymbolImpl();
-		for (IDynamicModule dm : buffer) {
-			symbol.attach(dm);
-		}
 		return symbol;
 	}
 
 	public VariableDeclaration createVariableDeclaration() {
 		VariableDeclarationImpl variableDeclaration = new VariableDeclarationImpl();
-		for (IDynamicModule dm : buffer) {
-			variableDeclaration.attach(dm);
-		}
 		return variableDeclaration;
 	}
 
 	public Assignment createAssignment() {
 		AssignmentImpl assignment = new AssignmentImpl();
-		for (IDynamicModule dm : buffer) {
-			assignment.attach(dm);
-		}
 		return assignment;
 	}
 
 	public Assignee createAssignee() {
 		AssigneeImpl assignee = new AssigneeImpl();
-		for (IDynamicModule dm : buffer) {
-			assignee.attach(dm);
-		}
 		return assignee;
 	}
 
 	public Expression createExpression() {
 		ExpressionImpl expression = new ExpressionImpl();
-		for (IDynamicModule dm : buffer) {
-			expression.attach(dm);
-		}
 		return expression;
 	}
 
 	public ArrayTypeRef createArrayTypeRef() {
 		ArrayTypeRefImpl arrayTypeRef = new ArrayTypeRefImpl();
-		for (IDynamicModule dm : buffer) {
-			arrayTypeRef.attach(dm);
-		}
 		return arrayTypeRef;
 	}
 
 	public IntegerTypeRef createIntegerTypeRef() {
 		IntegerTypeRefImpl integerTypeRef = new IntegerTypeRefImpl();
-		for (IDynamicModule dm : buffer) {
-			integerTypeRef.attach(dm);
-		}
 		return integerTypeRef;
 	}
 
 	public BooleanTypeRef createBooleanTypeRef() {
 		BooleanTypeRefImpl booleanTypeRef = new BooleanTypeRefImpl();
-		for (IDynamicModule dm : buffer) {
-			booleanTypeRef.attach(dm);
-		}
 		return booleanTypeRef;
 	}
 
 	public StringTypeRef createStringTypeRef() {
 		StringTypeRefImpl stringTypeRef = new StringTypeRefImpl();
-		for (IDynamicModule dm : buffer) {
-			stringTypeRef.attach(dm);
-		}
 		return stringTypeRef;
 	}
 
 	public VoidTypeRef createVoidTypeRef() {
 		VoidTypeRefImpl voidTypeRef = new VoidTypeRefImpl();
-		for (IDynamicModule dm : buffer) {
-			voidTypeRef.attach(dm);
-		}
 		return voidTypeRef;
 	}
 
 	public Or createOr() {
 		OrImpl or = new OrImpl();
-		for (IDynamicModule dm : buffer) {
-			or.attach(dm);
-		}
 		return or;
 	}
 
 	public And createAnd() {
 		AndImpl and = new AndImpl();
-		for (IDynamicModule dm : buffer) {
-			and.attach(dm);
-		}
 		return and;
 	}
 
 	public Equality createEquality() {
 		EqualityImpl equality = new EqualityImpl();
-		for (IDynamicModule dm : buffer) {
-			equality.attach(dm);
-		}
 		return equality;
 	}
 
 	public Inequality createInequality() {
 		InequalityImpl inequality = new InequalityImpl();
-		for (IDynamicModule dm : buffer) {
-			inequality.attach(dm);
-		}
 		return inequality;
 	}
 
 	public SuperiorOrEqual createSuperiorOrEqual() {
 		SuperiorOrEqualImpl superiorOrEqual = new SuperiorOrEqualImpl();
-		for (IDynamicModule dm : buffer) {
-			superiorOrEqual.attach(dm);
-		}
 		return superiorOrEqual;
 	}
 
 	public InferiorOrEqual createInferiorOrEqual() {
 		InferiorOrEqualImpl inferiorOrEqual = new InferiorOrEqualImpl();
-		for (IDynamicModule dm : buffer) {
-			inferiorOrEqual.attach(dm);
-		}
 		return inferiorOrEqual;
 	}
 
 	public Superior createSuperior() {
 		SuperiorImpl superior = new SuperiorImpl();
-		for (IDynamicModule dm : buffer) {
-			superior.attach(dm);
-		}
 		return superior;
 	}
 
 	public Inferior createInferior() {
 		InferiorImpl inferior = new InferiorImpl();
-		for (IDynamicModule dm : buffer) {
-			inferior.attach(dm);
-		}
 		return inferior;
 	}
 
 	public Plus createPlus() {
 		PlusImpl plus = new PlusImpl();
-		for (IDynamicModule dm : buffer) {
-			plus.attach(dm);
-		}
 		return plus;
 	}
 
 	public Minus createMinus() {
 		MinusImpl minus = new MinusImpl();
-		for (IDynamicModule dm : buffer) {
-			minus.attach(dm);
-		}
 		return minus;
 	}
 
 	public Multiplication createMultiplication() {
 		MultiplicationImpl multiplication = new MultiplicationImpl();
-		for (IDynamicModule dm : buffer) {
-			multiplication.attach(dm);
-		}
 		return multiplication;
 	}
 
 	public Division createDivision() {
 		DivisionImpl division = new DivisionImpl();
-		for (IDynamicModule dm : buffer) {
-			division.attach(dm);
-		}
 		return division;
 	}
 
 	public ArrayAccess createArrayAccess() {
 		ArrayAccessImpl arrayAccess = new ArrayAccessImpl();
-		for (IDynamicModule dm : buffer) {
-			arrayAccess.attach(dm);
-		}
 		return arrayAccess;
 	}
 
 	public ArrayLength createArrayLength() {
 		ArrayLengthImpl arrayLength = new ArrayLengthImpl();
-		for (IDynamicModule dm : buffer) {
-			arrayLength.attach(dm);
-		}
 		return arrayLength;
 	}
 
 	public Not createNot() {
 		NotImpl not = new NotImpl();
-		for (IDynamicModule dm : buffer) {
-			not.attach(dm);
-		}
 		return not;
 	}
 
 	public Neg createNeg() {
 		NegImpl neg = new NegImpl();
-		for (IDynamicModule dm : buffer) {
-			neg.attach(dm);
-		}
 		return neg;
 	}
 
 	public FieldAccess createFieldAccess() {
 		FieldAccessImpl fieldAccess = new FieldAccessImpl();
-		for (IDynamicModule dm : buffer) {
-			fieldAccess.attach(dm);
-		}
 		return fieldAccess;
 	}
 
 	public MethodCall createMethodCall() {
 		MethodCallImpl methodCall = new MethodCallImpl();
-		for (IDynamicModule dm : buffer) {
-			methodCall.attach(dm);
-		}
 		return methodCall;
 	}
 
 	public StringConstant createStringConstant() {
 		StringConstantImpl stringConstant = new StringConstantImpl();
-		for (IDynamicModule dm : buffer) {
-			stringConstant.attach(dm);
-		}
 		return stringConstant;
 	}
 
 	public IntConstant createIntConstant() {
 		IntConstantImpl intConstant = new IntConstantImpl();
-		for (IDynamicModule dm : buffer) {
-			intConstant.attach(dm);
-		}
 		return intConstant;
 	}
 
 	public BoolConstant createBoolConstant() {
 		BoolConstantImpl boolConstant = new BoolConstantImpl();
-		for (IDynamicModule dm : buffer) {
-			boolConstant.attach(dm);
-		}
 		return boolConstant;
 	}
 
 	public This createThis() {
 		ThisImpl this_ = new ThisImpl();
-		for (IDynamicModule dm : buffer) {
-			this_.attach(dm);
-		}
 		return this_;
 	}
 
 	public Super createSuper() {
 		SuperImpl super_ = new SuperImpl();
-		for (IDynamicModule dm : buffer) {
-			super_.attach(dm);
-		}
 		return super_;
 	}
 
 	public Null createNull() {
 		NullImpl null_ = new NullImpl();
-		for (IDynamicModule dm : buffer) {
-			null_.attach(dm);
-		}
 		return null_;
 	}
 
 	public NewObject createNewObject() {
 		NewObjectImpl newObject = new NewObjectImpl();
-		for (IDynamicModule dm : buffer) {
-			newObject.attach(dm);
-		}
 		return newObject;
 	}
 
 	public NewArray createNewArray() {
 		NewArrayImpl newArray = new NewArrayImpl();
-		for (IDynamicModule dm : buffer) {
-			newArray.attach(dm);
-		}
 		return newArray;
 	}
 
 	public SymbolRef createSymbolRef() {
 		SymbolRefImpl symbolRef = new SymbolRefImpl();
-		for (IDynamicModule dm : buffer) {
-			symbolRef.attach(dm);
-		}
 		return symbolRef;
 	}
 
 	public Context createContext() {
 		ContextImpl context = new ContextImpl();
-		for (IDynamicModule dm : buffer) {
-			context.attach(dm);
-		}
 		return context;
 	}
 
 	public Value createValue() {
 		ValueImpl value = new ValueImpl();
-		for (IDynamicModule dm : buffer) {
-			value.attach(dm);
-		}
 		return value;
 	}
 
 	public IntegerValue createIntegerValue() {
 		IntegerValueImpl integerValue = new IntegerValueImpl();
-		for (IDynamicModule dm : buffer) {
-			integerValue.attach(dm);
-		}
 		return integerValue;
 	}
 
 	public SymbolBinding createSymbolBinding() {
 		SymbolBindingImpl symbolBinding = new SymbolBindingImpl();
-		for (IDynamicModule dm : buffer) {
-			symbolBinding.attach(dm);
-		}
 		return symbolBinding;
 	}
 
 	public FieldBinding createFieldBinding() {
 		FieldBindingImpl fieldBinding = new FieldBindingImpl();
-		for (IDynamicModule dm : buffer) {
-			fieldBinding.attach(dm);
-		}
 		return fieldBinding;
 	}
 
 	public StringValue createStringValue() {
 		StringValueImpl stringValue = new StringValueImpl();
-		for (IDynamicModule dm : buffer) {
-			stringValue.attach(dm);
-		}
 		return stringValue;
 	}
 
 	public BooleanValue createBooleanValue() {
 		BooleanValueImpl booleanValue = new BooleanValueImpl();
-		for (IDynamicModule dm : buffer) {
-			booleanValue.attach(dm);
-		}
 		return booleanValue;
 	}
 
 	public OutputStream createOutputStream() {
 		OutputStreamImpl outputStream = new OutputStreamImpl();
-		for (IDynamicModule dm : buffer) {
-			outputStream.attach(dm);
-		}
 		return outputStream;
 	}
 
 	public State createState() {
 		StateImpl state = new StateImpl();
-		for (IDynamicModule dm : buffer) {
-			state.attach(dm);
-		}
 		return state;
 	}
 
 	public Frame createFrame() {
 		FrameImpl frame = new FrameImpl();
-		for (IDynamicModule dm : buffer) {
-			frame.attach(dm);
-		}
 		return frame;
 	}
 
 	public NullValue createNullValue() {
 		NullValueImpl nullValue = new NullValueImpl();
-		for (IDynamicModule dm : buffer) {
-			nullValue.attach(dm);
-		}
 		return nullValue;
 	}
 
 	public NewCall createNewCall() {
 		NewCallImpl newCall = new NewCallImpl();
-		for (IDynamicModule dm : buffer) {
-			newCall.attach(dm);
-		}
 		return newCall;
 	}
 
 	public MethodCall2 createMethodCall2() {
 		MethodCall2Impl methodCall2 = new MethodCall2Impl();
-		for (IDynamicModule dm : buffer) {
-			methodCall2.attach(dm);
-		}
 		return methodCall2;
 	}
 
 	public ObjectInstance createObjectInstance() {
 		ObjectInstanceImpl objectInstance = new ObjectInstanceImpl();
-		for (IDynamicModule dm : buffer) {
-			objectInstance.attach(dm);
-		}
 		return objectInstance;
 	}
 
 	public ArrayInstance createArrayInstance() {
 		ArrayInstanceImpl arrayInstance = new ArrayInstanceImpl();
-		for (IDynamicModule dm : buffer) {
-			arrayInstance.attach(dm);
-		}
 		return arrayInstance;
 	}
 
 	public ObjectRefValue createObjectRefValue() {
 		ObjectRefValueImpl objectRefValue = new ObjectRefValueImpl();
-		for (IDynamicModule dm : buffer) {
-			objectRefValue.attach(dm);
-		}
 		return objectRefValue;
 	}
 
 	public ArrayRefValue createArrayRefValue() {
 		ArrayRefValueImpl arrayRefValue = new ArrayRefValueImpl();
-		for (IDynamicModule dm : buffer) {
-			arrayRefValue.attach(dm);
-		}
 		return arrayRefValue;
 	}
 
@@ -922,10 +683,12 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 
 	public Modulo createModulo() {
 		ModuloImpl modulo = new ModuloImpl();
-		for (IDynamicModule dm : buffer) {
-			modulo.attach(dm);
-		}
 		return modulo;
+	}
+
+	public Sqrt createSqrt() {
+		SqrtImpl sqrt = new SqrtImpl();
+		return sqrt;
 	}
 
 	public AccessLevel createAccessLevelFromString(EDataType eDataType, String initialValue) {
@@ -947,10 +710,5 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	@Deprecated
 	public static MiniJavaPackage getPackage() {
 		return MiniJavaPackage.eINSTANCE;
-	}
-	
-	private static void instaciateDynamicModules() {
-		modules.add(new DynamicApproximateModule());
-		//modules.add(new DynamicMemoizationModule());
 	}
 }

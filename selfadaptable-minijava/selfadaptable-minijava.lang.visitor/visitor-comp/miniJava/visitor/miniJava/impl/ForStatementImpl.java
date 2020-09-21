@@ -1,20 +1,17 @@
 package miniJava.visitor.miniJava.impl;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
+import java.lang.Object;
+import java.lang.Override;
 import miniJava.visitor.miniJava.Assignment;
 import miniJava.visitor.miniJava.Block;
 import miniJava.visitor.miniJava.Expression;
 import miniJava.visitor.miniJava.ForStatement;
 import miniJava.visitor.miniJava.MiniJavaPackage;
-import visitor.IDynamicModule;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import visitor.VisitorInterface;
 
 public class ForStatementImpl extends StatementImpl implements ForStatement {

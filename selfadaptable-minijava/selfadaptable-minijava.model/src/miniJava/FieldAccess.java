@@ -24,10 +24,6 @@ public interface FieldAccess extends Expression {
 	/**
 	 * Returns the value of the '<em><b>Receiver</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Receiver</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Receiver</em>' containment reference.
 	 * @see #setReceiver(Expression)
@@ -50,10 +46,6 @@ public interface FieldAccess extends Expression {
 	/**
 	 * Returns the value of the '<em><b>Field</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Field</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Field</em>' reference.
 	 * @see #setField(Field)

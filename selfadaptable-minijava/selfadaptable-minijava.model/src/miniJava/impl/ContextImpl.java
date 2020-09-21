@@ -98,6 +98,7 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SymbolBinding> getBindings() {
 		if (bindings == null) {
 			bindings = new EObjectContainmentEList<SymbolBinding>(SymbolBinding.class, this, MiniJavaPackage.CONTEXT__BINDINGS);
@@ -110,6 +111,7 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Context getParentContext() {
 		if (eContainerFeatureID() != MiniJavaPackage.CONTEXT__PARENT_CONTEXT) return null;
 		return (Context)eInternalContainer();
@@ -130,6 +132,7 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParentContext(Context newParentContext) {
 		if (newParentContext != eInternalContainer() || (eContainerFeatureID() != MiniJavaPackage.CONTEXT__PARENT_CONTEXT && newParentContext != null)) {
 			if (EcoreUtil.isAncestor(this, newParentContext))
@@ -151,6 +154,7 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Context getChildContext() {
 		return childContext;
 	}
@@ -175,6 +179,7 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChildContext(Context newChildContext) {
 		if (newChildContext != childContext) {
 			NotificationChain msgs = null;
@@ -194,6 +199,7 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EMap<Symbol, SymbolBinding> getCache() {
 		if (cache == null) {
 			cache = new EcoreEMap<Symbol,SymbolBinding>(MiniJavaPackage.Literals.SYMBOL_TO_SYMBOL_BINDING_MAP, SymbolToSymbolBindingMapImpl.class, this, MiniJavaPackage.CONTEXT__CACHE);

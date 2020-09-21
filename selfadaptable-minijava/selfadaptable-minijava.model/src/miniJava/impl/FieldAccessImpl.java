@@ -74,6 +74,7 @@ public class FieldAccessImpl extends ExpressionImpl implements FieldAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getReceiver() {
 		return receiver;
 	}
@@ -98,6 +99,7 @@ public class FieldAccessImpl extends ExpressionImpl implements FieldAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReceiver(Expression newReceiver) {
 		if (newReceiver != receiver) {
 			NotificationChain msgs = null;
@@ -117,6 +119,7 @@ public class FieldAccessImpl extends ExpressionImpl implements FieldAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Field getField() {
 		if (field != null && field.eIsProxy()) {
 			InternalEObject oldField = (InternalEObject)field;
@@ -143,6 +146,7 @@ public class FieldAccessImpl extends ExpressionImpl implements FieldAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setField(Field newField) {
 		Field oldField = field;
 		field = newField;

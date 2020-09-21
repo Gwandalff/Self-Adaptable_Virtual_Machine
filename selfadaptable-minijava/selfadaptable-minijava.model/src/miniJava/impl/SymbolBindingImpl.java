@@ -75,6 +75,7 @@ public class SymbolBindingImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Value getValue() {
 		return value;
 	}
@@ -99,6 +100,7 @@ public class SymbolBindingImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Value newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
@@ -118,6 +120,7 @@ public class SymbolBindingImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Symbol getSymbol() {
 		if (symbol != null && symbol.eIsProxy()) {
 			InternalEObject oldSymbol = (InternalEObject)symbol;
@@ -144,6 +147,7 @@ public class SymbolBindingImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSymbol(Symbol newSymbol) {
 		Symbol oldSymbol = symbol;
 		symbol = newSymbol;

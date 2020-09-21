@@ -29,10 +29,6 @@ public interface Method extends Member {
 	/**
 	 * Returns the value of the '<em><b>Isabstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Isabstract</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Isabstract</em>' attribute.
 	 * @see #setIsabstract(boolean)
@@ -55,10 +51,6 @@ public interface Method extends Member {
 	/**
 	 * Returns the value of the '<em><b>Isstatic</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Isstatic</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Isstatic</em>' attribute.
 	 * @see #setIsstatic(boolean)
@@ -82,10 +74,6 @@ public interface Method extends Member {
 	 * Returns the value of the '<em><b>Params</b></em>' containment reference list.
 	 * The list contents are of type {@link miniJava.Parameter}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Params</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Params</em>' containment reference list.
 	 * @see miniJava.MiniJavaPackage#getMethod_Params()
@@ -97,10 +85,6 @@ public interface Method extends Member {
 	/**
 	 * Returns the value of the '<em><b>Body</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Body</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' containment reference.
 	 * @see #setBody(Block)
@@ -125,10 +109,6 @@ public interface Method extends Member {
 	 * The key is of type {@link miniJava.Clazz},
 	 * and the value is of type {@link miniJava.Method},
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cache</em>' map isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cache</em>' map.
 	 * @see miniJava.MiniJavaPackage#getMethod_Cache()

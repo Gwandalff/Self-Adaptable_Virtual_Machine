@@ -65,6 +65,7 @@ import miniJava.PrintStatement;
 import miniJava.Program;
 import miniJava.Return;
 import miniJava.SingleTypeRef;
+import miniJava.Sqrt;
 import miniJava.State;
 import miniJava.Statement;
 import miniJava.StringConstant;
@@ -658,6 +659,13 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass sqrtEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum accessLevelEEnum = null;
 
 	/**
@@ -726,6 +734,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getProgram() {
 		return programEClass;
 	}
@@ -735,6 +744,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getProgram_Name() {
 		return (EAttribute)programEClass.getEStructuralFeatures().get(0);
 	}
@@ -744,6 +754,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getProgram_Imports() {
 		return (EReference)programEClass.getEStructuralFeatures().get(1);
 	}
@@ -753,6 +764,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getProgram_Classes() {
 		return (EReference)programEClass.getEStructuralFeatures().get(2);
 	}
@@ -762,6 +774,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getProgram_State() {
 		return (EReference)programEClass.getEStructuralFeatures().get(3);
 	}
@@ -771,6 +784,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getImport() {
 		return importEClass;
 	}
@@ -780,6 +794,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getImport_ImportedNamespace() {
 		return (EAttribute)importEClass.getEStructuralFeatures().get(0);
 	}
@@ -789,6 +804,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypeDeclaration() {
 		return typeDeclarationEClass;
 	}
@@ -798,6 +814,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTypeDeclaration_AccessLevel() {
 		return (EAttribute)typeDeclarationEClass.getEStructuralFeatures().get(0);
 	}
@@ -807,6 +824,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeDeclaration_Implementz() {
 		return (EReference)typeDeclarationEClass.getEStructuralFeatures().get(1);
 	}
@@ -816,6 +834,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypeDeclaration_Members() {
 		return (EReference)typeDeclarationEClass.getEStructuralFeatures().get(2);
 	}
@@ -825,6 +844,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getClazz() {
 		return clazzEClass;
 	}
@@ -834,6 +854,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getClazz_Isabstract() {
 		return (EAttribute)clazzEClass.getEStructuralFeatures().get(0);
 	}
@@ -843,6 +864,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getClazz_SuperClass() {
 		return (EReference)clazzEClass.getEStructuralFeatures().get(1);
 	}
@@ -852,6 +874,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInterface() {
 		return interfaceEClass;
 	}
@@ -861,6 +884,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMember() {
 		return memberEClass;
 	}
@@ -870,6 +894,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMember_Access() {
 		return (EAttribute)memberEClass.getEStructuralFeatures().get(0);
 	}
@@ -879,6 +904,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMethod() {
 		return methodEClass;
 	}
@@ -888,6 +914,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMethod_Isabstract() {
 		return (EAttribute)methodEClass.getEStructuralFeatures().get(0);
 	}
@@ -897,6 +924,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMethod_Isstatic() {
 		return (EAttribute)methodEClass.getEStructuralFeatures().get(1);
 	}
@@ -906,6 +934,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethod_Params() {
 		return (EReference)methodEClass.getEStructuralFeatures().get(2);
 	}
@@ -915,6 +944,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethod_Body() {
 		return (EReference)methodEClass.getEStructuralFeatures().get(3);
 	}
@@ -924,6 +954,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethod_Cache() {
 		return (EReference)methodEClass.getEStructuralFeatures().get(4);
 	}
@@ -933,6 +964,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParameter() {
 		return parameterEClass;
 	}
@@ -942,6 +974,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getField() {
 		return fieldEClass;
 	}
@@ -951,6 +984,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getField_DefaultValue() {
 		return (EReference)fieldEClass.getEStructuralFeatures().get(0);
 	}
@@ -960,6 +994,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBlock() {
 		return blockEClass;
 	}
@@ -969,6 +1004,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBlock_Statements() {
 		return (EReference)blockEClass.getEStructuralFeatures().get(0);
 	}
@@ -978,6 +1014,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStatement() {
 		return statementEClass;
 	}
@@ -987,6 +1024,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPrintStatement() {
 		return printStatementEClass;
 	}
@@ -996,6 +1034,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPrintStatement_Expression() {
 		return (EReference)printStatementEClass.getEStructuralFeatures().get(0);
 	}
@@ -1005,6 +1044,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getReturn() {
 		return returnEClass;
 	}
@@ -1014,6 +1054,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getReturn_Expression() {
 		return (EReference)returnEClass.getEStructuralFeatures().get(0);
 	}
@@ -1023,6 +1064,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIfStatement() {
 		return ifStatementEClass;
 	}
@@ -1032,6 +1074,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIfStatement_Expression() {
 		return (EReference)ifStatementEClass.getEStructuralFeatures().get(0);
 	}
@@ -1041,6 +1084,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIfStatement_ThenBlock() {
 		return (EReference)ifStatementEClass.getEStructuralFeatures().get(1);
 	}
@@ -1050,6 +1094,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getIfStatement_ElseBlock() {
 		return (EReference)ifStatementEClass.getEStructuralFeatures().get(2);
 	}
@@ -1059,6 +1104,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWhileStatement() {
 		return whileStatementEClass;
 	}
@@ -1068,6 +1114,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWhileStatement_Condition() {
 		return (EReference)whileStatementEClass.getEStructuralFeatures().get(0);
 	}
@@ -1077,6 +1124,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getWhileStatement_Block() {
 		return (EReference)whileStatementEClass.getEStructuralFeatures().get(1);
 	}
@@ -1086,6 +1134,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getForStatement() {
 		return forStatementEClass;
 	}
@@ -1095,6 +1144,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getForStatement_Declaration() {
 		return (EReference)forStatementEClass.getEStructuralFeatures().get(0);
 	}
@@ -1104,6 +1154,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getForStatement_Condition() {
 		return (EReference)forStatementEClass.getEStructuralFeatures().get(1);
 	}
@@ -1113,6 +1164,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getForStatement_Progression() {
 		return (EReference)forStatementEClass.getEStructuralFeatures().get(2);
 	}
@@ -1122,6 +1174,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getForStatement_Block() {
 		return (EReference)forStatementEClass.getEStructuralFeatures().get(3);
 	}
@@ -1131,6 +1184,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypeRef() {
 		return typeRefEClass;
 	}
@@ -1140,6 +1194,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSingleTypeRef() {
 		return singleTypeRefEClass;
 	}
@@ -1149,6 +1204,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getClassRef() {
 		return classRefEClass;
 	}
@@ -1158,6 +1214,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getClassRef_ReferencedClass() {
 		return (EReference)classRefEClass.getEStructuralFeatures().get(0);
 	}
@@ -1167,6 +1224,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNamedElement() {
 		return namedElementEClass;
 	}
@@ -1176,6 +1234,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNamedElement_Name() {
 		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -1185,6 +1244,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTypedDeclaration() {
 		return typedDeclarationEClass;
 	}
@@ -1194,6 +1254,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTypedDeclaration_TypeRef() {
 		return (EReference)typedDeclarationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1203,6 +1264,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSymbol() {
 		return symbolEClass;
 	}
@@ -1212,6 +1274,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVariableDeclaration() {
 		return variableDeclarationEClass;
 	}
@@ -1221,6 +1284,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssignment() {
 		return assignmentEClass;
 	}
@@ -1230,6 +1294,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssignment_Assignee() {
 		return (EReference)assignmentEClass.getEStructuralFeatures().get(0);
 	}
@@ -1239,6 +1304,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAssignment_Value() {
 		return (EReference)assignmentEClass.getEStructuralFeatures().get(1);
 	}
@@ -1248,6 +1314,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAssignee() {
 		return assigneeEClass;
 	}
@@ -1257,6 +1324,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExpression() {
 		return expressionEClass;
 	}
@@ -1266,6 +1334,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArrayTypeRef() {
 		return arrayTypeRefEClass;
 	}
@@ -1275,6 +1344,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayTypeRef_TypeRef() {
 		return (EReference)arrayTypeRefEClass.getEStructuralFeatures().get(0);
 	}
@@ -1284,6 +1354,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIntegerTypeRef() {
 		return integerTypeRefEClass;
 	}
@@ -1293,6 +1364,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBooleanTypeRef() {
 		return booleanTypeRefEClass;
 	}
@@ -1302,6 +1374,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStringTypeRef() {
 		return stringTypeRefEClass;
 	}
@@ -1311,6 +1384,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVoidTypeRef() {
 		return voidTypeRefEClass;
 	}
@@ -1320,6 +1394,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOr() {
 		return orEClass;
 	}
@@ -1329,6 +1404,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOr_Left() {
 		return (EReference)orEClass.getEStructuralFeatures().get(0);
 	}
@@ -1338,6 +1414,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getOr_Right() {
 		return (EReference)orEClass.getEStructuralFeatures().get(1);
 	}
@@ -1347,6 +1424,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAnd() {
 		return andEClass;
 	}
@@ -1356,6 +1434,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAnd_Left() {
 		return (EReference)andEClass.getEStructuralFeatures().get(0);
 	}
@@ -1365,6 +1444,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAnd_Right() {
 		return (EReference)andEClass.getEStructuralFeatures().get(1);
 	}
@@ -1374,6 +1454,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEquality() {
 		return equalityEClass;
 	}
@@ -1383,6 +1464,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEquality_Left() {
 		return (EReference)equalityEClass.getEStructuralFeatures().get(0);
 	}
@@ -1392,6 +1474,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getEquality_Right() {
 		return (EReference)equalityEClass.getEStructuralFeatures().get(1);
 	}
@@ -1401,6 +1484,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInequality() {
 		return inequalityEClass;
 	}
@@ -1410,6 +1494,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInequality_Left() {
 		return (EReference)inequalityEClass.getEStructuralFeatures().get(0);
 	}
@@ -1419,6 +1504,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInequality_Right() {
 		return (EReference)inequalityEClass.getEStructuralFeatures().get(1);
 	}
@@ -1428,6 +1514,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSuperiorOrEqual() {
 		return superiorOrEqualEClass;
 	}
@@ -1437,6 +1524,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSuperiorOrEqual_Left() {
 		return (EReference)superiorOrEqualEClass.getEStructuralFeatures().get(0);
 	}
@@ -1446,6 +1534,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSuperiorOrEqual_Right() {
 		return (EReference)superiorOrEqualEClass.getEStructuralFeatures().get(1);
 	}
@@ -1455,6 +1544,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInferiorOrEqual() {
 		return inferiorOrEqualEClass;
 	}
@@ -1464,6 +1554,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInferiorOrEqual_Left() {
 		return (EReference)inferiorOrEqualEClass.getEStructuralFeatures().get(0);
 	}
@@ -1473,6 +1564,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInferiorOrEqual_Right() {
 		return (EReference)inferiorOrEqualEClass.getEStructuralFeatures().get(1);
 	}
@@ -1482,6 +1574,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSuperior() {
 		return superiorEClass;
 	}
@@ -1491,6 +1584,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSuperior_Left() {
 		return (EReference)superiorEClass.getEStructuralFeatures().get(0);
 	}
@@ -1500,6 +1594,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSuperior_Right() {
 		return (EReference)superiorEClass.getEStructuralFeatures().get(1);
 	}
@@ -1509,6 +1604,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInferior() {
 		return inferiorEClass;
 	}
@@ -1518,6 +1614,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInferior_Left() {
 		return (EReference)inferiorEClass.getEStructuralFeatures().get(0);
 	}
@@ -1527,6 +1624,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInferior_Right() {
 		return (EReference)inferiorEClass.getEStructuralFeatures().get(1);
 	}
@@ -1536,6 +1634,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPlus() {
 		return plusEClass;
 	}
@@ -1545,6 +1644,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlus_Left() {
 		return (EReference)plusEClass.getEStructuralFeatures().get(0);
 	}
@@ -1554,6 +1654,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlus_Right() {
 		return (EReference)plusEClass.getEStructuralFeatures().get(1);
 	}
@@ -1563,6 +1664,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMinus() {
 		return minusEClass;
 	}
@@ -1572,6 +1674,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMinus_Left() {
 		return (EReference)minusEClass.getEStructuralFeatures().get(0);
 	}
@@ -1581,6 +1684,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMinus_Right() {
 		return (EReference)minusEClass.getEStructuralFeatures().get(1);
 	}
@@ -1590,6 +1694,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMultiplication() {
 		return multiplicationEClass;
 	}
@@ -1599,6 +1704,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMultiplication_Left() {
 		return (EReference)multiplicationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1608,6 +1714,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMultiplication_Right() {
 		return (EReference)multiplicationEClass.getEStructuralFeatures().get(1);
 	}
@@ -1617,6 +1724,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDivision() {
 		return divisionEClass;
 	}
@@ -1626,6 +1734,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDivision_Left() {
 		return (EReference)divisionEClass.getEStructuralFeatures().get(0);
 	}
@@ -1635,6 +1744,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDivision_Right() {
 		return (EReference)divisionEClass.getEStructuralFeatures().get(1);
 	}
@@ -1644,6 +1754,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArrayAccess() {
 		return arrayAccessEClass;
 	}
@@ -1653,6 +1764,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayAccess_Object() {
 		return (EReference)arrayAccessEClass.getEStructuralFeatures().get(0);
 	}
@@ -1662,6 +1774,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayAccess_Index() {
 		return (EReference)arrayAccessEClass.getEStructuralFeatures().get(1);
 	}
@@ -1671,6 +1784,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArrayLength() {
 		return arrayLengthEClass;
 	}
@@ -1680,6 +1794,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayLength_Array() {
 		return (EReference)arrayLengthEClass.getEStructuralFeatures().get(0);
 	}
@@ -1689,6 +1804,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNot() {
 		return notEClass;
 	}
@@ -1698,6 +1814,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNot_Expression() {
 		return (EReference)notEClass.getEStructuralFeatures().get(0);
 	}
@@ -1707,6 +1824,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNeg() {
 		return negEClass;
 	}
@@ -1716,6 +1834,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNeg_Expression() {
 		return (EReference)negEClass.getEStructuralFeatures().get(0);
 	}
@@ -1725,6 +1844,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFieldAccess() {
 		return fieldAccessEClass;
 	}
@@ -1734,6 +1854,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFieldAccess_Receiver() {
 		return (EReference)fieldAccessEClass.getEStructuralFeatures().get(0);
 	}
@@ -1743,6 +1864,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFieldAccess_Field() {
 		return (EReference)fieldAccessEClass.getEStructuralFeatures().get(1);
 	}
@@ -1752,6 +1874,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMethodCall() {
 		return methodCallEClass;
 	}
@@ -1761,6 +1884,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodCall_Receiver() {
 		return (EReference)methodCallEClass.getEStructuralFeatures().get(0);
 	}
@@ -1770,6 +1894,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodCall_Method() {
 		return (EReference)methodCallEClass.getEStructuralFeatures().get(1);
 	}
@@ -1779,6 +1904,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodCall_Args() {
 		return (EReference)methodCallEClass.getEStructuralFeatures().get(2);
 	}
@@ -1788,6 +1914,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStringConstant() {
 		return stringConstantEClass;
 	}
@@ -1797,6 +1924,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStringConstant_Value() {
 		return (EAttribute)stringConstantEClass.getEStructuralFeatures().get(0);
 	}
@@ -1806,6 +1934,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIntConstant() {
 		return intConstantEClass;
 	}
@@ -1815,6 +1944,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIntConstant_Value() {
 		return (EAttribute)intConstantEClass.getEStructuralFeatures().get(0);
 	}
@@ -1824,6 +1954,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBoolConstant() {
 		return boolConstantEClass;
 	}
@@ -1833,6 +1964,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoolConstant_Value() {
 		return (EAttribute)boolConstantEClass.getEStructuralFeatures().get(0);
 	}
@@ -1842,6 +1974,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getThis() {
 		return thisEClass;
 	}
@@ -1851,6 +1984,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSuper() {
 		return superEClass;
 	}
@@ -1860,6 +1994,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNull() {
 		return nullEClass;
 	}
@@ -1869,6 +2004,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNewObject() {
 		return newObjectEClass;
 	}
@@ -1878,6 +2014,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNewObject_Type() {
 		return (EReference)newObjectEClass.getEStructuralFeatures().get(0);
 	}
@@ -1887,6 +2024,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNewObject_Args() {
 		return (EReference)newObjectEClass.getEStructuralFeatures().get(1);
 	}
@@ -1896,6 +2034,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNewArray() {
 		return newArrayEClass;
 	}
@@ -1905,6 +2044,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNewArray_Type() {
 		return (EReference)newArrayEClass.getEStructuralFeatures().get(0);
 	}
@@ -1914,6 +2054,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNewArray_Size() {
 		return (EReference)newArrayEClass.getEStructuralFeatures().get(1);
 	}
@@ -1923,6 +2064,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSymbolRef() {
 		return symbolRefEClass;
 	}
@@ -1932,6 +2074,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSymbolRef_Symbol() {
 		return (EReference)symbolRefEClass.getEStructuralFeatures().get(0);
 	}
@@ -1941,6 +2084,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getContext() {
 		return contextEClass;
 	}
@@ -1950,6 +2094,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getContext_Bindings() {
 		return (EReference)contextEClass.getEStructuralFeatures().get(0);
 	}
@@ -1959,6 +2104,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getContext_ParentContext() {
 		return (EReference)contextEClass.getEStructuralFeatures().get(1);
 	}
@@ -1968,6 +2114,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getContext_ChildContext() {
 		return (EReference)contextEClass.getEStructuralFeatures().get(2);
 	}
@@ -1977,6 +2124,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getContext_Cache() {
 		return (EReference)contextEClass.getEStructuralFeatures().get(3);
 	}
@@ -1986,6 +2134,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getValue() {
 		return valueEClass;
 	}
@@ -1995,6 +2144,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIntegerValue() {
 		return integerValueEClass;
 	}
@@ -2004,6 +2154,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIntegerValue_Value() {
 		return (EAttribute)integerValueEClass.getEStructuralFeatures().get(0);
 	}
@@ -2013,6 +2164,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSymbolBinding() {
 		return symbolBindingEClass;
 	}
@@ -2022,6 +2174,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSymbolBinding_Value() {
 		return (EReference)symbolBindingEClass.getEStructuralFeatures().get(0);
 	}
@@ -2031,6 +2184,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSymbolBinding_Symbol() {
 		return (EReference)symbolBindingEClass.getEStructuralFeatures().get(1);
 	}
@@ -2040,6 +2194,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFieldBinding() {
 		return fieldBindingEClass;
 	}
@@ -2049,6 +2204,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFieldBinding_Field() {
 		return (EReference)fieldBindingEClass.getEStructuralFeatures().get(0);
 	}
@@ -2058,6 +2214,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFieldBinding_Value() {
 		return (EReference)fieldBindingEClass.getEStructuralFeatures().get(1);
 	}
@@ -2067,6 +2224,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStringValue() {
 		return stringValueEClass;
 	}
@@ -2076,6 +2234,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStringValue_Value() {
 		return (EAttribute)stringValueEClass.getEStructuralFeatures().get(0);
 	}
@@ -2085,6 +2244,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBooleanValue() {
 		return booleanValueEClass;
 	}
@@ -2094,6 +2254,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBooleanValue_Value() {
 		return (EAttribute)booleanValueEClass.getEStructuralFeatures().get(0);
 	}
@@ -2103,6 +2264,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOutputStream() {
 		return outputStreamEClass;
 	}
@@ -2112,6 +2274,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getOutputStream_Stream() {
 		return (EAttribute)outputStreamEClass.getEStructuralFeatures().get(0);
 	}
@@ -2121,6 +2284,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getState() {
 		return stateEClass;
 	}
@@ -2130,6 +2294,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getState_RootFrame() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(0);
 	}
@@ -2139,6 +2304,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getState_ObjectsHeap() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(1);
 	}
@@ -2148,6 +2314,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getState_OutputStream() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(2);
 	}
@@ -2157,6 +2324,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getState_ArraysHeap() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(3);
 	}
@@ -2166,6 +2334,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getState_ContextCache() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(4);
 	}
@@ -2175,6 +2344,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getState_FrameCache() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(5);
 	}
@@ -2184,6 +2354,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFrame() {
 		return frameEClass;
 	}
@@ -2193,6 +2364,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFrame_Call() {
 		return (EReference)frameEClass.getEStructuralFeatures().get(0);
 	}
@@ -2202,6 +2374,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFrame_Instance() {
 		return (EReference)frameEClass.getEStructuralFeatures().get(1);
 	}
@@ -2211,6 +2384,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFrame_ChildFrame() {
 		return (EReference)frameEClass.getEStructuralFeatures().get(2);
 	}
@@ -2220,6 +2394,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFrame_ParentFrame() {
 		return (EReference)frameEClass.getEStructuralFeatures().get(3);
 	}
@@ -2229,6 +2404,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFrame_RootContext() {
 		return (EReference)frameEClass.getEStructuralFeatures().get(4);
 	}
@@ -2238,6 +2414,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFrame_ReturnValue() {
 		return (EReference)frameEClass.getEStructuralFeatures().get(5);
 	}
@@ -2247,6 +2424,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNullValue() {
 		return nullValueEClass;
 	}
@@ -2256,6 +2434,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCall() {
 		return callEClass;
 	}
@@ -2265,6 +2444,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNewCall() {
 		return newCallEClass;
 	}
@@ -2274,6 +2454,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getNewCall_Newz() {
 		return (EReference)newCallEClass.getEStructuralFeatures().get(0);
 	}
@@ -2283,6 +2464,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMethodCall2() {
 		return methodCall2EClass;
 	}
@@ -2292,6 +2474,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMethodCall2_Methodcall() {
 		return (EReference)methodCall2EClass.getEStructuralFeatures().get(0);
 	}
@@ -2301,6 +2484,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getObjectInstance() {
 		return objectInstanceEClass;
 	}
@@ -2310,6 +2494,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getObjectInstance_Fieldbindings() {
 		return (EReference)objectInstanceEClass.getEStructuralFeatures().get(0);
 	}
@@ -2319,6 +2504,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getObjectInstance_Type() {
 		return (EReference)objectInstanceEClass.getEStructuralFeatures().get(1);
 	}
@@ -2328,6 +2514,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArrayInstance() {
 		return arrayInstanceEClass;
 	}
@@ -2337,6 +2524,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayInstance_Value() {
 		return (EReference)arrayInstanceEClass.getEStructuralFeatures().get(0);
 	}
@@ -2346,6 +2534,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArrayInstance_Size() {
 		return (EAttribute)arrayInstanceEClass.getEStructuralFeatures().get(1);
 	}
@@ -2355,6 +2544,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getObjectRefValue() {
 		return objectRefValueEClass;
 	}
@@ -2364,6 +2554,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getObjectRefValue_Instance() {
 		return (EReference)objectRefValueEClass.getEStructuralFeatures().get(0);
 	}
@@ -2373,6 +2564,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArrayRefValue() {
 		return arrayRefValueEClass;
 	}
@@ -2382,6 +2574,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArrayRefValue_Instance() {
 		return (EReference)arrayRefValueEClass.getEStructuralFeatures().get(0);
 	}
@@ -2391,6 +2584,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSymbolToSymbolBindingMap() {
 		return symbolToSymbolBindingMapEClass;
 	}
@@ -2400,6 +2594,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSymbolToSymbolBindingMap_Key() {
 		return (EReference)symbolToSymbolBindingMapEClass.getEStructuralFeatures().get(0);
 	}
@@ -2409,6 +2604,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSymbolToSymbolBindingMap_Value() {
 		return (EReference)symbolToSymbolBindingMapEClass.getEStructuralFeatures().get(1);
 	}
@@ -2418,6 +2614,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getClazzToMethodMap() {
 		return clazzToMethodMapEClass;
 	}
@@ -2427,6 +2624,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getClazzToMethodMap_Key() {
 		return (EReference)clazzToMethodMapEClass.getEStructuralFeatures().get(0);
 	}
@@ -2436,6 +2634,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getClazzToMethodMap_Value() {
 		return (EReference)clazzToMethodMapEClass.getEStructuralFeatures().get(1);
 	}
@@ -2445,6 +2644,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getModulo() {
 		return moduloEClass;
 	}
@@ -2454,6 +2654,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModulo_Left() {
 		return (EReference)moduloEClass.getEStructuralFeatures().get(0);
 	}
@@ -2463,6 +2664,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getModulo_Right() {
 		return (EReference)moduloEClass.getEStructuralFeatures().get(1);
 	}
@@ -2472,6 +2674,27 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public EClass getSqrt() {
+		return sqrtEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getSqrt_Expression() {
+		return (EReference)sqrtEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getAccessLevel() {
 		return accessLevelEEnum;
 	}
@@ -2481,6 +2704,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MiniJavaFactory getMiniJavaFactory() {
 		return (MiniJavaFactory)getEFactoryInstance();
 	}
@@ -2777,6 +3001,9 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		createEReference(moduloEClass, MODULO__LEFT);
 		createEReference(moduloEClass, MODULO__RIGHT);
 
+		sqrtEClass = createEClass(SQRT);
+		createEReference(sqrtEClass, SQRT__EXPRESSION);
+
 		// Create enums
 		accessLevelEEnum = createEEnum(ACCESS_LEVEL);
 	}
@@ -2831,7 +3058,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		assignmentEClass.getESuperTypes().add(this.getStatement());
 		expressionEClass.getESuperTypes().add(this.getStatement());
 		expressionEClass.getESuperTypes().add(this.getAssignee());
-		arrayTypeRefEClass.getESuperTypes().add(this.getTypeRef());
+		arrayTypeRefEClass.getESuperTypes().add(this.getSingleTypeRef());
 		integerTypeRefEClass.getESuperTypes().add(this.getSingleTypeRef());
 		booleanTypeRefEClass.getESuperTypes().add(this.getSingleTypeRef());
 		stringTypeRefEClass.getESuperTypes().add(this.getSingleTypeRef());
@@ -2872,6 +3099,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		objectRefValueEClass.getESuperTypes().add(this.getValue());
 		arrayRefValueEClass.getESuperTypes().add(this.getValue());
 		moduloEClass.getESuperTypes().add(this.getExpression());
+		sqrtEClass.getESuperTypes().add(this.getExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3146,6 +3374,9 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		initEClass(moduloEClass, Modulo.class, "Modulo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModulo_Left(), this.getExpression(), null, "left", null, 0, 1, Modulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModulo_Right(), this.getExpression(), null, "right", null, 0, 1, Modulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sqrtEClass, Sqrt.class, "Sqrt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSqrt_Expression(), this.getExpression(), null, "expression", null, 0, 1, Sqrt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(accessLevelEEnum, AccessLevel.class, "AccessLevel");

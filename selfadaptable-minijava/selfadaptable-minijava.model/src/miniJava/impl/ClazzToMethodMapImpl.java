@@ -230,6 +230,7 @@ public class ClazzToMethodMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getHash() {
 		if (hash == -1) {
 			Object theKey = getKey();
@@ -243,6 +244,7 @@ public class ClazzToMethodMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHash(int hash) {
 		this.hash = hash;
 	}
@@ -252,6 +254,7 @@ public class ClazzToMethodMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Clazz getKey() {
 		return getTypedKey();
 	}
@@ -261,6 +264,7 @@ public class ClazzToMethodMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKey(Clazz key) {
 		setTypedKey(key);
 	}
@@ -270,6 +274,7 @@ public class ClazzToMethodMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Method getValue() {
 		return getTypedValue();
 	}
@@ -279,6 +284,7 @@ public class ClazzToMethodMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Method setValue(Method value) {
 		Method oldValue = getValue();
 		setTypedValue(value);

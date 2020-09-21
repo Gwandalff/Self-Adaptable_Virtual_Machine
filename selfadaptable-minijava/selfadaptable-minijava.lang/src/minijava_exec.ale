@@ -242,6 +242,26 @@ open class miniJava.Expression {
 	} 
 }
 
+open class miniJava.Image{
+	def miniJava::Value evaluateExpression(miniJava::State state) {
+		miniJava::Array currentInstance := self.loadImage(self.url);
+		miniJava::ArrayInstance res := miniJava::ArrayInstance.create();
+		miniJava::IntegerValue sizeArray := self.size.evaluateExpression(state).oclAsType(miniJava::IntegerValue);
+		res.size := sizeArray.value;
+		state.arraysHeap += res;
+		
+		miniJava::Value defaultValue := null;
+		if(self.type.oclIsKindOf(miniJava::IntegerTypeRef)) {
+			miniJava::IntegerValue idv := miniJava::IntegerValue.create();
+			idv.value := 0;
+			defaultValue := idv;
+		} 
+		miniJava::ArrayRefValue ret := miniJava::ArrayRefValue.create();
+		ret.instance := res;
+		result := ret; 
+	}
+}
+
 open class miniJava.This {
 	def miniJava::Value evaluateExpression(miniJava::State state) {
 		miniJava::ObjectInstance currentInstance := state.findCurrentFrame().instance;
@@ -400,6 +420,20 @@ open class miniJava.Modulo {
 				result := null;
 			}
 		} else {
+			result := null;
+		}
+	}
+}
+
+open class miniJava.Sqrt {
+	def miniJava::Value evaluateExpression(miniJava::State state) {
+		miniJava::Value expression := self.expression.evaluateExpression(state);
+		if(expression.oclIsKindOf(miniJava::IntegerValue)) {
+			miniJava::IntegerValue number := expression;
+			miniJava::IntegerValue tmp := miniJava::IntegerValue.create();
+			tmp.value := self.sqrt(number.value);
+			result := tmp;
+		} else { 
 			result := null;
 		}
 	}
@@ -722,7 +756,7 @@ open class miniJava.NewArray {
 					miniJava::NullValue idv := miniJava::NullValue.create();
 					defaultValue := idv;
 				} else {
-					if(self.type.oclIsKindOf(miniJava::ClassRef)) {
+					if(self.type.oclIsKindOf(miniJava::ClassRef) or self.type.oclIsKindOf(miniJava::ArrayTypeRef)) {
 						miniJava::NullValue idv := miniJava::NullValue.create();
 						defaultValue := idv;
 					}	
@@ -738,7 +772,6 @@ open class miniJava.NewArray {
 			res.value += v;
 			i:=i+1;
 		}
-		
 		miniJava::ArrayRefValue ret := miniJava::ArrayRefValue.create();
 		ret.instance := res;
 		result := ret; 

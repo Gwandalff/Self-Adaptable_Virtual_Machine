@@ -61,6 +61,7 @@ public class SymbolRefImpl extends ExpressionImpl implements SymbolRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Symbol getSymbol() {
 		if (symbol != null && symbol.eIsProxy()) {
 			InternalEObject oldSymbol = (InternalEObject)symbol;
@@ -87,6 +88,7 @@ public class SymbolRefImpl extends ExpressionImpl implements SymbolRef {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSymbol(Symbol newSymbol) {
 		Symbol oldSymbol = symbol;
 		symbol = newSymbol;

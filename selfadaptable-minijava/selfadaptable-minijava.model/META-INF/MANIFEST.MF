@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: minijava.model;singleton:=true
-Automatic-Module-Name: minijava.model
+Bundle-SymbolicName: selfadaptable-minijava.model;singleton:=true
+Automatic-Module-Name: selfadaptable-minijava.model
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName

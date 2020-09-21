@@ -24,17 +24,13 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see miniJava.MiniJavaPackage#getState()
- * @model
+ * @model annotation="aspect"
  * @generated
  */
 public interface State extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Root Frame</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Root Frame</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Root Frame</em>' containment reference.
 	 * @see #setRootFrame(Frame)
@@ -58,10 +54,6 @@ public interface State extends EObject {
 	 * Returns the value of the '<em><b>Objects Heap</b></em>' containment reference list.
 	 * The list contents are of type {@link miniJava.ObjectInstance}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Objects Heap</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Objects Heap</em>' containment reference list.
 	 * @see miniJava.MiniJavaPackage#getState_ObjectsHeap()
@@ -73,10 +65,6 @@ public interface State extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Output Stream</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Output Stream</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output Stream</em>' containment reference.
 	 * @see #setOutputStream(OutputStream)
@@ -100,10 +88,6 @@ public interface State extends EObject {
 	 * Returns the value of the '<em><b>Arrays Heap</b></em>' containment reference list.
 	 * The list contents are of type {@link miniJava.ArrayInstance}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Arrays Heap</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arrays Heap</em>' containment reference list.
 	 * @see miniJava.MiniJavaPackage#getState_ArraysHeap()
@@ -115,10 +99,6 @@ public interface State extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Context Cache</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Context Cache</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Context Cache</em>' reference.
 	 * @see #setContextCache(Context)
@@ -141,10 +121,6 @@ public interface State extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Frame Cache</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Frame Cache</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Frame Cache</em>' reference.
 	 * @see #setFrameCache(Frame)

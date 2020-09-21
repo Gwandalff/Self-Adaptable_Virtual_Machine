@@ -35,18 +35,31 @@
 					</execution>
 				</executions>
 			</plugin>
+		<!-- </plugins>
+		<plugins> -->
+			<plugin>
+				<groupId>org.eclipse.emf.ecoretools.ale.compiler</groupId>
+				<artifactId>alecompiler-maven-plugin</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>ale-dsl-compile</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<dslFile>${project.basedir}/src/minijava_exec.dsl</dslFile>
+				</configuration>
+			</plugin>
 		</plugins>
-		<!--<plugins> Enlever le plugin pour eviter la re-generation du visiteur 
-			<plugin> <groupId>org.eclipse.emf.ecoretools.ale.compiler</groupId> <artifactId>alecompiler-maven-plugin</artifactId> 
-			<version>0.0.1-SNAPSHOT</version> <executions> <execution> <phase>generate-sources</phase> 
-			<goals> <goal>ale-dsl-compile</goal> </goals> </execution> </executions> 
-			<configuration> <dslFile>${project.basedir}/src/minijava_exec.dsl</dslFile> 
-			</configuration> </plugin> </plugins> -->
 	</build>
 
 	<properties>
-		<!-- <graalvm.version>19.0.0</graalvm.version> <maven.compiler.source>1.8</maven.compiler.source> 
-			<maven.compiler.target>1.8</maven.compiler.target> -->
+		<!-- <graalvm.version>19.0.0</graalvm.version> -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>

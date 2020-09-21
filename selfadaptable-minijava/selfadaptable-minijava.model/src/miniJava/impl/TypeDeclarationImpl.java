@@ -104,6 +104,7 @@ public class TypeDeclarationImpl extends NamedElementImpl implements TypeDeclara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AccessLevel getAccessLevel() {
 		return accessLevel;
 	}
@@ -113,6 +114,7 @@ public class TypeDeclarationImpl extends NamedElementImpl implements TypeDeclara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAccessLevel(AccessLevel newAccessLevel) {
 		AccessLevel oldAccessLevel = accessLevel;
 		accessLevel = newAccessLevel == null ? ACCESS_LEVEL_EDEFAULT : newAccessLevel;
@@ -125,6 +127,7 @@ public class TypeDeclarationImpl extends NamedElementImpl implements TypeDeclara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getImplementz() {
 		if (implementz == null) {
 			implementz = new EObjectResolvingEList<Interface>(Interface.class, this, MiniJavaPackage.TYPE_DECLARATION__IMPLEMENTZ);
@@ -137,6 +140,7 @@ public class TypeDeclarationImpl extends NamedElementImpl implements TypeDeclara
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Member> getMembers() {
 		if (members == null) {
 			members = new EObjectContainmentEList<Member>(Member.class, this, MiniJavaPackage.TYPE_DECLARATION__MEMBERS);

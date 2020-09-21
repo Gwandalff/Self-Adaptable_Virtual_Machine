@@ -137,6 +137,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 			case MiniJavaPackage.SYMBOL_TO_SYMBOL_BINDING_MAP: return (EObject)createSymbolToSymbolBindingMap();
 			case MiniJavaPackage.CLAZZ_TO_METHOD_MAP: return (EObject)createClazzToMethodMap();
 			case MiniJavaPackage.MODULO: return createModulo();
+			case MiniJavaPackage.SQRT: return createSqrt();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -177,6 +178,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Program createProgram() {
 		ProgramImpl program = new ProgramImpl();
 		return program;
@@ -187,6 +189,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Import createImport() {
 		ImportImpl import_ = new ImportImpl();
 		return import_;
@@ -197,6 +200,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeDeclaration createTypeDeclaration() {
 		TypeDeclarationImpl typeDeclaration = new TypeDeclarationImpl();
 		return typeDeclaration;
@@ -207,6 +211,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Clazz createClazz() {
 		ClazzImpl clazz = new ClazzImpl();
 		return clazz;
@@ -217,6 +222,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface createInterface() {
 		InterfaceImpl interface_ = new InterfaceImpl();
 		return interface_;
@@ -227,6 +233,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Member createMember() {
 		MemberImpl member = new MemberImpl();
 		return member;
@@ -237,6 +244,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Method createMethod() {
 		MethodImpl method = new MethodImpl();
 		return method;
@@ -247,6 +255,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter createParameter() {
 		ParameterImpl parameter = new ParameterImpl();
 		return parameter;
@@ -257,6 +266,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Field createField() {
 		FieldImpl field = new FieldImpl();
 		return field;
@@ -267,6 +277,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block createBlock() {
 		BlockImpl block = new BlockImpl();
 		return block;
@@ -277,6 +288,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Statement createStatement() {
 		StatementImpl statement = new StatementImpl();
 		return statement;
@@ -287,6 +299,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PrintStatement createPrintStatement() {
 		PrintStatementImpl printStatement = new PrintStatementImpl();
 		return printStatement;
@@ -297,6 +310,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Return createReturn() {
 		ReturnImpl return_ = new ReturnImpl();
 		return return_;
@@ -307,6 +321,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IfStatement createIfStatement() {
 		IfStatementImpl ifStatement = new IfStatementImpl();
 		return ifStatement;
@@ -317,6 +332,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WhileStatement createWhileStatement() {
 		WhileStatementImpl whileStatement = new WhileStatementImpl();
 		return whileStatement;
@@ -327,6 +343,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ForStatement createForStatement() {
 		ForStatementImpl forStatement = new ForStatementImpl();
 		return forStatement;
@@ -337,6 +354,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeRef createTypeRef() {
 		TypeRefImpl typeRef = new TypeRefImpl();
 		return typeRef;
@@ -347,6 +365,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SingleTypeRef createSingleTypeRef() {
 		SingleTypeRefImpl singleTypeRef = new SingleTypeRefImpl();
 		return singleTypeRef;
@@ -357,6 +376,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClassRef createClassRef() {
 		ClassRefImpl classRef = new ClassRefImpl();
 		return classRef;
@@ -367,6 +387,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement createNamedElement() {
 		NamedElementImpl namedElement = new NamedElementImpl();
 		return namedElement;
@@ -377,6 +398,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypedDeclaration createTypedDeclaration() {
 		TypedDeclarationImpl typedDeclaration = new TypedDeclarationImpl();
 		return typedDeclaration;
@@ -387,6 +409,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Symbol createSymbol() {
 		SymbolImpl symbol = new SymbolImpl();
 		return symbol;
@@ -397,6 +420,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VariableDeclaration createVariableDeclaration() {
 		VariableDeclarationImpl variableDeclaration = new VariableDeclarationImpl();
 		return variableDeclaration;
@@ -407,6 +431,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Assignment createAssignment() {
 		AssignmentImpl assignment = new AssignmentImpl();
 		return assignment;
@@ -417,6 +442,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Assignee createAssignee() {
 		AssigneeImpl assignee = new AssigneeImpl();
 		return assignee;
@@ -427,6 +453,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression createExpression() {
 		ExpressionImpl expression = new ExpressionImpl();
 		return expression;
@@ -437,6 +464,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArrayTypeRef createArrayTypeRef() {
 		ArrayTypeRefImpl arrayTypeRef = new ArrayTypeRefImpl();
 		return arrayTypeRef;
@@ -447,6 +475,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IntegerTypeRef createIntegerTypeRef() {
 		IntegerTypeRefImpl integerTypeRef = new IntegerTypeRefImpl();
 		return integerTypeRef;
@@ -457,6 +486,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BooleanTypeRef createBooleanTypeRef() {
 		BooleanTypeRefImpl booleanTypeRef = new BooleanTypeRefImpl();
 		return booleanTypeRef;
@@ -467,6 +497,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringTypeRef createStringTypeRef() {
 		StringTypeRefImpl stringTypeRef = new StringTypeRefImpl();
 		return stringTypeRef;
@@ -477,6 +508,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VoidTypeRef createVoidTypeRef() {
 		VoidTypeRefImpl voidTypeRef = new VoidTypeRefImpl();
 		return voidTypeRef;
@@ -487,6 +519,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Or createOr() {
 		OrImpl or = new OrImpl();
 		return or;
@@ -497,6 +530,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public And createAnd() {
 		AndImpl and = new AndImpl();
 		return and;
@@ -507,6 +541,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Equality createEquality() {
 		EqualityImpl equality = new EqualityImpl();
 		return equality;
@@ -517,6 +552,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Inequality createInequality() {
 		InequalityImpl inequality = new InequalityImpl();
 		return inequality;
@@ -527,6 +563,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SuperiorOrEqual createSuperiorOrEqual() {
 		SuperiorOrEqualImpl superiorOrEqual = new SuperiorOrEqualImpl();
 		return superiorOrEqual;
@@ -537,6 +574,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InferiorOrEqual createInferiorOrEqual() {
 		InferiorOrEqualImpl inferiorOrEqual = new InferiorOrEqualImpl();
 		return inferiorOrEqual;
@@ -547,6 +585,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Superior createSuperior() {
 		SuperiorImpl superior = new SuperiorImpl();
 		return superior;
@@ -557,6 +596,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Inferior createInferior() {
 		InferiorImpl inferior = new InferiorImpl();
 		return inferior;
@@ -567,6 +607,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Plus createPlus() {
 		PlusImpl plus = new PlusImpl();
 		return plus;
@@ -577,6 +618,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Minus createMinus() {
 		MinusImpl minus = new MinusImpl();
 		return minus;
@@ -587,6 +629,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Multiplication createMultiplication() {
 		MultiplicationImpl multiplication = new MultiplicationImpl();
 		return multiplication;
@@ -597,6 +640,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Division createDivision() {
 		DivisionImpl division = new DivisionImpl();
 		return division;
@@ -607,6 +651,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArrayAccess createArrayAccess() {
 		ArrayAccessImpl arrayAccess = new ArrayAccessImpl();
 		return arrayAccess;
@@ -617,6 +662,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArrayLength createArrayLength() {
 		ArrayLengthImpl arrayLength = new ArrayLengthImpl();
 		return arrayLength;
@@ -627,6 +673,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Not createNot() {
 		NotImpl not = new NotImpl();
 		return not;
@@ -637,6 +684,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Neg createNeg() {
 		NegImpl neg = new NegImpl();
 		return neg;
@@ -647,6 +695,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FieldAccess createFieldAccess() {
 		FieldAccessImpl fieldAccess = new FieldAccessImpl();
 		return fieldAccess;
@@ -657,6 +706,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MethodCall createMethodCall() {
 		MethodCallImpl methodCall = new MethodCallImpl();
 		return methodCall;
@@ -667,6 +717,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringConstant createStringConstant() {
 		StringConstantImpl stringConstant = new StringConstantImpl();
 		return stringConstant;
@@ -677,6 +728,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IntConstant createIntConstant() {
 		IntConstantImpl intConstant = new IntConstantImpl();
 		return intConstant;
@@ -687,6 +739,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BoolConstant createBoolConstant() {
 		BoolConstantImpl boolConstant = new BoolConstantImpl();
 		return boolConstant;
@@ -697,6 +750,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public This createThis() {
 		ThisImpl this_ = new ThisImpl();
 		return this_;
@@ -707,6 +761,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Super createSuper() {
 		SuperImpl super_ = new SuperImpl();
 		return super_;
@@ -717,6 +772,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Null createNull() {
 		NullImpl null_ = new NullImpl();
 		return null_;
@@ -727,6 +783,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NewObject createNewObject() {
 		NewObjectImpl newObject = new NewObjectImpl();
 		return newObject;
@@ -737,6 +794,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NewArray createNewArray() {
 		NewArrayImpl newArray = new NewArrayImpl();
 		return newArray;
@@ -747,6 +805,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SymbolRef createSymbolRef() {
 		SymbolRefImpl symbolRef = new SymbolRefImpl();
 		return symbolRef;
@@ -757,6 +816,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Context createContext() {
 		ContextImpl context = new ContextImpl();
 		return context;
@@ -767,6 +827,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Value createValue() {
 		ValueImpl value = new ValueImpl();
 		return value;
@@ -777,6 +838,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IntegerValue createIntegerValue() {
 		IntegerValueImpl integerValue = new IntegerValueImpl();
 		return integerValue;
@@ -787,6 +849,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SymbolBinding createSymbolBinding() {
 		SymbolBindingImpl symbolBinding = new SymbolBindingImpl();
 		return symbolBinding;
@@ -797,6 +860,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FieldBinding createFieldBinding() {
 		FieldBindingImpl fieldBinding = new FieldBindingImpl();
 		return fieldBinding;
@@ -807,6 +871,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringValue createStringValue() {
 		StringValueImpl stringValue = new StringValueImpl();
 		return stringValue;
@@ -817,6 +882,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BooleanValue createBooleanValue() {
 		BooleanValueImpl booleanValue = new BooleanValueImpl();
 		return booleanValue;
@@ -827,6 +893,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputStream createOutputStream() {
 		OutputStreamImpl outputStream = new OutputStreamImpl();
 		return outputStream;
@@ -837,6 +904,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public State createState() {
 		StateImpl state = new StateImpl();
 		return state;
@@ -847,6 +915,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Frame createFrame() {
 		FrameImpl frame = new FrameImpl();
 		return frame;
@@ -857,6 +926,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NullValue createNullValue() {
 		NullValueImpl nullValue = new NullValueImpl();
 		return nullValue;
@@ -867,6 +937,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NewCall createNewCall() {
 		NewCallImpl newCall = new NewCallImpl();
 		return newCall;
@@ -877,6 +948,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MethodCall2 createMethodCall2() {
 		MethodCall2Impl methodCall2 = new MethodCall2Impl();
 		return methodCall2;
@@ -887,6 +959,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObjectInstance createObjectInstance() {
 		ObjectInstanceImpl objectInstance = new ObjectInstanceImpl();
 		return objectInstance;
@@ -897,6 +970,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArrayInstance createArrayInstance() {
 		ArrayInstanceImpl arrayInstance = new ArrayInstanceImpl();
 		return arrayInstance;
@@ -907,6 +981,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObjectRefValue createObjectRefValue() {
 		ObjectRefValueImpl objectRefValue = new ObjectRefValueImpl();
 		return objectRefValue;
@@ -917,6 +992,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArrayRefValue createArrayRefValue() {
 		ArrayRefValueImpl arrayRefValue = new ArrayRefValueImpl();
 		return arrayRefValue;
@@ -947,9 +1023,21 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Modulo createModulo() {
 		ModuloImpl modulo = new ModuloImpl();
 		return modulo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Sqrt createSqrt() {
+		SqrtImpl sqrt = new SqrtImpl();
+		return sqrt;
 	}
 
 	/**
@@ -977,6 +1065,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MiniJavaPackage getMiniJavaPackage() {
 		return (MiniJavaPackage)getEPackage();
 	}

@@ -1,4 +1,4 @@
 package visitor.operation.miniJava;
 
-public interface ArrayTypeRefOperation extends TypeRefOperation {
+public interface ArrayTypeRefOperation extends SingleTypeRefOperation {
 }

@@ -16,17 +16,14 @@ package miniJava;
  * </ul>
  *
  * @see miniJava.MiniJavaPackage#getNewCall()
- * @model
+ * @model annotation="aspect"
+ *        annotation="RuntimeData"
  * @generated
  */
 public interface NewCall extends Call {
 	/**
 	 * Returns the value of the '<em><b>Newz</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Newz</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Newz</em>' reference.
 	 * @see #setNewz(NewObject)

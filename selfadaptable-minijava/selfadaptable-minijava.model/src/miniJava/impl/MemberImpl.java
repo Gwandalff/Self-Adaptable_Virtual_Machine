@@ -70,6 +70,7 @@ public class MemberImpl extends TypedDeclarationImpl implements Member {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AccessLevel getAccess() {
 		return access;
 	}
@@ -79,6 +80,7 @@ public class MemberImpl extends TypedDeclarationImpl implements Member {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAccess(AccessLevel newAccess) {
 		AccessLevel oldAccess = access;
 		access = newAccess == null ? ACCESS_EDEFAULT : newAccess;

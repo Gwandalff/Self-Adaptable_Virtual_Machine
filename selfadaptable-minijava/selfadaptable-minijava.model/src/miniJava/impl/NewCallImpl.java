@@ -61,6 +61,7 @@ public class NewCallImpl extends CallImpl implements NewCall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NewObject getNewz() {
 		if (newz != null && newz.eIsProxy()) {
 			InternalEObject oldNewz = (InternalEObject)newz;
@@ -87,6 +88,7 @@ public class NewCallImpl extends CallImpl implements NewCall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNewz(NewObject newNewz) {
 		NewObject oldNewz = newz;
 		newz = newNewz;

@@ -3,9 +3,6 @@ package miniJava.visitor.miniJava.impl;
 import java.lang.Object;
 import java.lang.Override;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-
 import miniJava.visitor.miniJava.Expression;
 import miniJava.visitor.miniJava.Method;
 import miniJava.visitor.miniJava.MethodCall;
@@ -18,13 +15,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import visitor.IDynamicModule;
 import visitor.VisitorInterface;
 
 public class MethodCallImpl extends ExpressionImpl implements MethodCall {
-	protected Set<IDynamicModule> modules;
-	
 	protected Expression receiver;
 
 	protected Method method;
@@ -33,7 +26,6 @@ public class MethodCallImpl extends ExpressionImpl implements MethodCall {
 
 	protected MethodCallImpl() {
 		super();
-		modules = new HashSet<IDynamicModule>();
 	}
 
 	@Override

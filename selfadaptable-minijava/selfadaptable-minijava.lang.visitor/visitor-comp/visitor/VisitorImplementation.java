@@ -58,6 +58,7 @@ import miniJava.visitor.miniJava.PrintStatement;
 import miniJava.visitor.miniJava.Program;
 import miniJava.visitor.miniJava.Return;
 import miniJava.visitor.miniJava.SingleTypeRef;
+import miniJava.visitor.miniJava.Sqrt;
 import miniJava.visitor.miniJava.State;
 import miniJava.visitor.miniJava.Statement;
 import miniJava.visitor.miniJava.StringConstant;
@@ -136,6 +137,7 @@ import visitor.operation.miniJava.PrintStatementOperation;
 import visitor.operation.miniJava.ProgramOperation;
 import visitor.operation.miniJava.ReturnOperation;
 import visitor.operation.miniJava.SingleTypeRefOperation;
+import visitor.operation.miniJava.SqrtOperation;
 import visitor.operation.miniJava.StateOperation;
 import visitor.operation.miniJava.StatementOperation;
 import visitor.operation.miniJava.StringConstantOperation;
@@ -214,6 +216,7 @@ import visitor.operation.miniJava.impl.PrintStatementOperationImpl;
 import visitor.operation.miniJava.impl.ProgramOperationImpl;
 import visitor.operation.miniJava.impl.ReturnOperationImpl;
 import visitor.operation.miniJava.impl.SingleTypeRefOperationImpl;
+import visitor.operation.miniJava.impl.SqrtOperationImpl;
 import visitor.operation.miniJava.impl.StateOperationImpl;
 import visitor.operation.miniJava.impl.StatementOperationImpl;
 import visitor.operation.miniJava.impl.StringConstantOperationImpl;
@@ -547,5 +550,9 @@ public class VisitorImplementation implements VisitorInterface {
 
 	public ModuloOperation visitminiJava__Modulo(Modulo it) {
 		return new ModuloOperationImpl(it, this);
+	}
+
+	public SqrtOperation visitminiJava__Sqrt(Sqrt it) {
+		return new SqrtOperationImpl(it, this);
 	}
 }

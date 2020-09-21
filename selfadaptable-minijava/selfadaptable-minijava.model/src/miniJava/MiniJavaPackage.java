@@ -1324,7 +1324,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARRAY_TYPE_REF__TYPE_REF = TYPE_REF_FEATURE_COUNT + 0;
+	int ARRAY_TYPE_REF__TYPE_REF = SINGLE_TYPE_REF_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Array Type Ref</em>' class.
@@ -1333,7 +1333,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARRAY_TYPE_REF_FEATURE_COUNT = TYPE_REF_FEATURE_COUNT + 1;
+	int ARRAY_TYPE_REF_FEATURE_COUNT = SINGLE_TYPE_REF_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Array Type Ref</em>' class.
@@ -1342,7 +1342,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARRAY_TYPE_REF_OPERATION_COUNT = TYPE_REF_OPERATION_COUNT + 0;
+	int ARRAY_TYPE_REF_OPERATION_COUNT = SINGLE_TYPE_REF_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link miniJava.impl.IntegerTypeRefImpl <em>Integer Type Ref</em>}' class.
@@ -3521,6 +3521,43 @@ public interface MiniJavaPackage extends EPackage {
 	int MODULO_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link miniJava.impl.SqrtImpl <em>Sqrt</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.SqrtImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getSqrt()
+	 * @generated
+	 */
+	int SQRT = 79;
+
+	/**
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SQRT__EXPRESSION = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Sqrt</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SQRT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Sqrt</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SQRT_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link miniJava.AccessLevel <em>Access Level</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3528,7 +3565,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getAccessLevel()
 	 * @generated
 	 */
-	int ACCESS_LEVEL = 79;
+	int ACCESS_LEVEL = 80;
 
 
 	/**
@@ -5591,6 +5628,27 @@ public interface MiniJavaPackage extends EPackage {
 	EReference getModulo_Right();
 
 	/**
+	 * Returns the meta object for class '{@link miniJava.Sqrt <em>Sqrt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sqrt</em>'.
+	 * @see miniJava.Sqrt
+	 * @generated
+	 */
+	EClass getSqrt();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link miniJava.Sqrt#getExpression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
+	 * @see miniJava.Sqrt#getExpression()
+	 * @see #getSqrt()
+	 * @generated
+	 */
+	EReference getSqrt_Expression();
+
+	/**
 	 * Returns the meta object for enum '{@link miniJava.AccessLevel <em>Access Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7332,6 +7390,24 @@ public interface MiniJavaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MODULO__RIGHT = eINSTANCE.getModulo_Right();
+
+		/**
+		 * The meta object literal for the '{@link miniJava.impl.SqrtImpl <em>Sqrt</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see miniJava.impl.SqrtImpl
+		 * @see miniJava.impl.MiniJavaPackageImpl#getSqrt()
+		 * @generated
+		 */
+		EClass SQRT = eINSTANCE.getSqrt();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SQRT__EXPRESSION = eINSTANCE.getSqrt_Expression();
 
 		/**
 		 * The meta object literal for the '{@link miniJava.AccessLevel <em>Access Level</em>}' enum.

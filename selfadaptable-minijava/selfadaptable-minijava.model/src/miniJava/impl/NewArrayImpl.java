@@ -74,6 +74,7 @@ public class NewArrayImpl extends ExpressionImpl implements NewArray {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TypeRef getType() {
 		return type;
 	}
@@ -98,6 +99,7 @@ public class NewArrayImpl extends ExpressionImpl implements NewArray {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(TypeRef newType) {
 		if (newType != type) {
 			NotificationChain msgs = null;
@@ -117,6 +119,7 @@ public class NewArrayImpl extends ExpressionImpl implements NewArray {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression getSize() {
 		return size;
 	}
@@ -141,6 +144,7 @@ public class NewArrayImpl extends ExpressionImpl implements NewArray {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSize(Expression newSize) {
 		if (newSize != size) {
 			NotificationChain msgs = null;
