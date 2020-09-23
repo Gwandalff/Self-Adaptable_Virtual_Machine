@@ -30,6 +30,10 @@ public interface MiniJavaFactory extends EFactory {
 
 	PrintStatement createPrintStatement();
 
+	LoadImage createLoadImage();
+
+	WriteImage createWriteImage();
+
 	Return createReturn();
 
 	IfStatement createIfStatement();

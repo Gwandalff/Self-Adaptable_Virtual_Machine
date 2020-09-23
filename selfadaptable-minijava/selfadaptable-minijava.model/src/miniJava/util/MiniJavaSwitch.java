@@ -158,6 +158,22 @@ public class MiniJavaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MiniJavaPackage.LOAD_IMAGE: {
+				LoadImage loadImage = (LoadImage)theEObject;
+				T result = caseLoadImage(loadImage);
+				if (result == null) result = caseExpression(loadImage);
+				if (result == null) result = caseStatement(loadImage);
+				if (result == null) result = caseAssignee(loadImage);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MiniJavaPackage.WRITE_IMAGE: {
+				WriteImage writeImage = (WriteImage)theEObject;
+				T result = caseWriteImage(writeImage);
+				if (result == null) result = caseStatement(writeImage);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MiniJavaPackage.RETURN: {
 				Return return_ = (Return)theEObject;
 				T result = caseReturn(return_);
@@ -869,6 +885,36 @@ public class MiniJavaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePrintStatement(PrintStatement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Load Image</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Load Image</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLoadImage(LoadImage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Write Image</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Write Image</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWriteImage(WriteImage object) {
 		return null;
 	}
 

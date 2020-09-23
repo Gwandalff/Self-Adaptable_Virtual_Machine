@@ -33,6 +33,7 @@ import miniJava.visitor.miniJava.IntConstant;
 import miniJava.visitor.miniJava.IntegerTypeRef;
 import miniJava.visitor.miniJava.IntegerValue;
 import miniJava.visitor.miniJava.Interface;
+import miniJava.visitor.miniJava.LoadImage;
 import miniJava.visitor.miniJava.Member;
 import miniJava.visitor.miniJava.Method;
 import miniJava.visitor.miniJava.MethodCall;
@@ -79,6 +80,7 @@ import miniJava.visitor.miniJava.Value;
 import miniJava.visitor.miniJava.VariableDeclaration;
 import miniJava.visitor.miniJava.VoidTypeRef;
 import miniJava.visitor.miniJava.WhileStatement;
+import miniJava.visitor.miniJava.WriteImage;
 import visitor.operation.miniJava.AndOperation;
 import visitor.operation.miniJava.ArrayAccessOperation;
 import visitor.operation.miniJava.ArrayInstanceOperation;
@@ -112,6 +114,7 @@ import visitor.operation.miniJava.IntConstantOperation;
 import visitor.operation.miniJava.IntegerTypeRefOperation;
 import visitor.operation.miniJava.IntegerValueOperation;
 import visitor.operation.miniJava.InterfaceOperation;
+import visitor.operation.miniJava.LoadImageOperation;
 import visitor.operation.miniJava.MemberOperation;
 import visitor.operation.miniJava.MethodCall2Operation;
 import visitor.operation.miniJava.MethodCallOperation;
@@ -158,6 +161,7 @@ import visitor.operation.miniJava.ValueOperation;
 import visitor.operation.miniJava.VariableDeclarationOperation;
 import visitor.operation.miniJava.VoidTypeRefOperation;
 import visitor.operation.miniJava.WhileStatementOperation;
+import visitor.operation.miniJava.WriteImageOperation;
 import visitor.operation.miniJava.impl.AndOperationImpl;
 import visitor.operation.miniJava.impl.ArrayAccessOperationImpl;
 import visitor.operation.miniJava.impl.ArrayInstanceOperationImpl;
@@ -191,6 +195,7 @@ import visitor.operation.miniJava.impl.IntConstantOperationImpl;
 import visitor.operation.miniJava.impl.IntegerTypeRefOperationImpl;
 import visitor.operation.miniJava.impl.IntegerValueOperationImpl;
 import visitor.operation.miniJava.impl.InterfaceOperationImpl;
+import visitor.operation.miniJava.impl.LoadImageOperationImpl;
 import visitor.operation.miniJava.impl.MemberOperationImpl;
 import visitor.operation.miniJava.impl.MethodCall2OperationImpl;
 import visitor.operation.miniJava.impl.MethodCallOperationImpl;
@@ -237,6 +242,7 @@ import visitor.operation.miniJava.impl.ValueOperationImpl;
 import visitor.operation.miniJava.impl.VariableDeclarationOperationImpl;
 import visitor.operation.miniJava.impl.VoidTypeRefOperationImpl;
 import visitor.operation.miniJava.impl.WhileStatementOperationImpl;
+import visitor.operation.miniJava.impl.WriteImageOperationImpl;
 
 public class VisitorImplementation implements VisitorInterface {
 	public ProgramOperation visitminiJava__Program(Program it) {
@@ -285,6 +291,14 @@ public class VisitorImplementation implements VisitorInterface {
 
 	public PrintStatementOperation visitminiJava__PrintStatement(PrintStatement it) {
 		return new PrintStatementOperationImpl(it, this);
+	}
+
+	public LoadImageOperation visitminiJava__LoadImage(LoadImage it) {
+		return new LoadImageOperationImpl(it, this);
+	}
+
+	public WriteImageOperation visitminiJava__WriteImage(WriteImage it) {
+		return new WriteImageOperationImpl(it, this);
 	}
 
 	public ReturnOperation visitminiJava__Return(Return it) {

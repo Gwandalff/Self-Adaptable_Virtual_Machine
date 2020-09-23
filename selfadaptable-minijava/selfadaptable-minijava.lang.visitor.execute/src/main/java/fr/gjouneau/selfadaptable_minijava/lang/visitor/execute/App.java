@@ -24,7 +24,7 @@ public class App
 	
     public static void main( String[] args )
     {
-    	program = "/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/sobel.xmi";
+    	program = args[0];
     	loadXMI();
     	((ProgramOperationImpl) minijavaProgram.accept(visitor)).execute();
     }

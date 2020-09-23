@@ -71,6 +71,8 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 			case MiniJavaPackage.BLOCK: return createBlock();
 			case MiniJavaPackage.STATEMENT: return createStatement();
 			case MiniJavaPackage.PRINT_STATEMENT: return createPrintStatement();
+			case MiniJavaPackage.LOAD_IMAGE: return createLoadImage();
+			case MiniJavaPackage.WRITE_IMAGE: return createWriteImage();
 			case MiniJavaPackage.RETURN: return createReturn();
 			case MiniJavaPackage.IF_STATEMENT: return createIfStatement();
 			case MiniJavaPackage.WHILE_STATEMENT: return createWhileStatement();
@@ -303,6 +305,28 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	public PrintStatement createPrintStatement() {
 		PrintStatementImpl printStatement = new PrintStatementImpl();
 		return printStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public LoadImage createLoadImage() {
+		LoadImageImpl loadImage = new LoadImageImpl();
+		return loadImage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public WriteImage createWriteImage() {
+		WriteImageImpl writeImage = new WriteImageImpl();
+		return writeImage;
 	}
 
 	/**

@@ -130,6 +130,24 @@ public interface MiniJavaFactory extends EFactory {
 	PrintStatement createPrintStatement();
 
 	/**
+	 * Returns a new object of class '<em>Load Image</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Load Image</em>'.
+	 * @generated
+	 */
+	LoadImage createLoadImage();
+
+	/**
+	 * Returns a new object of class '<em>Write Image</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Write Image</em>'.
+	 * @generated
+	 */
+	WriteImage createWriteImage();
+
+	/**
 	 * Returns a new object of class '<em>Return</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

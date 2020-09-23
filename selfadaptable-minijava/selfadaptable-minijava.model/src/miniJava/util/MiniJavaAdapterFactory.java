@@ -118,6 +118,14 @@ public class MiniJavaAdapterFactory extends AdapterFactoryImpl {
 				return createPrintStatementAdapter();
 			}
 			@Override
+			public Adapter caseLoadImage(LoadImage object) {
+				return createLoadImageAdapter();
+			}
+			@Override
+			public Adapter caseWriteImage(WriteImage object) {
+				return createWriteImageAdapter();
+			}
+			@Override
 			public Adapter caseReturn(Return object) {
 				return createReturnAdapter();
 			}
@@ -574,6 +582,34 @@ public class MiniJavaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPrintStatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link miniJava.LoadImage <em>Load Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see miniJava.LoadImage
+	 * @generated
+	 */
+	public Adapter createLoadImageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link miniJava.WriteImage <em>Write Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see miniJava.WriteImage
+	 * @generated
+	 */
+	public Adapter createWriteImageAdapter() {
 		return null;
 	}
 

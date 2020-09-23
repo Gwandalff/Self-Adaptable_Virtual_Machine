@@ -39,6 +39,7 @@ import miniJava.visitor.miniJava.IntConstant;
 import miniJava.visitor.miniJava.IntegerTypeRef;
 import miniJava.visitor.miniJava.IntegerValue;
 import miniJava.visitor.miniJava.Interface;
+import miniJava.visitor.miniJava.LoadImage;
 import miniJava.visitor.miniJava.Member;
 import miniJava.visitor.miniJava.Method;
 import miniJava.visitor.miniJava.MethodCall;
@@ -86,6 +87,7 @@ import miniJava.visitor.miniJava.Value;
 import miniJava.visitor.miniJava.VariableDeclaration;
 import miniJava.visitor.miniJava.VoidTypeRef;
 import miniJava.visitor.miniJava.WhileStatement;
+import miniJava.visitor.miniJava.WriteImage;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -137,6 +139,10 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 				return createStatement();
 			case MiniJavaPackage.PRINT_STATEMENT :
 				return createPrintStatement();
+			case MiniJavaPackage.LOAD_IMAGE :
+				return createLoadImage();
+			case MiniJavaPackage.WRITE_IMAGE :
+				return createWriteImage();
 			case MiniJavaPackage.RETURN :
 				return createReturn();
 			case MiniJavaPackage.IF_STATEMENT :
@@ -354,6 +360,16 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	public PrintStatement createPrintStatement() {
 		PrintStatementImpl printStatement = new PrintStatementImpl();
 		return printStatement;
+	}
+
+	public LoadImage createLoadImage() {
+		LoadImageImpl loadImage = new LoadImageImpl();
+		return loadImage;
+	}
+
+	public WriteImage createWriteImage() {
+		WriteImageImpl writeImage = new WriteImageImpl();
+		return writeImage;
 	}
 
 	public Return createReturn() {

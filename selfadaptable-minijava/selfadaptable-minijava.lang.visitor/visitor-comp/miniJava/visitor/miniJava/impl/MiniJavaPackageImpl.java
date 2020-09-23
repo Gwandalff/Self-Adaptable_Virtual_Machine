@@ -35,6 +35,7 @@ import miniJava.visitor.miniJava.IntConstant;
 import miniJava.visitor.miniJava.IntegerTypeRef;
 import miniJava.visitor.miniJava.IntegerValue;
 import miniJava.visitor.miniJava.Interface;
+import miniJava.visitor.miniJava.LoadImage;
 import miniJava.visitor.miniJava.Member;
 import miniJava.visitor.miniJava.Method;
 import miniJava.visitor.miniJava.MethodCall;
@@ -82,6 +83,7 @@ import miniJava.visitor.miniJava.Value;
 import miniJava.visitor.miniJava.VariableDeclaration;
 import miniJava.visitor.miniJava.VoidTypeRef;
 import miniJava.visitor.miniJava.WhileStatement;
+import miniJava.visitor.miniJava.WriteImage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -117,6 +119,10 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	private EClass statementEClass = null;
 
 	private EClass printStatementEClass = null;
+
+	private EClass loadImageEClass = null;
+
+	private EClass writeImageEClass = null;
 
 	private EClass returnEClass = null;
 
@@ -414,6 +420,26 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 
 	public EReference getPrintStatement_Expression() {
 		return (EReference) printStatementEClass.getEStructuralFeatures().get(0);
+	}
+
+	public EClass getLoadImage() {
+		return loadImageEClass;
+	}
+
+	public EReference getLoadImage_Path() {
+		return (EReference) loadImageEClass.getEStructuralFeatures().get(0);
+	}
+
+	public EClass getWriteImage() {
+		return writeImageEClass;
+	}
+
+	public EReference getWriteImage_Path() {
+		return (EReference) writeImageEClass.getEStructuralFeatures().get(0);
+	}
+
+	public EReference getWriteImage_Image() {
+		return (EReference) writeImageEClass.getEStructuralFeatures().get(1);
 	}
 
 	public EClass getReturn() {
@@ -1129,6 +1155,13 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		printStatementEClass = createEClass(PRINT_STATEMENT);
 		createEReference(printStatementEClass, PRINT_STATEMENT__EXPRESSION);
 
+		loadImageEClass = createEClass(LOAD_IMAGE);
+		createEReference(loadImageEClass, LOAD_IMAGE__PATH);
+
+		writeImageEClass = createEClass(WRITE_IMAGE);
+		createEReference(writeImageEClass, WRITE_IMAGE__PATH);
+		createEReference(writeImageEClass, WRITE_IMAGE__IMAGE);
+
 		returnEClass = createEClass(RETURN);
 		createEReference(returnEClass, RETURN__EXPRESSION);
 
@@ -1390,6 +1423,8 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		fieldEClass.getESuperTypes().add(this.getMember());
 		blockEClass.getESuperTypes().add(this.getStatement());
 		printStatementEClass.getESuperTypes().add(this.getStatement());
+		loadImageEClass.getESuperTypes().add(this.getExpression());
+		writeImageEClass.getESuperTypes().add(this.getStatement());
 		returnEClass.getESuperTypes().add(this.getStatement());
 		ifStatementEClass.getESuperTypes().add(this.getStatement());
 		whileStatementEClass.getESuperTypes().add(this.getStatement());
@@ -1489,6 +1524,13 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 
 		initEClass(printStatementEClass, PrintStatement.class, "PrintStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPrintStatement_Expression(), this.getExpression(), null, "expression", null, 0, 1, PrintStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(loadImageEClass, LoadImage.class, "LoadImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLoadImage_Path(), this.getExpression(), null, "path", null, 0, 1, LoadImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(writeImageEClass, WriteImage.class, "WriteImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWriteImage_Path(), this.getExpression(), null, "path", null, 0, 1, WriteImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWriteImage_Image(), this.getExpression(), null, "image", null, 0, 1, WriteImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(returnEClass, Return.class, "Return", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getReturn_Expression(), this.getExpression(), null, "expression", null, 0, 1, Return.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -166,7 +166,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getNamedElement()
 	 * @generated
 	 */
-	int NAMED_ELEMENT = 19;
+	int NAMED_ELEMENT = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -413,7 +413,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getTypedDeclaration()
 	 * @generated
 	 */
-	int TYPED_DECLARATION = 20;
+	int TYPED_DECLARATION = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -614,7 +614,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getSymbol()
 	 * @generated
 	 */
-	int SYMBOL = 21;
+	int SYMBOL = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -865,6 +865,26 @@ public interface MiniJavaPackage extends EPackage {
 	int PRINT_STATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link miniJava.impl.LoadImageImpl <em>Load Image</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.LoadImageImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getLoadImage()
+	 * @generated
+	 */
+	int LOAD_IMAGE = 12;
+
+	/**
+	 * The meta object id for the '{@link miniJava.impl.WriteImageImpl <em>Write Image</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.WriteImageImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getWriteImage()
+	 * @generated
+	 */
+	int WRITE_IMAGE = 13;
+
+	/**
 	 * The meta object id for the '{@link miniJava.impl.ReturnImpl <em>Return</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -872,7 +892,188 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getReturn()
 	 * @generated
 	 */
-	int RETURN = 12;
+	int RETURN = 14;
+
+	/**
+	 * The meta object id for the '{@link miniJava.impl.IfStatementImpl <em>If Statement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.IfStatementImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getIfStatement()
+	 * @generated
+	 */
+	int IF_STATEMENT = 15;
+
+	/**
+	 * The meta object id for the '{@link miniJava.impl.WhileStatementImpl <em>While Statement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.WhileStatementImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getWhileStatement()
+	 * @generated
+	 */
+	int WHILE_STATEMENT = 16;
+
+	/**
+	 * The meta object id for the '{@link miniJava.impl.ForStatementImpl <em>For Statement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.ForStatementImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getForStatement()
+	 * @generated
+	 */
+	int FOR_STATEMENT = 17;
+
+	/**
+	 * The meta object id for the '{@link miniJava.impl.TypeRefImpl <em>Type Ref</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.TypeRefImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getTypeRef()
+	 * @generated
+	 */
+	int TYPE_REF = 18;
+
+	/**
+	 * The meta object id for the '{@link miniJava.impl.SingleTypeRefImpl <em>Single Type Ref</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.SingleTypeRefImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getSingleTypeRef()
+	 * @generated
+	 */
+	int SINGLE_TYPE_REF = 19;
+
+	/**
+	 * The meta object id for the '{@link miniJava.impl.ClassRefImpl <em>Class Ref</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.ClassRefImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getClassRef()
+	 * @generated
+	 */
+	int CLASS_REF = 20;
+
+	/**
+	 * The meta object id for the '{@link miniJava.impl.VariableDeclarationImpl <em>Variable Declaration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.VariableDeclarationImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getVariableDeclaration()
+	 * @generated
+	 */
+	int VARIABLE_DECLARATION = 24;
+
+	/**
+	 * The meta object id for the '{@link miniJava.impl.AssignmentImpl <em>Assignment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.AssignmentImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getAssignment()
+	 * @generated
+	 */
+	int ASSIGNMENT = 25;
+
+	/**
+	 * The meta object id for the '{@link miniJava.impl.AssigneeImpl <em>Assignee</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.AssigneeImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getAssignee()
+	 * @generated
+	 */
+	int ASSIGNEE = 26;
+
+	/**
+	 * The meta object id for the '{@link miniJava.impl.ExpressionImpl <em>Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see miniJava.impl.ExpressionImpl
+	 * @see miniJava.impl.MiniJavaPackageImpl#getExpression()
+	 * @generated
+	 */
+	int EXPRESSION = 27;
+
+	/**
+	 * The number of structural features of the '<em>Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOAD_IMAGE__PATH = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Load Image</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOAD_IMAGE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Load Image</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOAD_IMAGE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRITE_IMAGE__PATH = STATEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Image</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRITE_IMAGE__IMAGE = STATEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Write Image</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRITE_IMAGE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Write Image</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRITE_IMAGE_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -900,16 +1101,6 @@ public interface MiniJavaPackage extends EPackage {
 	 * @ordered
 	 */
 	int RETURN_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link miniJava.impl.IfStatementImpl <em>If Statement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see miniJava.impl.IfStatementImpl
-	 * @see miniJava.impl.MiniJavaPackageImpl#getIfStatement()
-	 * @generated
-	 */
-	int IF_STATEMENT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -957,16 +1148,6 @@ public interface MiniJavaPackage extends EPackage {
 	int IF_STATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link miniJava.impl.WhileStatementImpl <em>While Statement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see miniJava.impl.WhileStatementImpl
-	 * @see miniJava.impl.MiniJavaPackageImpl#getWhileStatement()
-	 * @generated
-	 */
-	int WHILE_STATEMENT = 14;
-
-	/**
 	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1001,16 +1182,6 @@ public interface MiniJavaPackage extends EPackage {
 	 * @ordered
 	 */
 	int WHILE_STATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link miniJava.impl.ForStatementImpl <em>For Statement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see miniJava.impl.ForStatementImpl
-	 * @see miniJava.impl.MiniJavaPackageImpl#getForStatement()
-	 * @generated
-	 */
-	int FOR_STATEMENT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Declaration</b></em>' containment reference.
@@ -1067,16 +1238,6 @@ public interface MiniJavaPackage extends EPackage {
 	int FOR_STATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link miniJava.impl.TypeRefImpl <em>Type Ref</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see miniJava.impl.TypeRefImpl
-	 * @see miniJava.impl.MiniJavaPackageImpl#getTypeRef()
-	 * @generated
-	 */
-	int TYPE_REF = 16;
-
-	/**
 	 * The number of structural features of the '<em>Type Ref</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1095,16 +1256,6 @@ public interface MiniJavaPackage extends EPackage {
 	int TYPE_REF_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link miniJava.impl.SingleTypeRefImpl <em>Single Type Ref</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see miniJava.impl.SingleTypeRefImpl
-	 * @see miniJava.impl.MiniJavaPackageImpl#getSingleTypeRef()
-	 * @generated
-	 */
-	int SINGLE_TYPE_REF = 17;
-
-	/**
 	 * The number of structural features of the '<em>Single Type Ref</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1121,16 +1272,6 @@ public interface MiniJavaPackage extends EPackage {
 	 * @ordered
 	 */
 	int SINGLE_TYPE_REF_OPERATION_COUNT = TYPE_REF_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link miniJava.impl.ClassRefImpl <em>Class Ref</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see miniJava.impl.ClassRefImpl
-	 * @see miniJava.impl.MiniJavaPackageImpl#getClassRef()
-	 * @generated
-	 */
-	int CLASS_REF = 18;
 
 	/**
 	 * The feature id for the '<em><b>Referenced Class</b></em>' reference.
@@ -1158,16 +1299,6 @@ public interface MiniJavaPackage extends EPackage {
 	 * @ordered
 	 */
 	int CLASS_REF_OPERATION_COUNT = SINGLE_TYPE_REF_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link miniJava.impl.VariableDeclarationImpl <em>Variable Declaration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see miniJava.impl.VariableDeclarationImpl
-	 * @see miniJava.impl.MiniJavaPackageImpl#getVariableDeclaration()
-	 * @generated
-	 */
-	int VARIABLE_DECLARATION = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1206,16 +1337,6 @@ public interface MiniJavaPackage extends EPackage {
 	int VARIABLE_DECLARATION_OPERATION_COUNT = SYMBOL_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link miniJava.impl.AssignmentImpl <em>Assignment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see miniJava.impl.AssignmentImpl
-	 * @see miniJava.impl.MiniJavaPackageImpl#getAssignment()
-	 * @generated
-	 */
-	int ASSIGNMENT = 23;
-
-	/**
 	 * The feature id for the '<em><b>Assignee</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1252,16 +1373,6 @@ public interface MiniJavaPackage extends EPackage {
 	int ASSIGNMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link miniJava.impl.AssigneeImpl <em>Assignee</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see miniJava.impl.AssigneeImpl
-	 * @see miniJava.impl.MiniJavaPackageImpl#getAssignee()
-	 * @generated
-	 */
-	int ASSIGNEE = 24;
-
-	/**
 	 * The number of structural features of the '<em>Assignee</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1280,34 +1391,6 @@ public interface MiniJavaPackage extends EPackage {
 	int ASSIGNEE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link miniJava.impl.ExpressionImpl <em>Expression</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see miniJava.impl.ExpressionImpl
-	 * @see miniJava.impl.MiniJavaPackageImpl#getExpression()
-	 * @generated
-	 */
-	int EXPRESSION = 25;
-
-	/**
-	 * The number of structural features of the '<em>Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link miniJava.impl.ArrayTypeRefImpl <em>Array Type Ref</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1315,7 +1398,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getArrayTypeRef()
 	 * @generated
 	 */
-	int ARRAY_TYPE_REF = 26;
+	int ARRAY_TYPE_REF = 28;
 
 	/**
 	 * The feature id for the '<em><b>Type Ref</b></em>' containment reference.
@@ -1352,7 +1435,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getIntegerTypeRef()
 	 * @generated
 	 */
-	int INTEGER_TYPE_REF = 27;
+	int INTEGER_TYPE_REF = 29;
 
 	/**
 	 * The number of structural features of the '<em>Integer Type Ref</em>' class.
@@ -1380,7 +1463,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getBooleanTypeRef()
 	 * @generated
 	 */
-	int BOOLEAN_TYPE_REF = 28;
+	int BOOLEAN_TYPE_REF = 30;
 
 	/**
 	 * The number of structural features of the '<em>Boolean Type Ref</em>' class.
@@ -1408,7 +1491,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getStringTypeRef()
 	 * @generated
 	 */
-	int STRING_TYPE_REF = 29;
+	int STRING_TYPE_REF = 31;
 
 	/**
 	 * The number of structural features of the '<em>String Type Ref</em>' class.
@@ -1436,7 +1519,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getVoidTypeRef()
 	 * @generated
 	 */
-	int VOID_TYPE_REF = 30;
+	int VOID_TYPE_REF = 32;
 
 	/**
 	 * The number of structural features of the '<em>Void Type Ref</em>' class.
@@ -1464,7 +1547,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getOr()
 	 * @generated
 	 */
-	int OR = 31;
+	int OR = 33;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1510,7 +1593,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getAnd()
 	 * @generated
 	 */
-	int AND = 32;
+	int AND = 34;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1556,7 +1639,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getEquality()
 	 * @generated
 	 */
-	int EQUALITY = 33;
+	int EQUALITY = 35;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1602,7 +1685,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getInequality()
 	 * @generated
 	 */
-	int INEQUALITY = 34;
+	int INEQUALITY = 36;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1648,7 +1731,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getSuperiorOrEqual()
 	 * @generated
 	 */
-	int SUPERIOR_OR_EQUAL = 35;
+	int SUPERIOR_OR_EQUAL = 37;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1694,7 +1777,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getInferiorOrEqual()
 	 * @generated
 	 */
-	int INFERIOR_OR_EQUAL = 36;
+	int INFERIOR_OR_EQUAL = 38;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1740,7 +1823,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getSuperior()
 	 * @generated
 	 */
-	int SUPERIOR = 37;
+	int SUPERIOR = 39;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1786,7 +1869,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getInferior()
 	 * @generated
 	 */
-	int INFERIOR = 38;
+	int INFERIOR = 40;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1832,7 +1915,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getPlus()
 	 * @generated
 	 */
-	int PLUS = 39;
+	int PLUS = 41;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1878,7 +1961,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getMinus()
 	 * @generated
 	 */
-	int MINUS = 40;
+	int MINUS = 42;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1924,7 +2007,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getMultiplication()
 	 * @generated
 	 */
-	int MULTIPLICATION = 41;
+	int MULTIPLICATION = 43;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1970,7 +2053,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getDivision()
 	 * @generated
 	 */
-	int DIVISION = 42;
+	int DIVISION = 44;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2016,7 +2099,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getArrayAccess()
 	 * @generated
 	 */
-	int ARRAY_ACCESS = 43;
+	int ARRAY_ACCESS = 45;
 
 	/**
 	 * The feature id for the '<em><b>Object</b></em>' containment reference.
@@ -2062,7 +2145,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getArrayLength()
 	 * @generated
 	 */
-	int ARRAY_LENGTH = 44;
+	int ARRAY_LENGTH = 46;
 
 	/**
 	 * The feature id for the '<em><b>Array</b></em>' containment reference.
@@ -2099,7 +2182,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getNot()
 	 * @generated
 	 */
-	int NOT = 45;
+	int NOT = 47;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -2136,7 +2219,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getNeg()
 	 * @generated
 	 */
-	int NEG = 46;
+	int NEG = 48;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -2173,7 +2256,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getFieldAccess()
 	 * @generated
 	 */
-	int FIELD_ACCESS = 47;
+	int FIELD_ACCESS = 49;
 
 	/**
 	 * The feature id for the '<em><b>Receiver</b></em>' containment reference.
@@ -2219,7 +2302,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getMethodCall()
 	 * @generated
 	 */
-	int METHOD_CALL = 48;
+	int METHOD_CALL = 50;
 
 	/**
 	 * The feature id for the '<em><b>Receiver</b></em>' containment reference.
@@ -2274,7 +2357,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getStringConstant()
 	 * @generated
 	 */
-	int STRING_CONSTANT = 49;
+	int STRING_CONSTANT = 51;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2311,7 +2394,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getIntConstant()
 	 * @generated
 	 */
-	int INT_CONSTANT = 50;
+	int INT_CONSTANT = 52;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2348,7 +2431,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getBoolConstant()
 	 * @generated
 	 */
-	int BOOL_CONSTANT = 51;
+	int BOOL_CONSTANT = 53;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2385,7 +2468,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getThis()
 	 * @generated
 	 */
-	int THIS = 52;
+	int THIS = 54;
 
 	/**
 	 * The number of structural features of the '<em>This</em>' class.
@@ -2413,7 +2496,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getSuper()
 	 * @generated
 	 */
-	int SUPER = 53;
+	int SUPER = 55;
 
 	/**
 	 * The number of structural features of the '<em>Super</em>' class.
@@ -2441,7 +2524,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getNull()
 	 * @generated
 	 */
-	int NULL = 54;
+	int NULL = 56;
 
 	/**
 	 * The number of structural features of the '<em>Null</em>' class.
@@ -2469,7 +2552,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getNewObject()
 	 * @generated
 	 */
-	int NEW_OBJECT = 55;
+	int NEW_OBJECT = 57;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -2515,7 +2598,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getNewArray()
 	 * @generated
 	 */
-	int NEW_ARRAY = 56;
+	int NEW_ARRAY = 58;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -2561,7 +2644,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getSymbolRef()
 	 * @generated
 	 */
-	int SYMBOL_REF = 57;
+	int SYMBOL_REF = 59;
 
 	/**
 	 * The feature id for the '<em><b>Symbol</b></em>' reference.
@@ -2598,7 +2681,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getContext()
 	 * @generated
 	 */
-	int CONTEXT = 58;
+	int CONTEXT = 60;
 
 	/**
 	 * The feature id for the '<em><b>Bindings</b></em>' containment reference list.
@@ -2662,7 +2745,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getValue()
 	 * @generated
 	 */
-	int VALUE = 59;
+	int VALUE = 61;
 
 	/**
 	 * The number of structural features of the '<em>Value</em>' class.
@@ -2690,7 +2773,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getIntegerValue()
 	 * @generated
 	 */
-	int INTEGER_VALUE = 60;
+	int INTEGER_VALUE = 62;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2727,7 +2810,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getSymbolBinding()
 	 * @generated
 	 */
-	int SYMBOL_BINDING = 61;
+	int SYMBOL_BINDING = 63;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -2773,7 +2856,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getFieldBinding()
 	 * @generated
 	 */
-	int FIELD_BINDING = 62;
+	int FIELD_BINDING = 64;
 
 	/**
 	 * The feature id for the '<em><b>Field</b></em>' reference.
@@ -2819,7 +2902,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getStringValue()
 	 * @generated
 	 */
-	int STRING_VALUE = 63;
+	int STRING_VALUE = 65;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2856,7 +2939,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getBooleanValue()
 	 * @generated
 	 */
-	int BOOLEAN_VALUE = 64;
+	int BOOLEAN_VALUE = 66;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2893,7 +2976,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getOutputStream()
 	 * @generated
 	 */
-	int OUTPUT_STREAM = 65;
+	int OUTPUT_STREAM = 67;
 
 	/**
 	 * The feature id for the '<em><b>Stream</b></em>' attribute list.
@@ -2930,7 +3013,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getState()
 	 * @generated
 	 */
-	int STATE = 66;
+	int STATE = 68;
 
 	/**
 	 * The feature id for the '<em><b>Root Frame</b></em>' containment reference.
@@ -3012,7 +3095,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getFrame()
 	 * @generated
 	 */
-	int FRAME = 67;
+	int FRAME = 69;
 
 	/**
 	 * The feature id for the '<em><b>Call</b></em>' containment reference.
@@ -3094,7 +3177,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getNullValue()
 	 * @generated
 	 */
-	int NULL_VALUE = 68;
+	int NULL_VALUE = 70;
 
 	/**
 	 * The number of structural features of the '<em>Null Value</em>' class.
@@ -3122,7 +3205,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getCall()
 	 * @generated
 	 */
-	int CALL = 69;
+	int CALL = 71;
 
 	/**
 	 * The number of structural features of the '<em>Call</em>' class.
@@ -3150,7 +3233,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getNewCall()
 	 * @generated
 	 */
-	int NEW_CALL = 70;
+	int NEW_CALL = 72;
 
 	/**
 	 * The feature id for the '<em><b>Newz</b></em>' reference.
@@ -3187,7 +3270,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getMethodCall2()
 	 * @generated
 	 */
-	int METHOD_CALL2 = 71;
+	int METHOD_CALL2 = 73;
 
 	/**
 	 * The feature id for the '<em><b>Methodcall</b></em>' reference.
@@ -3224,7 +3307,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getObjectInstance()
 	 * @generated
 	 */
-	int OBJECT_INSTANCE = 72;
+	int OBJECT_INSTANCE = 74;
 
 	/**
 	 * The feature id for the '<em><b>Fieldbindings</b></em>' containment reference list.
@@ -3270,7 +3353,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getArrayInstance()
 	 * @generated
 	 */
-	int ARRAY_INSTANCE = 73;
+	int ARRAY_INSTANCE = 75;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' containment reference list.
@@ -3316,7 +3399,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getObjectRefValue()
 	 * @generated
 	 */
-	int OBJECT_REF_VALUE = 74;
+	int OBJECT_REF_VALUE = 76;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' reference.
@@ -3353,7 +3436,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getArrayRefValue()
 	 * @generated
 	 */
-	int ARRAY_REF_VALUE = 75;
+	int ARRAY_REF_VALUE = 77;
 
 	/**
 	 * The feature id for the '<em><b>Instance</b></em>' reference.
@@ -3390,7 +3473,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getSymbolToSymbolBindingMap()
 	 * @generated
 	 */
-	int SYMBOL_TO_SYMBOL_BINDING_MAP = 76;
+	int SYMBOL_TO_SYMBOL_BINDING_MAP = 78;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' reference.
@@ -3436,7 +3519,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getClazzToMethodMap()
 	 * @generated
 	 */
-	int CLAZZ_TO_METHOD_MAP = 77;
+	int CLAZZ_TO_METHOD_MAP = 79;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' reference.
@@ -3482,7 +3565,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getModulo()
 	 * @generated
 	 */
-	int MODULO = 78;
+	int MODULO = 80;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -3528,7 +3611,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getSqrt()
 	 * @generated
 	 */
-	int SQRT = 79;
+	int SQRT = 81;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -3565,7 +3648,7 @@ public interface MiniJavaPackage extends EPackage {
 	 * @see miniJava.impl.MiniJavaPackageImpl#getAccessLevel()
 	 * @generated
 	 */
-	int ACCESS_LEVEL = 80;
+	int ACCESS_LEVEL = 82;
 
 
 	/**
@@ -3896,6 +3979,59 @@ public interface MiniJavaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPrintStatement_Expression();
+
+	/**
+	 * Returns the meta object for class '{@link miniJava.LoadImage <em>Load Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Load Image</em>'.
+	 * @see miniJava.LoadImage
+	 * @generated
+	 */
+	EClass getLoadImage();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link miniJava.LoadImage#getPath <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Path</em>'.
+	 * @see miniJava.LoadImage#getPath()
+	 * @see #getLoadImage()
+	 * @generated
+	 */
+	EReference getLoadImage_Path();
+
+	/**
+	 * Returns the meta object for class '{@link miniJava.WriteImage <em>Write Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Write Image</em>'.
+	 * @see miniJava.WriteImage
+	 * @generated
+	 */
+	EClass getWriteImage();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link miniJava.WriteImage#getPath <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Path</em>'.
+	 * @see miniJava.WriteImage#getPath()
+	 * @see #getWriteImage()
+	 * @generated
+	 */
+	EReference getWriteImage_Path();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link miniJava.WriteImage#getImage <em>Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Image</em>'.
+	 * @see miniJava.WriteImage#getImage()
+	 * @see #getWriteImage()
+	 * @generated
+	 */
+	EReference getWriteImage_Image();
 
 	/**
 	 * Returns the meta object for class '{@link miniJava.Return <em>Return</em>}'.
@@ -5952,6 +6088,50 @@ public interface MiniJavaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PRINT_STATEMENT__EXPRESSION = eINSTANCE.getPrintStatement_Expression();
+
+		/**
+		 * The meta object literal for the '{@link miniJava.impl.LoadImageImpl <em>Load Image</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see miniJava.impl.LoadImageImpl
+		 * @see miniJava.impl.MiniJavaPackageImpl#getLoadImage()
+		 * @generated
+		 */
+		EClass LOAD_IMAGE = eINSTANCE.getLoadImage();
+
+		/**
+		 * The meta object literal for the '<em><b>Path</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOAD_IMAGE__PATH = eINSTANCE.getLoadImage_Path();
+
+		/**
+		 * The meta object literal for the '{@link miniJava.impl.WriteImageImpl <em>Write Image</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see miniJava.impl.WriteImageImpl
+		 * @see miniJava.impl.MiniJavaPackageImpl#getWriteImage()
+		 * @generated
+		 */
+		EClass WRITE_IMAGE = eINSTANCE.getWriteImage();
+
+		/**
+		 * The meta object literal for the '<em><b>Path</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WRITE_IMAGE__PATH = eINSTANCE.getWriteImage_Path();
+
+		/**
+		 * The meta object literal for the '<em><b>Image</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WRITE_IMAGE__IMAGE = eINSTANCE.getWriteImage_Image();
 
 		/**
 		 * The meta object literal for the '{@link miniJava.impl.ReturnImpl <em>Return</em>}' class.

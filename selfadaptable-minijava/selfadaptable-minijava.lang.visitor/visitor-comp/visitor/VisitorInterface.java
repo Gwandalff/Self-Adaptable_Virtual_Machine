@@ -34,6 +34,7 @@ import miniJava.visitor.miniJava.IntConstant;
 import miniJava.visitor.miniJava.IntegerTypeRef;
 import miniJava.visitor.miniJava.IntegerValue;
 import miniJava.visitor.miniJava.Interface;
+import miniJava.visitor.miniJava.LoadImage;
 import miniJava.visitor.miniJava.Member;
 import miniJava.visitor.miniJava.Method;
 import miniJava.visitor.miniJava.MethodCall;
@@ -80,6 +81,7 @@ import miniJava.visitor.miniJava.Value;
 import miniJava.visitor.miniJava.VariableDeclaration;
 import miniJava.visitor.miniJava.VoidTypeRef;
 import miniJava.visitor.miniJava.WhileStatement;
+import miniJava.visitor.miniJava.WriteImage;
 
 public interface VisitorInterface {
 	Object visitminiJava__Program(Program it);
@@ -105,6 +107,10 @@ public interface VisitorInterface {
 	Object visitminiJava__Statement(Statement it);
 
 	Object visitminiJava__PrintStatement(PrintStatement it);
+
+	Object visitminiJava__LoadImage(LoadImage it);
+
+	Object visitminiJava__WriteImage(WriteImage it);
 
 	Object visitminiJava__Return(Return it);
 

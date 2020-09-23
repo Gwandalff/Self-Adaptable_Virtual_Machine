@@ -51,6 +51,13 @@
     <genClasses ecoreClass="MiniJava.ecore#//PrintStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniJava.ecore#//PrintStatement/expression"/>
     </genClasses>
+    <genClasses ecoreClass="MiniJava.ecore#//LoadImage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniJava.ecore#//LoadImage/path"/>
+    </genClasses>
+    <genClasses ecoreClass="MiniJava.ecore#//WriteImage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniJava.ecore#//WriteImage/path"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MiniJava.ecore#//WriteImage/image"/>
+    </genClasses>
     <genClasses ecoreClass="MiniJava.ecore#//Return">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MiniJava.ecore#//Return/expression"/>
     </genClasses>

@@ -36,7 +36,7 @@
 				</executions>
 			</plugin>
 		<!-- </plugins>
-		<plugins> -->
+		<plugins> 
 			<plugin>
 				<groupId>org.eclipse.emf.ecoretools.ale.compiler</groupId>
 				<artifactId>alecompiler-maven-plugin</artifactId>
@@ -52,7 +52,7 @@
 				<configuration>
 					<dslFile>${project.basedir}/src/minijava_exec.dsl</dslFile>
 				</configuration>
-			</plugin>
+			</plugin>-->
 		</plugins>
 	</build>
 

@@ -23,7 +23,16 @@ public class SymbolRefOperationImpl extends ExpressionOperationImpl implements S
 
 	public Value evaluateExpression(State state) {
 		Value result;
-		result = ((Value) (((ValueOperation)((ContextOperation)((StateOperation)state.accept(vis)).findCurrentContext().accept(vis)).findBinding((Symbol) (this.it.getSymbol())).getValue().accept(vis)).copyj()));
+		
+		result = ((Value) (((ValueOperation)
+				((ContextOperation)
+				((StateOperation)state.accept(vis))
+				.findCurrentContext()
+				.accept(vis))
+				.findBinding((Symbol) (this.it.getSymbol()))
+				.getValue()
+				.accept(vis))
+				.copyj()));
 		return result;
 	}
 }

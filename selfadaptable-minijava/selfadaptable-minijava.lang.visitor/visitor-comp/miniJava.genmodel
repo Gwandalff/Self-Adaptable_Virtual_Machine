@@ -2,605 +2,620 @@
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/selfadaptable-minijava.lang.visitor/visitor-comp" complianceLevel="8.0" copyrightFields="false">
   <foreignModel>miniJava.ecore</foreignModel>
   <genPackages prefix="MiniJava" basePackage="miniJava.interpreter" disposableProviderFactory="true">
-    <ecorePackage href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#/"/>
+    <ecorePackage href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#/"/>
     <genEnums typeSafeEnumCompatible="false">
-      <ecoreEnum href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//AccessLevel"/>
+      <ecoreEnum href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//AccessLevel"/>
       <genEnumLiterals>
-        <ecoreEnumLiteral href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//AccessLevel/PRIVATE"/>
+        <ecoreEnumLiteral href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//AccessLevel/PRIVATE"/>
       </genEnumLiterals>
       <genEnumLiterals>
-        <ecoreEnumLiteral href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//AccessLevel/PROTECTED"/>
+        <ecoreEnumLiteral href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//AccessLevel/PROTECTED"/>
       </genEnumLiterals>
       <genEnumLiterals>
-        <ecoreEnumLiteral href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//AccessLevel/PUBLIC"/>
+        <ecoreEnumLiteral href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//AccessLevel/PUBLIC"/>
       </genEnumLiterals>
     </genEnums>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Program"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Program"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Program/name"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Program/name"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Program/imports"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Program/imports"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Program/classes"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Program/classes"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Program/state"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Program/state"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Import"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Import"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Import/importedNamespace"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Import/importedNamespace"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypeDeclaration"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypeDeclaration"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypeDeclaration/accessLevel"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypeDeclaration/accessLevel"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypeDeclaration/implementz"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypeDeclaration/implementz"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypeDeclaration/members"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypeDeclaration/members"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Clazz"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Clazz"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Clazz/isabstract"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Clazz/isabstract"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Clazz/superClass"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Clazz/superClass"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Interface"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Interface"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Member"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Member"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Member/access"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Member/access"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Method"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Method"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Method/isabstract"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Method/isabstract"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Method/isstatic"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Method/isstatic"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Method/params"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Method/params"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Method/body"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Method/body"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Method/cache"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Method/cache"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Parameter"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Parameter"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Field"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Field"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Field/defaultValue"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Block"/>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Block/statements"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Field/defaultValue"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Statement"/>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//PrintStatement"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Block"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//PrintStatement/expression"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Block/statements"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Return"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Statement"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//PrintStatement"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Return/expression"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//PrintStatement/expression"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IfStatement"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//LoadImage"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IfStatement/expression"/>
-      </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IfStatement/thenBlock"/>
-      </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IfStatement/elseBlock"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//LoadImage/path"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//WhileStatement"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//WriteImage"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//WhileStatement/condition"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//WriteImage/path"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//WhileStatement/block"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ForStatement"/>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ForStatement/declaration"/>
-      </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ForStatement/condition"/>
-      </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ForStatement/progression"/>
-      </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ForStatement/block"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//WriteImage/image"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypeRef"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Return"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Return/expression"/>
+      </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SingleTypeRef"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IfStatement"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IfStatement/expression"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IfStatement/thenBlock"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IfStatement/elseBlock"/>
+      </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ClassRef"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//WhileStatement"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//WhileStatement/condition"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//WhileStatement/block"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ForStatement"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ForStatement/declaration"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ForStatement/condition"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ForStatement/progression"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ForStatement/block"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypeRef"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SingleTypeRef"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ClassRef"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ClassRef/referencedClass"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ClassRef/referencedClass"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NamedElement"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NamedElement"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NamedElement/name"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NamedElement/name"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypedDeclaration"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypedDeclaration"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypedDeclaration/typeRef"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//TypedDeclaration/typeRef"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Symbol"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Symbol"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//VariableDeclaration"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//VariableDeclaration"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Assignment"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Assignment"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Assignment/assignee"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Assignment/assignee"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Assignment/value"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Assignee"/>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Expression"/>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayTypeRef"/>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayTypeRef/typeRef"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Assignment/value"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IntegerTypeRef"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Assignee"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//BooleanTypeRef"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Expression"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//StringTypeRef"/>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//VoidTypeRef"/>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Or"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayTypeRef"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Or/left"/>
-      </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Or/right"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayTypeRef/typeRef"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//And"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IntegerTypeRef"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//BooleanTypeRef"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//StringTypeRef"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//VoidTypeRef"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Or"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//And/left"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Or/left"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//And/right"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Or/right"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Equality"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//And"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Equality/left"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//And/left"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Equality/right"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Inequality"/>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Inequality/left"/>
-      </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Inequality/right"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//And/right"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SuperiorOrEqual"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Equality"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SuperiorOrEqual/left"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Equality/left"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SuperiorOrEqual/right"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//InferiorOrEqual"/>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//InferiorOrEqual/left"/>
-      </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//InferiorOrEqual/right"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Equality/right"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Superior"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Inequality"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Superior/left"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Inequality/left"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Superior/right"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Inferior"/>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Inferior/left"/>
-      </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Inferior/right"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Inequality/right"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Plus"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SuperiorOrEqual"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Plus/left"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SuperiorOrEqual/left"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Plus/right"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Minus"/>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Minus/left"/>
-      </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Minus/right"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SuperiorOrEqual/right"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Multiplication"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//InferiorOrEqual"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Multiplication/left"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//InferiorOrEqual/left"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Multiplication/right"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Division"/>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Division/left"/>
-      </genFeatures>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Division/right"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//InferiorOrEqual/right"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayAccess"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Superior"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayAccess/object"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Superior/left"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayAccess/index"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayLength"/>
-      <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayLength/array"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Superior/right"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Not"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Inferior"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Not/expression"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Inferior/left"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Inferior/right"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Neg"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Plus"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Neg/expression"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Plus/left"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Plus/right"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//FieldAccess"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Minus"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//FieldAccess/receiver"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Minus/left"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Minus/right"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Multiplication"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Multiplication/left"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Multiplication/right"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Division"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Division/left"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Division/right"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayAccess"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayAccess/object"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayAccess/index"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayLength"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayLength/array"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Not"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Not/expression"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Neg"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Neg/expression"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//FieldAccess"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//FieldAccess/receiver"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//FieldAccess/field"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//FieldAccess/field"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//MethodCall"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//MethodCall"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//MethodCall/receiver"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//MethodCall/receiver"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//MethodCall/method"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//MethodCall/method"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//MethodCall/args"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//MethodCall/args"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//StringConstant"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//StringConstant"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//StringConstant/value"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//StringConstant/value"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IntConstant"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IntConstant"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IntConstant/value"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IntConstant/value"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//BoolConstant"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//BoolConstant"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//BoolConstant/value"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//BoolConstant/value"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//This"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//This"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Super"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Super"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Null"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Null"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewObject"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewObject"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewObject/type"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewObject/type"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewObject/args"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewObject/args"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewArray"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewArray"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewArray/type"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewArray/type"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewArray/size"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewArray/size"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolRef"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolRef"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolRef/symbol"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolRef/symbol"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Context"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Context"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Context/bindings"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Context/bindings"/>
       </genFeatures>
       <genFeatures property="None" notify="false" createChild="false">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Context/parentContext"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Context/parentContext"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Context/childContext"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Context/childContext"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Context/cache"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Context/cache"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Value"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Value"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IntegerValue"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IntegerValue"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IntegerValue/value"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//IntegerValue/value"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolBinding"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolBinding"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolBinding/value"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolBinding/value"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolBinding/symbol"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolBinding/symbol"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//FieldBinding"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//FieldBinding"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//FieldBinding/field"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//FieldBinding/field"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//FieldBinding/value"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//FieldBinding/value"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//StringValue"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//StringValue"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//StringValue/value"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//StringValue/value"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//BooleanValue"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//BooleanValue"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//BooleanValue/value"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//BooleanValue/value"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//OutputStream"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//OutputStream"/>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//OutputStream/stream"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//OutputStream/stream"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State/rootFrame"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State/rootFrame"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State/objectsHeap"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State/objectsHeap"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State/outputStream"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State/outputStream"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State/arraysHeap"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State/arraysHeap"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State/contextCache"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State/contextCache"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State/frameCache"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//State/frameCache"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame/call"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame/call"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame/instance"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame/instance"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame/childFrame"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame/childFrame"/>
       </genFeatures>
       <genFeatures property="None" notify="false" createChild="false">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame/parentFrame"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame/parentFrame"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame/rootContext"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame/rootContext"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame/returnValue"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Frame/returnValue"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NullValue"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NullValue"/>
     </genClasses>
     <genClasses image="false">
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Call"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Call"/>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewCall"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewCall"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewCall/newz"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//NewCall/newz"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//MethodCall2"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//MethodCall2"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//MethodCall2/methodcall"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//MethodCall2/methodcall"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ObjectInstance"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ObjectInstance"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ObjectInstance/fieldbindings"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ObjectInstance/fieldbindings"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ObjectInstance/type"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ObjectInstance/type"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayInstance"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayInstance"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayInstance/value"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayInstance/value"/>
       </genFeatures>
       <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayInstance/size"/>
+        <ecoreFeature xsi:type="ecore:EAttribute" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayInstance/size"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ObjectRefValue"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ObjectRefValue"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ObjectRefValue/instance"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ObjectRefValue/instance"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayRefValue"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayRefValue"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayRefValue/instance"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ArrayRefValue/instance"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolToSymbolBindingMap"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolToSymbolBindingMap"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolToSymbolBindingMap/key"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolToSymbolBindingMap/key"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolToSymbolBindingMap/value"/>
-      </genFeatures>
-    </genClasses>
-    <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ClazzToMethodMap"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ClazzToMethodMap/key"/>
-      </genFeatures>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ClazzToMethodMap/value"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//SymbolToSymbolBindingMap/value"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Modulo"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ClazzToMethodMap"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ClazzToMethodMap/key"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//ClazzToMethodMap/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Modulo"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Modulo/left"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Modulo/left"/>
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Modulo/right"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Modulo/right"/>
       </genFeatures>
     </genClasses>
     <genClasses>
-      <ecoreClass href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Sqrt"/>
+      <ecoreClass href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Sqrt"/>
       <genFeatures property="None" children="true" createChild="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="/home/gwandalf/Documents/ALE/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Sqrt/expression"/>
+        <ecoreFeature xsi:type="ecore:EReference" href="/home/gjouneau/Documents/Recherche/Self-Adaptable_Virtual_Machine/selfadaptable-minijava/selfadaptable-minijava.model/model/MiniJava.ecore#//Sqrt/expression"/>
       </genFeatures>
     </genClasses>
   </genPackages>

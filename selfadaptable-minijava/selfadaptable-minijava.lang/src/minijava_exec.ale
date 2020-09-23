@@ -2,6 +2,7 @@ behavior minijava_exec;
 
 use minijava.MapService;
 use minijava.MathService;
+use minijava.ImageService;
 
 open class miniJava.Program {
 	@main
@@ -242,23 +243,15 @@ open class miniJava.Expression {
 	} 
 }
 
-open class miniJava.Image{
-	def miniJava::Value evaluateExpression(miniJava::State state) {
-		miniJava::Array currentInstance := self.loadImage(self.url);
-		miniJava::ArrayInstance res := miniJava::ArrayInstance.create();
-		miniJava::IntegerValue sizeArray := self.size.evaluateExpression(state).oclAsType(miniJava::IntegerValue);
-		res.size := sizeArray.value;
-		state.arraysHeap += res;
-		
-		miniJava::Value defaultValue := null;
-		if(self.type.oclIsKindOf(miniJava::IntegerTypeRef)) {
-			miniJava::IntegerValue idv := miniJava::IntegerValue.create();
-			idv.value := 0;
-			defaultValue := idv;
-		} 
-		miniJava::ArrayRefValue ret := miniJava::ArrayRefValue.create();
-		ret.instance := res;
-		result := ret; 
+open class miniJava.LoadImage {
+	def miniJava::Value evaluateExpression(miniJava::State state) {   
+		result := self.loadImage(state, self.path.evaluateExpression(state).customToString());
+	}
+}
+
+open class miniJava.WriteImage {
+	def void evaluateStatement(miniJava::State state) {
+		self.writeImage(self.path.evaluateExpression(state).customToString(), self.image.evaluateExpression(state));
 	}
 }
 
