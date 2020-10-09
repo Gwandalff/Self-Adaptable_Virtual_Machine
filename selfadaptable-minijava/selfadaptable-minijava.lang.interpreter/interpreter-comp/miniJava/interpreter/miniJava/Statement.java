@@ -2,8 +2,8 @@ package miniJava.interpreter.miniJava;
 
 import org.eclipse.emf.ecore.EObject;
 
-import miniJava.interpreter.IDynamicSubject;
+import miniJava.interpreter.IAdaptationNode;
 
-public interface Statement extends EObject, IDynamicSubject {
+public interface Statement extends EObject, IAdaptationNode {
 	void evaluateStatement(State state);
 }

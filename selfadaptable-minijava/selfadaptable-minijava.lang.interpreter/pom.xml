@@ -33,22 +33,22 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- <plugin>
-				<groupId>org.eclipse.emf.ecoretools.ale.compiler</groupId>
-				<artifactId>alecompiler-maven-plugin</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-				<executions>
-					<execution>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>ale-dsl-compile</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<dslFile>${project.basedir}/src/minijava_exec.dsl</dslFile>
-				</configuration>
-			</plugin> -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.eclipse.emf.ecoretools.ale.compiler</groupId> -->
+<!-- 				<artifactId>alecompiler-maven-plugin</artifactId> -->
+<!-- 				<version>0.0.1-SNAPSHOT</version> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<phase>generate-sources</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>ale-dsl-compile</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 				<configuration> -->
+<!-- 					<dslFile>${project.basedir}/src/minijava_exec.dsl</dslFile> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
 		</plugins>
 
 	</build>

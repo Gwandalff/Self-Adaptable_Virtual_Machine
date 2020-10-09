@@ -106,7 +106,7 @@ public class PrintStatementImpl extends StatementImpl implements PrintStatement 
 	}
 
 	public void evaluateStatement(State state) {
-		String res = ((String) ((Value) (((Expression) (this.getExpression())).evaluateExpression((State) (state)))).customToString());
+		String res = ((String) (((Value) (((Expression) (this.getExpression())).evaluateExpression((State) (state)))).customToString()));
 		((State) (state)).println((String) (res));
 	}
 }

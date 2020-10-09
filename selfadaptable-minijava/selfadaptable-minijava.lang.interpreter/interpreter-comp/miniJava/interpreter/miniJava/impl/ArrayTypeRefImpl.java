@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-public class ArrayTypeRefImpl extends TypeRefImpl implements ArrayTypeRef {
+public class ArrayTypeRefImpl extends SingleTypeRefImpl implements ArrayTypeRef {
 	protected SingleTypeRef typeRef;
 
 	protected ArrayTypeRefImpl() {

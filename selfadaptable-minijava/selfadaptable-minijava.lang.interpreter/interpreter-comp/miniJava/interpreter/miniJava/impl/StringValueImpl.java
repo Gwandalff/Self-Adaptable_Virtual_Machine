@@ -87,9 +87,4 @@ public class StringValueImpl extends ValueImpl implements StringValue {
 		result = (Value) (tmp) ;
 		return result;
 	}
-	
-	@Override
-	public boolean equals(Object other) {
-		return other instanceof StringValue && this.getValue().equals(((StringValue) other).getValue());
-	}
 }

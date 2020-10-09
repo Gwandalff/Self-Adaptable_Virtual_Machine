@@ -1,21 +1,11 @@
 package miniJava.interpreter.miniJava.impl;
 
-import java.util.HashSet;
+import java.lang.Deprecated;
+import java.lang.IllegalArgumentException;
+import java.lang.Object;
+import java.lang.Override;
+import java.lang.String;
 import java.util.Map;
-import java.util.Set;
-
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.impl.EFactoryImpl;
-import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
-import miniJava.interpreter.IDynamicModule;
-import miniJava.interpreter.dynamicModules.DynamicApproximateModule;
-import miniJava.interpreter.dynamicModules.DynamicMemoizationModule;
-import miniJava.interpreter.dynamicModules.DynamicPEModule;
-import miniJava.interpreter.dynamicModules.DynamicSemanticInjectionModule;
 import miniJava.interpreter.miniJava.AccessLevel;
 import miniJava.interpreter.miniJava.And;
 import miniJava.interpreter.miniJava.ArrayAccess;
@@ -49,6 +39,7 @@ import miniJava.interpreter.miniJava.IntConstant;
 import miniJava.interpreter.miniJava.IntegerTypeRef;
 import miniJava.interpreter.miniJava.IntegerValue;
 import miniJava.interpreter.miniJava.Interface;
+import miniJava.interpreter.miniJava.LoadImage;
 import miniJava.interpreter.miniJava.Member;
 import miniJava.interpreter.miniJava.Method;
 import miniJava.interpreter.miniJava.MethodCall;
@@ -76,6 +67,7 @@ import miniJava.interpreter.miniJava.PrintStatement;
 import miniJava.interpreter.miniJava.Program;
 import miniJava.interpreter.miniJava.Return;
 import miniJava.interpreter.miniJava.SingleTypeRef;
+import miniJava.interpreter.miniJava.Sqrt;
 import miniJava.interpreter.miniJava.State;
 import miniJava.interpreter.miniJava.Statement;
 import miniJava.interpreter.miniJava.StringConstant;
@@ -95,17 +87,20 @@ import miniJava.interpreter.miniJava.Value;
 import miniJava.interpreter.miniJava.VariableDeclaration;
 import miniJava.interpreter.miniJava.VoidTypeRef;
 import miniJava.interpreter.miniJava.WhileStatement;
+import miniJava.interpreter.miniJava.WriteImage;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory {
-	static Set<IDynamicModule> modules = new HashSet<IDynamicModule>();
-	Set<IDynamicModule> buffer = new HashSet<IDynamicModule>();
-	
 	public MiniJavaFactoryImpl() {
 		super();
 	}
 
 	public static MiniJavaFactory init() {
-		instaciateDynamicModules();
 		try {
 			MiniJavaFactory theMiniJavaFactory = (MiniJavaFactory) EPackage.Registry.INSTANCE.getEFactory(MiniJavaPackage.eNS_URI);
 			if (theMiniJavaFactory != null) {
@@ -119,17 +114,7 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 
 	@Override
 	public EObject create(EClass eClass) {
-		int id = eClass.getClassifierID();
-		
-		buffer.clear();
-		for (IDynamicModule dm : modules) {
-			int[] ids = dm.targetedNodes();
-			for (int i = 0; i < ids.length; i++) {
-				if(ids[i] == id) buffer.add(dm);
-			}
-		}
-		
-		switch (id) {
+		switch (eClass.getClassifierID()) {
 			case MiniJavaPackage.PROGRAM :
 				return createProgram();
 			case MiniJavaPackage.IMPORT :
@@ -154,6 +139,10 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 				return createStatement();
 			case MiniJavaPackage.PRINT_STATEMENT :
 				return createPrintStatement();
+			case MiniJavaPackage.LOAD_IMAGE :
+				return createLoadImage();
+			case MiniJavaPackage.WRITE_IMAGE :
+				return createWriteImage();
 			case MiniJavaPackage.RETURN :
 				return createReturn();
 			case MiniJavaPackage.IF_STATEMENT :
@@ -286,6 +275,8 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 				return (EObject) createClazzToMethodMap();
 			case MiniJavaPackage.MODULO :
 				return createModulo();
+			case MiniJavaPackage.SQRT :
+				return createSqrt();
 			default :
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -358,57 +349,46 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 
 	public Block createBlock() {
 		BlockImpl block = new BlockImpl();
-		for (IDynamicModule dm : buffer) {
-			block.attach(dm);
-		}
 		return block;
 	}
 
 	public Statement createStatement() {
 		StatementImpl statement = new StatementImpl();
-		for (IDynamicModule dm : buffer) {
-			statement.attach(dm);
-		}
 		return statement;
 	}
 
 	public PrintStatement createPrintStatement() {
 		PrintStatementImpl printStatement = new PrintStatementImpl();
-		for (IDynamicModule dm : buffer) {
-			printStatement.attach(dm);
-		}
 		return printStatement;
+	}
+
+	public LoadImage createLoadImage() {
+		LoadImageImpl loadImage = new LoadImageImpl();
+		return loadImage;
+	}
+
+	public WriteImage createWriteImage() {
+		WriteImageImpl writeImage = new WriteImageImpl();
+		return writeImage;
 	}
 
 	public Return createReturn() {
 		ReturnImpl return_ = new ReturnImpl();
-		for (IDynamicModule dm : buffer) {
-			return_.attach(dm);
-		}
 		return return_;
 	}
 
 	public IfStatement createIfStatement() {
 		IfStatementImpl ifStatement = new IfStatementImpl();
-		for (IDynamicModule dm : buffer) {
-			ifStatement.attach(dm);
-		}
 		return ifStatement;
 	}
 
 	public WhileStatement createWhileStatement() {
 		WhileStatementImpl whileStatement = new WhileStatementImpl();
-		for (IDynamicModule dm : buffer) {
-			whileStatement.attach(dm);
-		}
 		return whileStatement;
 	}
 
 	public ForStatement createForStatement() {
 		ForStatementImpl forStatement = new ForStatementImpl();
-		for (IDynamicModule dm : buffer) {
-			forStatement.attach(dm);
-		}
 		return forStatement;
 	}
 
@@ -449,9 +429,6 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 
 	public Assignment createAssignment() {
 		AssignmentImpl assignment = new AssignmentImpl();
-		for (IDynamicModule dm : buffer) {
-			assignment.attach(dm);
-		}
 		return assignment;
 	}
 
@@ -462,9 +439,6 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 
 	public Expression createExpression() {
 		ExpressionImpl expression = new ExpressionImpl();
-		for (IDynamicModule dm : buffer) {
-			expression.attach(dm);
-		}
 		return expression;
 	}
 
@@ -495,217 +469,136 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 
 	public Or createOr() {
 		OrImpl or = new OrImpl();
-		for (IDynamicModule dm : buffer) {
-			or.attach(dm);
-		}
 		return or;
 	}
 
 	public And createAnd() {
 		AndImpl and = new AndImpl();
-		for (IDynamicModule dm : buffer) {
-			and.attach(dm);
-		}
 		return and;
 	}
 
 	public Equality createEquality() {
 		EqualityImpl equality = new EqualityImpl();
-		for (IDynamicModule dm : buffer) {
-			equality.attach(dm);
-		}
 		return equality;
 	}
 
 	public Inequality createInequality() {
 		InequalityImpl inequality = new InequalityImpl();
-		for (IDynamicModule dm : buffer) {
-			inequality.attach(dm);
-		}
 		return inequality;
 	}
 
 	public SuperiorOrEqual createSuperiorOrEqual() {
 		SuperiorOrEqualImpl superiorOrEqual = new SuperiorOrEqualImpl();
-		for (IDynamicModule dm : buffer) {
-			superiorOrEqual.attach(dm);
-		}
 		return superiorOrEqual;
 	}
 
 	public InferiorOrEqual createInferiorOrEqual() {
 		InferiorOrEqualImpl inferiorOrEqual = new InferiorOrEqualImpl();
-		for (IDynamicModule dm : buffer) {
-			inferiorOrEqual.attach(dm);
-		}
 		return inferiorOrEqual;
 	}
 
 	public Superior createSuperior() {
 		SuperiorImpl superior = new SuperiorImpl();
-		for (IDynamicModule dm : buffer) {
-			superior.attach(dm);
-		}
 		return superior;
 	}
 
 	public Inferior createInferior() {
 		InferiorImpl inferior = new InferiorImpl();
-		for (IDynamicModule dm : buffer) {
-			inferior.attach(dm);
-		}
 		return inferior;
 	}
 
 	public Plus createPlus() {
 		PlusImpl plus = new PlusImpl();
-		for (IDynamicModule dm : buffer) {
-			plus.attach(dm);
-		}
 		return plus;
 	}
 
 	public Minus createMinus() {
 		MinusImpl minus = new MinusImpl();
-		for (IDynamicModule dm : buffer) {
-			minus.attach(dm);
-		}
 		return minus;
 	}
 
 	public Multiplication createMultiplication() {
 		MultiplicationImpl multiplication = new MultiplicationImpl();
-		for (IDynamicModule dm : buffer) {
-			multiplication.attach(dm);
-		}
 		return multiplication;
 	}
 
 	public Division createDivision() {
 		DivisionImpl division = new DivisionImpl();
-		for (IDynamicModule dm : buffer) {
-			division.attach(dm);
-		}
 		return division;
 	}
 
 	public ArrayAccess createArrayAccess() {
 		ArrayAccessImpl arrayAccess = new ArrayAccessImpl();
-		for (IDynamicModule dm : buffer) {
-			arrayAccess.attach(dm);
-		}
 		return arrayAccess;
 	}
 
 	public ArrayLength createArrayLength() {
 		ArrayLengthImpl arrayLength = new ArrayLengthImpl();
-		for (IDynamicModule dm : buffer) {
-			arrayLength.attach(dm);
-		}
 		return arrayLength;
 	}
 
 	public Not createNot() {
 		NotImpl not = new NotImpl();
-		for (IDynamicModule dm : buffer) {
-			not.attach(dm);
-		}
 		return not;
 	}
 
 	public Neg createNeg() {
 		NegImpl neg = new NegImpl();
-		for (IDynamicModule dm : buffer) {
-			neg.attach(dm);
-		}
 		return neg;
 	}
 
 	public FieldAccess createFieldAccess() {
 		FieldAccessImpl fieldAccess = new FieldAccessImpl();
-		for (IDynamicModule dm : buffer) {
-			fieldAccess.attach(dm);
-		}
 		return fieldAccess;
 	}
 
 	public MethodCall createMethodCall() {
 		MethodCallImpl methodCall = new MethodCallImpl();
-		for (IDynamicModule dm : buffer) {
-			methodCall.attach(dm);
-		}
 		return methodCall;
 	}
 
 	public StringConstant createStringConstant() {
 		StringConstantImpl stringConstant = new StringConstantImpl();
-		for (IDynamicModule dm : buffer) {
-			stringConstant.attach(dm);
-		}
 		return stringConstant;
 	}
 
 	public IntConstant createIntConstant() {
 		IntConstantImpl intConstant = new IntConstantImpl();
-		for (IDynamicModule dm : buffer) {
-			intConstant.attach(dm);
-		}
 		return intConstant;
 	}
 
 	public BoolConstant createBoolConstant() {
 		BoolConstantImpl boolConstant = new BoolConstantImpl();
-		for (IDynamicModule dm : buffer) {
-			boolConstant.attach(dm);
-		}
 		return boolConstant;
 	}
 
 	public This createThis() {
 		ThisImpl this_ = new ThisImpl();
-		for (IDynamicModule dm : buffer) {
-			this_.attach(dm);
-		}
 		return this_;
 	}
 
 	public Super createSuper() {
 		SuperImpl super_ = new SuperImpl();
-		for (IDynamicModule dm : buffer) {
-			super_.attach(dm);
-		}
 		return super_;
 	}
 
 	public Null createNull() {
 		NullImpl null_ = new NullImpl();
-		for (IDynamicModule dm : buffer) {
-			null_.attach(dm);
-		}
 		return null_;
 	}
 
 	public NewObject createNewObject() {
 		NewObjectImpl newObject = new NewObjectImpl();
-		for (IDynamicModule dm : buffer) {
-			newObject.attach(dm);
-		}
 		return newObject;
 	}
 
 	public NewArray createNewArray() {
 		NewArrayImpl newArray = new NewArrayImpl();
-		for (IDynamicModule dm : buffer) {
-			newArray.attach(dm);
-		}
 		return newArray;
 	}
 
 	public SymbolRef createSymbolRef() {
 		SymbolRefImpl symbolRef = new SymbolRefImpl();
-		for (IDynamicModule dm : buffer) {
-			symbolRef.attach(dm);
-		}
 		return symbolRef;
 	}
 
@@ -806,10 +699,12 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 
 	public Modulo createModulo() {
 		ModuloImpl modulo = new ModuloImpl();
-		for (IDynamicModule dm : buffer) {
-			modulo.attach(dm);
-		}
 		return modulo;
+	}
+
+	public Sqrt createSqrt() {
+		SqrtImpl sqrt = new SqrtImpl();
+		return sqrt;
 	}
 
 	public AccessLevel createAccessLevelFromString(EDataType eDataType, String initialValue) {
@@ -831,12 +726,5 @@ public class MiniJavaFactoryImpl extends EFactoryImpl implements MiniJavaFactory
 	@Deprecated
 	public static MiniJavaPackage getPackage() {
 		return MiniJavaPackage.eINSTANCE;
-	}
-	
-	private static void instaciateDynamicModules() {
-		modules.add(new DynamicApproximateModule());
-		modules.add(new DynamicMemoizationModule());
-		modules.add(new DynamicPEModule());
-		modules.add(new DynamicSemanticInjectionModule());
 	}
 }

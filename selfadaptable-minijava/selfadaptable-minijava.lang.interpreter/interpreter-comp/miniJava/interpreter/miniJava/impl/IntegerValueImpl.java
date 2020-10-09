@@ -7,7 +7,6 @@ import java.lang.String;
 import miniJava.interpreter.miniJava.IntegerValue;
 import miniJava.interpreter.miniJava.MiniJavaFactory;
 import miniJava.interpreter.miniJava.MiniJavaPackage;
-import miniJava.interpreter.miniJava.StringValue;
 import miniJava.interpreter.miniJava.Value;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
@@ -88,10 +87,5 @@ public class IntegerValueImpl extends ValueImpl implements IntegerValue {
 		tmp.setValue(this.value);
 		result = (Value) (tmp) ;
 		return result;
-	}
-	
-	@Override
-	public boolean equals(Object other) {
-		return other instanceof IntegerValue && this.getValue() == ((IntegerValue) other).getValue();
 	}
 }

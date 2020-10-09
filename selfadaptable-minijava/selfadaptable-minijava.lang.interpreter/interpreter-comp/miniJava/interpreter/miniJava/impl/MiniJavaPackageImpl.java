@@ -35,6 +35,7 @@ import miniJava.interpreter.miniJava.IntConstant;
 import miniJava.interpreter.miniJava.IntegerTypeRef;
 import miniJava.interpreter.miniJava.IntegerValue;
 import miniJava.interpreter.miniJava.Interface;
+import miniJava.interpreter.miniJava.LoadImage;
 import miniJava.interpreter.miniJava.Member;
 import miniJava.interpreter.miniJava.Method;
 import miniJava.interpreter.miniJava.MethodCall;
@@ -62,6 +63,7 @@ import miniJava.interpreter.miniJava.PrintStatement;
 import miniJava.interpreter.miniJava.Program;
 import miniJava.interpreter.miniJava.Return;
 import miniJava.interpreter.miniJava.SingleTypeRef;
+import miniJava.interpreter.miniJava.Sqrt;
 import miniJava.interpreter.miniJava.State;
 import miniJava.interpreter.miniJava.Statement;
 import miniJava.interpreter.miniJava.StringConstant;
@@ -81,6 +83,7 @@ import miniJava.interpreter.miniJava.Value;
 import miniJava.interpreter.miniJava.VariableDeclaration;
 import miniJava.interpreter.miniJava.VoidTypeRef;
 import miniJava.interpreter.miniJava.WhileStatement;
+import miniJava.interpreter.miniJava.WriteImage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -116,6 +119,10 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	private EClass statementEClass = null;
 
 	private EClass printStatementEClass = null;
+
+	private EClass loadImageEClass = null;
+
+	private EClass writeImageEClass = null;
 
 	private EClass returnEClass = null;
 
@@ -250,6 +257,8 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 	private EClass clazzToMethodMapEClass = null;
 
 	private EClass moduloEClass = null;
+
+	private EClass sqrtEClass = null;
 
 	private boolean isCreated = false;
 
@@ -411,6 +420,26 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 
 	public EReference getPrintStatement_Expression() {
 		return (EReference) printStatementEClass.getEStructuralFeatures().get(0);
+	}
+
+	public EClass getLoadImage() {
+		return loadImageEClass;
+	}
+
+	public EReference getLoadImage_Path() {
+		return (EReference) loadImageEClass.getEStructuralFeatures().get(0);
+	}
+
+	public EClass getWriteImage() {
+		return writeImageEClass;
+	}
+
+	public EReference getWriteImage_Path() {
+		return (EReference) writeImageEClass.getEStructuralFeatures().get(0);
+	}
+
+	public EReference getWriteImage_Image() {
+		return (EReference) writeImageEClass.getEStructuralFeatures().get(1);
 	}
 
 	public EClass getReturn() {
@@ -1065,6 +1094,14 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		return (EReference) moduloEClass.getEStructuralFeatures().get(1);
 	}
 
+	public EClass getSqrt() {
+		return sqrtEClass;
+	}
+
+	public EReference getSqrt_Expression() {
+		return (EReference) sqrtEClass.getEStructuralFeatures().get(0);
+	}
+
 	public MiniJavaFactory getMiniJavaFactory() {
 		return (MiniJavaFactory) getEFactoryInstance();
 	}
@@ -1117,6 +1154,13 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 
 		printStatementEClass = createEClass(PRINT_STATEMENT);
 		createEReference(printStatementEClass, PRINT_STATEMENT__EXPRESSION);
+
+		loadImageEClass = createEClass(LOAD_IMAGE);
+		createEReference(loadImageEClass, LOAD_IMAGE__PATH);
+
+		writeImageEClass = createEClass(WRITE_IMAGE);
+		createEReference(writeImageEClass, WRITE_IMAGE__PATH);
+		createEReference(writeImageEClass, WRITE_IMAGE__IMAGE);
 
 		returnEClass = createEClass(RETURN);
 		createEReference(returnEClass, RETURN__EXPRESSION);
@@ -1348,6 +1392,9 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		createEReference(moduloEClass, MODULO__LEFT);
 		createEReference(moduloEClass, MODULO__RIGHT);
 
+		sqrtEClass = createEClass(SQRT);
+		createEReference(sqrtEClass, SQRT__EXPRESSION);
+
 		// Create enums
 		accessLevelEEnum = createEEnum(ACCESS_LEVEL);
 	}
@@ -1376,6 +1423,8 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		fieldEClass.getESuperTypes().add(this.getMember());
 		blockEClass.getESuperTypes().add(this.getStatement());
 		printStatementEClass.getESuperTypes().add(this.getStatement());
+		loadImageEClass.getESuperTypes().add(this.getExpression());
+		writeImageEClass.getESuperTypes().add(this.getStatement());
 		returnEClass.getESuperTypes().add(this.getStatement());
 		ifStatementEClass.getESuperTypes().add(this.getStatement());
 		whileStatementEClass.getESuperTypes().add(this.getStatement());
@@ -1389,7 +1438,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		assignmentEClass.getESuperTypes().add(this.getStatement());
 		expressionEClass.getESuperTypes().add(this.getStatement());
 		expressionEClass.getESuperTypes().add(this.getAssignee());
-		arrayTypeRefEClass.getESuperTypes().add(this.getTypeRef());
+		arrayTypeRefEClass.getESuperTypes().add(this.getSingleTypeRef());
 		integerTypeRefEClass.getESuperTypes().add(this.getSingleTypeRef());
 		booleanTypeRefEClass.getESuperTypes().add(this.getSingleTypeRef());
 		stringTypeRefEClass.getESuperTypes().add(this.getSingleTypeRef());
@@ -1430,6 +1479,7 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		objectRefValueEClass.getESuperTypes().add(this.getValue());
 		arrayRefValueEClass.getESuperTypes().add(this.getValue());
 		moduloEClass.getESuperTypes().add(this.getExpression());
+		sqrtEClass.getESuperTypes().add(this.getExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1474,6 +1524,13 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 
 		initEClass(printStatementEClass, PrintStatement.class, "PrintStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPrintStatement_Expression(), this.getExpression(), null, "expression", null, 0, 1, PrintStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(loadImageEClass, LoadImage.class, "LoadImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLoadImage_Path(), this.getExpression(), null, "path", null, 0, 1, LoadImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(writeImageEClass, WriteImage.class, "WriteImage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWriteImage_Path(), this.getExpression(), null, "path", null, 0, 1, WriteImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWriteImage_Image(), this.getExpression(), null, "image", null, 0, 1, WriteImage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(returnEClass, Return.class, "Return", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getReturn_Expression(), this.getExpression(), null, "expression", null, 0, 1, Return.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1704,6 +1761,9 @@ public class MiniJavaPackageImpl extends EPackageImpl implements MiniJavaPackage
 		initEClass(moduloEClass, Modulo.class, "Modulo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModulo_Left(), this.getExpression(), null, "left", null, 0, 1, Modulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModulo_Right(), this.getExpression(), null, "right", null, 0, 1, Modulo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sqrtEClass, Sqrt.class, "Sqrt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSqrt_Expression(), this.getExpression(), null, "expression", null, 0, 1, Sqrt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(accessLevelEEnum, AccessLevel.class, "AccessLevel");

@@ -4,6 +4,7 @@ import java.lang.Object;
 import java.lang.Override;
 import miniJava.interpreter.miniJava.ArrayInstance;
 import miniJava.interpreter.miniJava.ArrayRefValue;
+import miniJava.interpreter.miniJava.ArrayTypeRef;
 import miniJava.interpreter.miniJava.BooleanTypeRef;
 import miniJava.interpreter.miniJava.BooleanValue;
 import miniJava.interpreter.miniJava.ClassRef;
@@ -184,7 +185,7 @@ public class NewArrayImpl extends ExpressionImpl implements NewArray {
 					defaultValue = idv;
 				}
 				else {
-					if (this.getType() instanceof ClassRef) {
+					if (((this.getType() instanceof ClassRef) || (this.getType() instanceof ArrayTypeRef))) {
 						NullValue idv = ((NullValue) (MiniJavaFactory.eINSTANCE.createNullValue()));
 						defaultValue = idv;
 					}

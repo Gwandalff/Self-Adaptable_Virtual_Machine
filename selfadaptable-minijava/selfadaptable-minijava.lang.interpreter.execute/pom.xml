@@ -33,11 +33,6 @@
 			<artifactId>selfadaptable-minijava.lang.interpreter</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>minijava.lang.xtext</groupId>
-			<artifactId>minijava.lang.xtext</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
 
 	<build>

@@ -1,12 +1,12 @@
 package miniJava.interpreter.miniJava;
 
-import java.lang.String;
-import miniJava.interpreter.miniJava.impl.MiniJavaPackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import miniJava.interpreter.miniJava.impl.MiniJavaPackageImpl;
 
 public interface MiniJavaPackage extends EPackage {
 	String eNAME = "miniJava";
@@ -193,7 +193,31 @@ public interface MiniJavaPackage extends EPackage {
 
 	int PRINT_STATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
-	int RETURN = 15;
+	int EXPRESSION = 15;
+
+	int EXPRESSION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 0;
+
+	int EXPRESSION_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
+
+	int LOAD_IMAGE = 16;
+
+	int LOAD_IMAGE__PATH = 0;
+
+	int LOAD_IMAGE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	int LOAD_IMAGE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	int WRITE_IMAGE = 17;
+
+	int WRITE_IMAGE__PATH = 0;
+
+	int WRITE_IMAGE__IMAGE = 1;
+
+	int WRITE_IMAGE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+	int WRITE_IMAGE_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
+
+	int RETURN = 18;
 
 	int RETURN__EXPRESSION = 0;
 
@@ -201,7 +225,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int RETURN_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
-	int IF_STATEMENT = 16;
+	int IF_STATEMENT = 19;
 
 	int IF_STATEMENT__EXPRESSION = 0;
 
@@ -213,7 +237,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int IF_STATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
-	int WHILE_STATEMENT = 17;
+	int WHILE_STATEMENT = 20;
 
 	int WHILE_STATEMENT__CONDITION = 0;
 
@@ -223,7 +247,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int WHILE_STATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
-	int FOR_STATEMENT = 18;
+	int FOR_STATEMENT = 21;
 
 	int FOR_STATEMENT__DECLARATION = 0;
 
@@ -237,19 +261,19 @@ public interface MiniJavaPackage extends EPackage {
 
 	int FOR_STATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
-	int TYPE_REF = 19;
+	int TYPE_REF = 22;
 
 	int TYPE_REF_FEATURE_COUNT = 0;
 
 	int TYPE_REF_OPERATION_COUNT = 0;
 
-	int SINGLE_TYPE_REF = 20;
+	int SINGLE_TYPE_REF = 23;
 
 	int SINGLE_TYPE_REF_FEATURE_COUNT = TYPE_REF_FEATURE_COUNT + 0;
 
 	int SINGLE_TYPE_REF_OPERATION_COUNT = TYPE_REF_OPERATION_COUNT + 0;
 
-	int CLASS_REF = 21;
+	int CLASS_REF = 24;
 
 	int CLASS_REF__REFERENCED_CLASS = 0;
 
@@ -257,7 +281,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int CLASS_REF_OPERATION_COUNT = SINGLE_TYPE_REF_OPERATION_COUNT + 0;
 
-	int VARIABLE_DECLARATION = 22;
+	int VARIABLE_DECLARATION = 25;
 
 	int VARIABLE_DECLARATION__NAME = NAMED_ELEMENT__NAME;
 
@@ -267,7 +291,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int VARIABLE_DECLARATION_OPERATION_COUNT = SYMBOL_OPERATION_COUNT + 0;
 
-	int ASSIGNMENT = 23;
+	int ASSIGNMENT = 26;
 
 	int ASSIGNMENT__ASSIGNEE = 0;
 
@@ -277,51 +301,45 @@ public interface MiniJavaPackage extends EPackage {
 
 	int ASSIGNMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
-	int ASSIGNEE = 24;
+	int ASSIGNEE = 27;
 
 	int ASSIGNEE_FEATURE_COUNT = 0;
 
 	int ASSIGNEE_OPERATION_COUNT = 0;
 
-	int EXPRESSION = 25;
-
-	int EXPRESSION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 0;
-
-	int EXPRESSION_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
-
-	int ARRAY_TYPE_REF = 26;
+	int ARRAY_TYPE_REF = 28;
 
 	int ARRAY_TYPE_REF__TYPE_REF = 0;
 
-	int ARRAY_TYPE_REF_FEATURE_COUNT = TYPE_REF_FEATURE_COUNT + 1;
+	int ARRAY_TYPE_REF_FEATURE_COUNT = SINGLE_TYPE_REF_FEATURE_COUNT + 1;
 
-	int ARRAY_TYPE_REF_OPERATION_COUNT = TYPE_REF_OPERATION_COUNT + 0;
+	int ARRAY_TYPE_REF_OPERATION_COUNT = SINGLE_TYPE_REF_OPERATION_COUNT + 0;
 
-	int INTEGER_TYPE_REF = 27;
+	int INTEGER_TYPE_REF = 29;
 
 	int INTEGER_TYPE_REF_FEATURE_COUNT = SINGLE_TYPE_REF_FEATURE_COUNT + 0;
 
 	int INTEGER_TYPE_REF_OPERATION_COUNT = SINGLE_TYPE_REF_OPERATION_COUNT + 0;
 
-	int BOOLEAN_TYPE_REF = 28;
+	int BOOLEAN_TYPE_REF = 30;
 
 	int BOOLEAN_TYPE_REF_FEATURE_COUNT = SINGLE_TYPE_REF_FEATURE_COUNT + 0;
 
 	int BOOLEAN_TYPE_REF_OPERATION_COUNT = SINGLE_TYPE_REF_OPERATION_COUNT + 0;
 
-	int STRING_TYPE_REF = 29;
+	int STRING_TYPE_REF = 31;
 
 	int STRING_TYPE_REF_FEATURE_COUNT = SINGLE_TYPE_REF_FEATURE_COUNT + 0;
 
 	int STRING_TYPE_REF_OPERATION_COUNT = SINGLE_TYPE_REF_OPERATION_COUNT + 0;
 
-	int VOID_TYPE_REF = 30;
+	int VOID_TYPE_REF = 32;
 
 	int VOID_TYPE_REF_FEATURE_COUNT = SINGLE_TYPE_REF_FEATURE_COUNT + 0;
 
 	int VOID_TYPE_REF_OPERATION_COUNT = SINGLE_TYPE_REF_OPERATION_COUNT + 0;
 
-	int OR = 31;
+	int OR = 33;
 
 	int OR__LEFT = 0;
 
@@ -331,7 +349,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int OR_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int AND = 32;
+	int AND = 34;
 
 	int AND__LEFT = 0;
 
@@ -341,7 +359,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int AND_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int EQUALITY = 33;
+	int EQUALITY = 35;
 
 	int EQUALITY__LEFT = 0;
 
@@ -351,7 +369,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int EQUALITY_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int INEQUALITY = 34;
+	int INEQUALITY = 36;
 
 	int INEQUALITY__LEFT = 0;
 
@@ -361,7 +379,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int INEQUALITY_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int SUPERIOR_OR_EQUAL = 35;
+	int SUPERIOR_OR_EQUAL = 37;
 
 	int SUPERIOR_OR_EQUAL__LEFT = 0;
 
@@ -371,7 +389,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int SUPERIOR_OR_EQUAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int INFERIOR_OR_EQUAL = 36;
+	int INFERIOR_OR_EQUAL = 38;
 
 	int INFERIOR_OR_EQUAL__LEFT = 0;
 
@@ -381,7 +399,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int INFERIOR_OR_EQUAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int SUPERIOR = 37;
+	int SUPERIOR = 39;
 
 	int SUPERIOR__LEFT = 0;
 
@@ -391,7 +409,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int SUPERIOR_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int INFERIOR = 38;
+	int INFERIOR = 40;
 
 	int INFERIOR__LEFT = 0;
 
@@ -401,7 +419,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int INFERIOR_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int PLUS = 39;
+	int PLUS = 41;
 
 	int PLUS__LEFT = 0;
 
@@ -411,7 +429,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int PLUS_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int MINUS = 40;
+	int MINUS = 42;
 
 	int MINUS__LEFT = 0;
 
@@ -421,7 +439,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int MINUS_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int MULTIPLICATION = 41;
+	int MULTIPLICATION = 43;
 
 	int MULTIPLICATION__LEFT = 0;
 
@@ -431,7 +449,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int MULTIPLICATION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int DIVISION = 42;
+	int DIVISION = 44;
 
 	int DIVISION__LEFT = 0;
 
@@ -441,7 +459,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int DIVISION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int ARRAY_ACCESS = 43;
+	int ARRAY_ACCESS = 45;
 
 	int ARRAY_ACCESS__OBJECT = 0;
 
@@ -451,7 +469,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int ARRAY_ACCESS_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int ARRAY_LENGTH = 44;
+	int ARRAY_LENGTH = 46;
 
 	int ARRAY_LENGTH__ARRAY = 0;
 
@@ -459,7 +477,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int ARRAY_LENGTH_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int NOT = 45;
+	int NOT = 47;
 
 	int NOT__EXPRESSION = 0;
 
@@ -467,7 +485,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int NOT_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int NEG = 46;
+	int NEG = 48;
 
 	int NEG__EXPRESSION = 0;
 
@@ -475,7 +493,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int NEG_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int FIELD_ACCESS = 47;
+	int FIELD_ACCESS = 49;
 
 	int FIELD_ACCESS__RECEIVER = 0;
 
@@ -485,7 +503,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int FIELD_ACCESS_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int METHOD_CALL = 48;
+	int METHOD_CALL = 50;
 
 	int METHOD_CALL__RECEIVER = 0;
 
@@ -497,7 +515,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int METHOD_CALL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int STRING_CONSTANT = 49;
+	int STRING_CONSTANT = 51;
 
 	int STRING_CONSTANT__VALUE = 0;
 
@@ -505,7 +523,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int STRING_CONSTANT_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int INT_CONSTANT = 50;
+	int INT_CONSTANT = 52;
 
 	int INT_CONSTANT__VALUE = 0;
 
@@ -513,7 +531,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int INT_CONSTANT_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int BOOL_CONSTANT = 51;
+	int BOOL_CONSTANT = 53;
 
 	int BOOL_CONSTANT__VALUE = 0;
 
@@ -521,25 +539,25 @@ public interface MiniJavaPackage extends EPackage {
 
 	int BOOL_CONSTANT_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int THIS = 52;
+	int THIS = 54;
 
 	int THIS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
 	int THIS_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int SUPER = 53;
+	int SUPER = 55;
 
 	int SUPER_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
 	int SUPER_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int NULL = 54;
+	int NULL = 56;
 
 	int NULL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
 	int NULL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int NEW_OBJECT = 55;
+	int NEW_OBJECT = 57;
 
 	int NEW_OBJECT__TYPE = 0;
 
@@ -549,7 +567,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int NEW_OBJECT_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int NEW_ARRAY = 56;
+	int NEW_ARRAY = 58;
 
 	int NEW_ARRAY__TYPE = 0;
 
@@ -559,7 +577,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int NEW_ARRAY_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int SYMBOL_REF = 57;
+	int SYMBOL_REF = 59;
 
 	int SYMBOL_REF__SYMBOL = 0;
 
@@ -567,7 +585,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int SYMBOL_REF_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int CONTEXT = 58;
+	int CONTEXT = 60;
 
 	int CONTEXT__BINDINGS = 0;
 
@@ -581,13 +599,13 @@ public interface MiniJavaPackage extends EPackage {
 
 	int CONTEXT_OPERATION_COUNT = 0;
 
-	int VALUE = 59;
+	int VALUE = 61;
 
 	int VALUE_FEATURE_COUNT = 0;
 
 	int VALUE_OPERATION_COUNT = 0;
 
-	int INTEGER_VALUE = 60;
+	int INTEGER_VALUE = 62;
 
 	int INTEGER_VALUE__VALUE = 0;
 
@@ -595,7 +613,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int INTEGER_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
-	int SYMBOL_BINDING = 61;
+	int SYMBOL_BINDING = 63;
 
 	int SYMBOL_BINDING__VALUE = 0;
 
@@ -605,7 +623,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int SYMBOL_BINDING_OPERATION_COUNT = 0;
 
-	int FIELD_BINDING = 62;
+	int FIELD_BINDING = 64;
 
 	int FIELD_BINDING__FIELD = 0;
 
@@ -615,7 +633,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int FIELD_BINDING_OPERATION_COUNT = 0;
 
-	int STRING_VALUE = 63;
+	int STRING_VALUE = 65;
 
 	int STRING_VALUE__VALUE = 0;
 
@@ -623,7 +641,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int STRING_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
-	int BOOLEAN_VALUE = 64;
+	int BOOLEAN_VALUE = 66;
 
 	int BOOLEAN_VALUE__VALUE = 0;
 
@@ -631,7 +649,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int BOOLEAN_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
-	int OUTPUT_STREAM = 65;
+	int OUTPUT_STREAM = 67;
 
 	int OUTPUT_STREAM__STREAM = 0;
 
@@ -639,7 +657,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int OUTPUT_STREAM_OPERATION_COUNT = 0;
 
-	int STATE = 66;
+	int STATE = 68;
 
 	int STATE__ROOT_FRAME = 0;
 
@@ -657,7 +675,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int STATE_OPERATION_COUNT = 0;
 
-	int FRAME = 67;
+	int FRAME = 69;
 
 	int FRAME__CALL = 0;
 
@@ -675,19 +693,19 @@ public interface MiniJavaPackage extends EPackage {
 
 	int FRAME_OPERATION_COUNT = 0;
 
-	int NULL_VALUE = 68;
+	int NULL_VALUE = 70;
 
 	int NULL_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 0;
 
 	int NULL_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
-	int CALL = 69;
+	int CALL = 71;
 
 	int CALL_FEATURE_COUNT = 0;
 
 	int CALL_OPERATION_COUNT = 0;
 
-	int NEW_CALL = 70;
+	int NEW_CALL = 72;
 
 	int NEW_CALL__NEWZ = 0;
 
@@ -695,7 +713,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int NEW_CALL_OPERATION_COUNT = CALL_OPERATION_COUNT + 0;
 
-	int METHOD_CALL2 = 71;
+	int METHOD_CALL2 = 73;
 
 	int METHOD_CALL2__METHODCALL = 0;
 
@@ -703,7 +721,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int METHOD_CALL2_OPERATION_COUNT = CALL_OPERATION_COUNT + 0;
 
-	int OBJECT_INSTANCE = 72;
+	int OBJECT_INSTANCE = 74;
 
 	int OBJECT_INSTANCE__FIELDBINDINGS = 0;
 
@@ -713,7 +731,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int OBJECT_INSTANCE_OPERATION_COUNT = 0;
 
-	int ARRAY_INSTANCE = 73;
+	int ARRAY_INSTANCE = 75;
 
 	int ARRAY_INSTANCE__VALUE = 0;
 
@@ -723,7 +741,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int ARRAY_INSTANCE_OPERATION_COUNT = 0;
 
-	int OBJECT_REF_VALUE = 74;
+	int OBJECT_REF_VALUE = 76;
 
 	int OBJECT_REF_VALUE__INSTANCE = 0;
 
@@ -731,7 +749,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int OBJECT_REF_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
-	int ARRAY_REF_VALUE = 75;
+	int ARRAY_REF_VALUE = 77;
 
 	int ARRAY_REF_VALUE__INSTANCE = 0;
 
@@ -739,7 +757,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int ARRAY_REF_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
-	int SYMBOL_TO_SYMBOL_BINDING_MAP = 76;
+	int SYMBOL_TO_SYMBOL_BINDING_MAP = 78;
 
 	int SYMBOL_TO_SYMBOL_BINDING_MAP__KEY = 0;
 
@@ -749,7 +767,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int SYMBOL_TO_SYMBOL_BINDING_MAP_OPERATION_COUNT = 0;
 
-	int CLAZZ_TO_METHOD_MAP = 77;
+	int CLAZZ_TO_METHOD_MAP = 79;
 
 	int CLAZZ_TO_METHOD_MAP__KEY = 0;
 
@@ -759,7 +777,7 @@ public interface MiniJavaPackage extends EPackage {
 
 	int CLAZZ_TO_METHOD_MAP_OPERATION_COUNT = 0;
 
-	int MODULO = 78;
+	int MODULO = 80;
 
 	int MODULO__LEFT = 0;
 
@@ -769,7 +787,15 @@ public interface MiniJavaPackage extends EPackage {
 
 	int MODULO_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
-	int ACCESS_LEVEL = 79;
+	int SQRT = 81;
+
+	int SQRT__EXPRESSION = 0;
+
+	int SQRT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	int SQRT_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	int ACCESS_LEVEL = 82;
 
 	EClass getProgram();
 
@@ -834,6 +860,16 @@ public interface MiniJavaPackage extends EPackage {
 	EClass getPrintStatement();
 
 	EReference getPrintStatement_Expression();
+
+	EClass getLoadImage();
+
+	EReference getLoadImage_Path();
+
+	EClass getWriteImage();
+
+	EReference getWriteImage_Path();
+
+	EReference getWriteImage_Image();
 
 	EClass getReturn();
 
@@ -1161,6 +1197,10 @@ public interface MiniJavaPackage extends EPackage {
 
 	EReference getModulo_Right();
 
+	EClass getSqrt();
+
+	EReference getSqrt_Expression();
+
 	MiniJavaFactory getMiniJavaFactory();
 
 	interface Literals {
@@ -1236,6 +1276,18 @@ public interface MiniJavaPackage extends EPackage {
 
 		EReference PRINT_STATEMENT__EXPRESSION = eINSTANCE.getPrintStatement_Expression();
 
+		EClass EXPRESSION = eINSTANCE.getExpression();
+
+		EClass LOAD_IMAGE = eINSTANCE.getLoadImage();
+
+		EReference LOAD_IMAGE__PATH = eINSTANCE.getLoadImage_Path();
+
+		EClass WRITE_IMAGE = eINSTANCE.getWriteImage();
+
+		EReference WRITE_IMAGE__PATH = eINSTANCE.getWriteImage_Path();
+
+		EReference WRITE_IMAGE__IMAGE = eINSTANCE.getWriteImage_Image();
+
 		EClass RETURN = eINSTANCE.getReturn();
 
 		EReference RETURN__EXPRESSION = eINSTANCE.getReturn_Expression();
@@ -1281,8 +1333,6 @@ public interface MiniJavaPackage extends EPackage {
 		EReference ASSIGNMENT__VALUE = eINSTANCE.getAssignment_Value();
 
 		EClass ASSIGNEE = eINSTANCE.getAssignee();
-
-		EClass EXPRESSION = eINSTANCE.getExpression();
 
 		EClass ARRAY_TYPE_REF = eINSTANCE.getArrayTypeRef();
 
@@ -1551,6 +1601,10 @@ public interface MiniJavaPackage extends EPackage {
 		EReference MODULO__LEFT = eINSTANCE.getModulo_Left();
 
 		EReference MODULO__RIGHT = eINSTANCE.getModulo_Right();
+
+		EClass SQRT = eINSTANCE.getSqrt();
+
+		EReference SQRT__EXPRESSION = eINSTANCE.getSqrt_Expression();
 
 		EEnum ACCESSLEVEL = eINSTANCE.getAccessLevel();
 	}

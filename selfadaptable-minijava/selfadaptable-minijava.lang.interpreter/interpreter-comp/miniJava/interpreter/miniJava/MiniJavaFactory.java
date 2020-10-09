@@ -1,7 +1,8 @@
 package miniJava.interpreter.miniJava;
 
-import miniJava.interpreter.miniJava.impl.MiniJavaFactoryImpl;
 import org.eclipse.emf.ecore.EFactory;
+
+import miniJava.interpreter.miniJava.impl.MiniJavaFactoryImpl;
 
 public interface MiniJavaFactory extends EFactory {
 	MiniJavaFactory eINSTANCE = MiniJavaFactoryImpl.init();
@@ -29,6 +30,10 @@ public interface MiniJavaFactory extends EFactory {
 	Statement createStatement();
 
 	PrintStatement createPrintStatement();
+
+	LoadImage createLoadImage();
+
+	WriteImage createWriteImage();
 
 	Return createReturn();
 
@@ -157,6 +162,8 @@ public interface MiniJavaFactory extends EFactory {
 	ArrayRefValue createArrayRefValue();
 
 	Modulo createModulo();
+
+	Sqrt createSqrt();
 
 	MiniJavaPackage getMiniJavaPackage();
 }
