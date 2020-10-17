@@ -10,13 +10,6 @@ To make this project work correctly you need to clone [the ALE Language](https:/
 
 This project need to be compiled using Java 8.
 
-## Authors
-The actors of this project are :
-
-JOUNEAUX Gwendal, Author(Internship of Master 2)
-COMBEMALE Benoit, Supervisor
-BARAIS Olivier, Supervisor
-
 # Evaluation Notebook
 
 The following content is an export of the statistic analysis done for the evaluation of the Self-Adaptable implementation of MiniJava for image processing. This snapshot of the results was made the 2020-10-17.
