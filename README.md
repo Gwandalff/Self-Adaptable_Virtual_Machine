@@ -464,7 +464,7 @@ compute_stats(reference_stress100.time.tolist())
 
 effectSize
 ```
-
+```text
 Stats for adaptive VM with stress level at 0%
 Estimated mean : 25.57480081015556
 Confidence interval : [25.540537433595826, 25.60906418671529] delta = 0.034263376559731995
@@ -506,6 +506,7 @@ Confidence interval : [12.662745132295244, 12.685259624882535] delta = 0.0112572
 Stats for reference VM with stress level at 100%
 Estimated mean : 13.222143579022223
 Confidence interval : [13.178102749755944, 13.266184408288503] delta = 0.0440408292662795
+```
 
 <table border="1" class="dataframe">
   <thead>
