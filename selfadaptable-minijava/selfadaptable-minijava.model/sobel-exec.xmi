@@ -3,23 +3,78 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:miniJava="http://miniJava.miniJava.miniJava/"
-	xsi:schemaLocation="http://miniJava.miniJava.miniJava/ model/MiniJava.ecore">
+    xmlns:miniJava="http://www.example.org/minijava/MiniJava"
+    xsi:schemaLocation="http://www.example.org/minijava/MiniJava model/MiniJava.ecore">
   <classes xsi:type="miniJava:Clazz"
       xmi:id="_GzHhIPNtEeq1j5bK4LiKpA"
       name="Sobel">
     <members
         xsi:type="miniJava:Method"
-        xmi:id="_JgvlAPNtEeq1j5bK4LiKpA"
         name="main"
-        access="public"
         isstatic="true">
+      <typeRef
+          xsi:type="miniJava:VoidTypeRef"/>
+      <params
+          name="args">
+        <typeRef
+            xsi:type="miniJava:ArrayTypeRef">
+          <typeRef
+              xsi:type="miniJava:StringTypeRef"/>
+        </typeRef>
+      </params>
+      <body>
+        <statements
+            xsi:type="miniJava:ForStatement">
+          <declaration>
+            <assignee
+                xsi:type="miniJava:VariableDeclaration"
+                name="i"/>
+            <value
+                xsi:type="miniJava:IntConstant"/>
+          </declaration>
+          <condition
+              xsi:type="miniJava:Inferior">
+            <left
+                xsi:type="miniJava:SymbolRef"
+                symbol="//@classes.0/@members.0/@body/@statements.0/@declaration/@assignee"/>
+            <right
+                xsi:type="miniJava:IntConstant"
+                value="50"/>
+          </condition>
+          <progression>
+            <assignee
+                xsi:type="miniJava:SymbolRef"
+                symbol="//@classes.0/@members.0/@body/@statements.0/@declaration/@assignee"/>
+            <value
+                xsi:type="miniJava:Plus">
+              <left
+                  xsi:type="miniJava:SymbolRef"
+                  symbol="//@classes.0/@members.0/@body/@statements.0/@declaration/@assignee"/>
+              <right
+                  xsi:type="miniJava:IntConstant"
+                  value="1"/>
+            </value>
+          </progression>
+          <block>
+            <statements
+                xsi:type="miniJava:MethodCall"
+                method="_JgvlAPNtEeq1j5bK4LiKpA">
+              <receiver
+                  xsi:type="miniJava:NewObject"
+                  type="_GzHhIPNtEeq1j5bK4LiKpA"/>
+            </statements>
+          </block>
+        </statements>
+      </body>
+    </members>
+    <members
+        xsi:type="miniJava:Method"
+        xmi:id="_JgvlAPNtEeq1j5bK4LiKpA"
+        name="bench"
+        access="public">
       <typeRef
           xsi:type="miniJava:VoidTypeRef"
           xmi:id="_NPaPIPNtEeq1j5bK4LiKpA"/>
-      <params
-          xmi:id="_OrtOAPNtEeq1j5bK4LiKpA"
-          name="args"/>
       <body>
         <statements
             xsi:type="miniJava:Assignment">
@@ -49,16 +104,16 @@
             xsi:type="miniJava:Assignment">
           <assignee
               xsi:type="miniJava:SymbolRef"
-              symbol="//@classes.0/@members.0/@body/@statements.0/@assignee"/>
+              symbol="//@classes.0/@members.1/@body/@statements.0/@assignee"/>
           <value
               xsi:type="miniJava:MethodCall"
-              method="//@classes.0/@members.1">
+              method="//@classes.0/@members.2">
             <receiver
                 xsi:type="miniJava:SymbolRef"
-                symbol="//@classes.0/@members.0/@body/@statements.1/@assignee"/>
+                symbol="//@classes.0/@members.1/@body/@statements.1/@assignee"/>
             <args
                 xsi:type="miniJava:SymbolRef"
-                symbol="//@classes.0/@members.0/@body/@statements.0/@assignee"/>
+                symbol="//@classes.0/@members.1/@body/@statements.0/@assignee"/>
           </value>
         </statements>
         <statements
@@ -68,7 +123,7 @@
               value="/home/gjouneau/out.png"/>
           <image
               xsi:type="miniJava:SymbolRef"
-              symbol="//@classes.0/@members.0/@body/@statements.0/@assignee"/>
+              symbol="//@classes.0/@members.1/@body/@statements.0/@assignee"/>
         </statements>
       </body>
     </members>
@@ -115,14 +170,14 @@
               xsi:type="miniJava:Inferior">
             <left
                 xsi:type="miniJava:SymbolRef"
-                symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
             <right
                 xsi:type="miniJava:Minus">
               <left
                   xsi:type="miniJava:ArrayLength">
                 <array
                     xsi:type="miniJava:SymbolRef"
-                    symbol="//@classes.0/@members.1/@params.0"/>
+                    symbol="//@classes.0/@members.2/@params.0"/>
               </left>
               <right
                   xsi:type="miniJava:IntConstant"
@@ -132,12 +187,12 @@
           <progression>
             <assignee
                 xsi:type="miniJava:SymbolRef"
-                symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
             <value
                 xsi:type="miniJava:Plus">
               <left
                   xsi:type="miniJava:SymbolRef"
-                  symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                  symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
               <right
                   xsi:type="miniJava:IntConstant"
                   value="1"/>
@@ -161,7 +216,7 @@
                   xsi:type="miniJava:Inferior">
                 <left
                     xsi:type="miniJava:SymbolRef"
-                    symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                    symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                 <right
                     xsi:type="miniJava:Minus">
                   <left
@@ -170,10 +225,10 @@
                         xsi:type="miniJava:ArrayAccess">
                       <object
                           xsi:type="miniJava:SymbolRef"
-                          symbol="//@classes.0/@members.1/@params.0"/>
+                          symbol="//@classes.0/@members.2/@params.0"/>
                       <index
                           xsi:type="miniJava:SymbolRef"
-                          symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                          symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                     </array>
                   </left>
                   <right
@@ -184,12 +239,12 @@
               <progression>
                 <assignee
                     xsi:type="miniJava:SymbolRef"
-                    symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                    symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                 <value
                     xsi:type="miniJava:Plus">
                   <left
                       xsi:type="miniJava:SymbolRef"
-                      symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                      symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                   <right
                       xsi:type="miniJava:IntConstant"
                       value="1"/>
@@ -216,12 +271,12 @@
                               xsi:type="miniJava:ArrayAccess">
                             <object
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@params.0"/>
+                                symbol="//@classes.0/@members.2/@params.0"/>
                             <index
                                 xsi:type="miniJava:Plus">
                               <left
                                   xsi:type="miniJava:SymbolRef"
-                                  symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                                  symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                               <right
                                   xsi:type="miniJava:IntConstant"
                                   value="1"/>
@@ -231,7 +286,7 @@
                               xsi:type="miniJava:Plus">
                             <left
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                                symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                             <right
                                 xsi:type="miniJava:IntConstant"
                                 value="1"/>
@@ -243,12 +298,12 @@
                               xsi:type="miniJava:ArrayAccess">
                             <object
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@params.0"/>
+                                symbol="//@classes.0/@members.2/@params.0"/>
                             <index
                                 xsi:type="miniJava:Minus">
                               <left
                                   xsi:type="miniJava:SymbolRef"
-                                  symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                                  symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                               <right
                                   xsi:type="miniJava:IntConstant"
                                   value="1"/>
@@ -258,7 +313,7 @@
                               xsi:type="miniJava:Plus">
                             <left
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                                symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                             <right
                                 xsi:type="miniJava:IntConstant"
                                 value="1"/>
@@ -276,16 +331,16 @@
                               xsi:type="miniJava:ArrayAccess">
                             <object
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@params.0"/>
+                                symbol="//@classes.0/@members.2/@params.0"/>
                             <index
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                                symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                           </object>
                           <index
                               xsi:type="miniJava:Plus">
                             <left
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                                symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                             <right
                                 xsi:type="miniJava:IntConstant"
                                 value="1"/>
@@ -303,12 +358,12 @@
                               xsi:type="miniJava:ArrayAccess">
                             <object
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@params.0"/>
+                                symbol="//@classes.0/@members.2/@params.0"/>
                             <index
                                 xsi:type="miniJava:Plus">
                               <left
                                   xsi:type="miniJava:SymbolRef"
-                                  symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                                  symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                               <right
                                   xsi:type="miniJava:IntConstant"
                                   value="1"/>
@@ -318,7 +373,7 @@
                               xsi:type="miniJava:Minus">
                             <left
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                                symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                             <right
                                 xsi:type="miniJava:IntConstant"
                                 value="1"/>
@@ -330,12 +385,12 @@
                               xsi:type="miniJava:ArrayAccess">
                             <object
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@params.0"/>
+                                symbol="//@classes.0/@members.2/@params.0"/>
                             <index
                                 xsi:type="miniJava:Minus">
                               <left
                                   xsi:type="miniJava:SymbolRef"
-                                  symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                                  symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                               <right
                                   xsi:type="miniJava:IntConstant"
                                   value="1"/>
@@ -345,7 +400,7 @@
                               xsi:type="miniJava:Minus">
                             <left
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                                symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                             <right
                                 xsi:type="miniJava:IntConstant"
                                 value="1"/>
@@ -363,16 +418,16 @@
                               xsi:type="miniJava:ArrayAccess">
                             <object
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@params.0"/>
+                                symbol="//@classes.0/@members.2/@params.0"/>
                             <index
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                                symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                           </object>
                           <index
                               xsi:type="miniJava:Minus">
                             <left
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                                symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                             <right
                                 xsi:type="miniJava:IntConstant"
                                 value="1"/>
@@ -402,12 +457,12 @@
                               xsi:type="miniJava:ArrayAccess">
                             <object
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@params.0"/>
+                                symbol="//@classes.0/@members.2/@params.0"/>
                             <index
                                 xsi:type="miniJava:Plus">
                               <left
                                   xsi:type="miniJava:SymbolRef"
-                                  symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                                  symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                               <right
                                   xsi:type="miniJava:IntConstant"
                                   value="1"/>
@@ -417,7 +472,7 @@
                               xsi:type="miniJava:Plus">
                             <left
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                                symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                             <right
                                 xsi:type="miniJava:IntConstant"
                                 value="1"/>
@@ -429,12 +484,12 @@
                               xsi:type="miniJava:ArrayAccess">
                             <object
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@params.0"/>
+                                symbol="//@classes.0/@members.2/@params.0"/>
                             <index
                                 xsi:type="miniJava:Plus">
                               <left
                                   xsi:type="miniJava:SymbolRef"
-                                  symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                                  symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                               <right
                                   xsi:type="miniJava:IntConstant"
                                   value="1"/>
@@ -444,7 +499,7 @@
                               xsi:type="miniJava:Minus">
                             <left
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                                symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                             <right
                                 xsi:type="miniJava:IntConstant"
                                 value="1"/>
@@ -462,12 +517,12 @@
                               xsi:type="miniJava:ArrayAccess">
                             <object
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@params.0"/>
+                                symbol="//@classes.0/@members.2/@params.0"/>
                             <index
                                 xsi:type="miniJava:Plus">
                               <left
                                   xsi:type="miniJava:SymbolRef"
-                                  symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                                  symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                               <right
                                   xsi:type="miniJava:IntConstant"
                                   value="1"/>
@@ -475,7 +530,7 @@
                           </object>
                           <index
                               xsi:type="miniJava:SymbolRef"
-                              symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                              symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                         </right>
                       </right>
                     </left>
@@ -489,12 +544,12 @@
                               xsi:type="miniJava:ArrayAccess">
                             <object
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@params.0"/>
+                                symbol="//@classes.0/@members.2/@params.0"/>
                             <index
                                 xsi:type="miniJava:Minus">
                               <left
                                   xsi:type="miniJava:SymbolRef"
-                                  symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                                  symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                               <right
                                   xsi:type="miniJava:IntConstant"
                                   value="1"/>
@@ -504,7 +559,7 @@
                               xsi:type="miniJava:Plus">
                             <left
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                                symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                             <right
                                 xsi:type="miniJava:IntConstant"
                                 value="1"/>
@@ -516,12 +571,12 @@
                               xsi:type="miniJava:ArrayAccess">
                             <object
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@params.0"/>
+                                symbol="//@classes.0/@members.2/@params.0"/>
                             <index
                                 xsi:type="miniJava:Minus">
                               <left
                                   xsi:type="miniJava:SymbolRef"
-                                  symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                                  symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                               <right
                                   xsi:type="miniJava:IntConstant"
                                   value="1"/>
@@ -531,7 +586,7 @@
                               xsi:type="miniJava:Minus">
                             <left
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                                symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                             <right
                                 xsi:type="miniJava:IntConstant"
                                 value="1"/>
@@ -549,12 +604,12 @@
                               xsi:type="miniJava:ArrayAccess">
                             <object
                                 xsi:type="miniJava:SymbolRef"
-                                symbol="//@classes.0/@members.1/@params.0"/>
+                                symbol="//@classes.0/@members.2/@params.0"/>
                             <index
                                 xsi:type="miniJava:Minus">
                               <left
                                   xsi:type="miniJava:SymbolRef"
-                                  symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                                  symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                               <right
                                   xsi:type="miniJava:IntConstant"
                                   value="1"/>
@@ -562,7 +617,7 @@
                           </object>
                           <index
                               xsi:type="miniJava:SymbolRef"
-                              symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                              symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                         </right>
                       </right>
                     </right>
@@ -581,19 +636,19 @@
                           xsi:type="miniJava:Multiplication">
                         <left
                             xsi:type="miniJava:SymbolRef"
-                            symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@block/@statements.1/@assignee"/>
+                            symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@block/@statements.1/@assignee"/>
                         <right
                             xsi:type="miniJava:SymbolRef"
-                            symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@block/@statements.1/@assignee"/>
+                            symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@block/@statements.1/@assignee"/>
                       </left>
                       <right
                           xsi:type="miniJava:Multiplication">
                         <left
                             xsi:type="miniJava:SymbolRef"
-                            symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@block/@statements.0/@assignee"/>
+                            symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@block/@statements.0/@assignee"/>
                         <right
                             xsi:type="miniJava:SymbolRef"
-                            symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@block/@statements.0/@assignee"/>
+                            symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@block/@statements.0/@assignee"/>
                       </right>
                     </expression>
                   </value>
@@ -604,7 +659,7 @@
                       xsi:type="miniJava:Superior">
                     <left
                         xsi:type="miniJava:SymbolRef"
-                        symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@block/@statements.2/@assignee"/>
+                        symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@block/@statements.2/@assignee"/>
                     <right
                         xsi:type="miniJava:IntConstant"
                         value="255"/>
@@ -614,7 +669,7 @@
                         xsi:type="miniJava:Assignment">
                       <assignee
                           xsi:type="miniJava:SymbolRef"
-                          symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@block/@statements.2/@assignee"/>
+                          symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@block/@statements.2/@assignee"/>
                       <value
                           xsi:type="miniJava:IntConstant"
                           value="255"/>
@@ -629,18 +684,18 @@
                         xsi:type="miniJava:ArrayAccess">
                       <object
                           xsi:type="miniJava:SymbolRef"
-                          symbol="//@classes.0/@members.1/@body/@statements.0/@assignee"/>
+                          symbol="//@classes.0/@members.2/@body/@statements.0/@assignee"/>
                       <index
                           xsi:type="miniJava:SymbolRef"
-                          symbol="//@classes.0/@members.1/@body/@statements.1/@declaration/@assignee"/>
+                          symbol="//@classes.0/@members.2/@body/@statements.1/@declaration/@assignee"/>
                     </object>
                     <index
                         xsi:type="miniJava:SymbolRef"
-                        symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
+                        symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@declaration/@assignee"/>
                   </assignee>
                   <value
                       xsi:type="miniJava:SymbolRef"
-                      symbol="//@classes.0/@members.1/@body/@statements.1/@block/@statements.0/@block/@statements.2/@assignee"/>
+                      symbol="//@classes.0/@members.2/@body/@statements.1/@block/@statements.0/@block/@statements.2/@assignee"/>
                 </statements>
               </block>
             </statements>
@@ -650,7 +705,7 @@
             xsi:type="miniJava:Return">
           <expression
               xsi:type="miniJava:SymbolRef"
-              symbol="//@classes.0/@members.1/@body/@statements.0/@assignee"/>
+              symbol="//@classes.0/@members.2/@body/@statements.0/@assignee"/>
         </statements>
       </body>
     </members>

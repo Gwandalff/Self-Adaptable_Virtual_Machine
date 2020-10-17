@@ -1,0 +1,85 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "fr.gjouneau.selfadaptable_minijava.lang.interpreter.benchmark.App.minijavaInterpreter",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/benchmarks/jvms/graalvm-ce-java11-20.2.0/bin/java",
+        "jvmArgs" : [
+            "-Xms4G",
+            "-Xmx4G"
+        ],
+        "jdkVersion" : "11.0.8",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "11.0.8+10-jvmci-20.2-b03",
+        "warmupIterations" : 10,
+        "warmupTime" : "10 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 30,
+        "measurementTime" : "10 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "program" : "/home/benchmarks/programs/minijava_sobel.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 12.5660429842,
+            "scoreError" : 0.02309860482981815,
+            "scoreConfidence" : [
+                12.542944379370182,
+                12.589141589029817
+            ],
+            "scorePercentiles" : {
+                "0.0" : 12.514301296,
+                "50.0" : 12.566323208,
+                "90.0" : 12.6105677543,
+                "95.0" : 12.62261516045,
+                "99.0" : 12.636166776,
+                "99.9" : 12.636166776,
+                "99.99" : 12.636166776,
+                "99.999" : 12.636166776,
+                "99.9999" : 12.636166776,
+                "100.0" : 12.636166776
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    12.572379422,
+                    12.611527475,
+                    12.610406468,
+                    12.602749453,
+                    12.589237891,
+                    12.583871937,
+                    12.553383415,
+                    12.572849688,
+                    12.53384443,
+                    12.544052347,
+                    12.518818194,
+                    12.543798174,
+                    12.57894663,
+                    12.516133168,
+                    12.543020937,
+                    12.527383394,
+                    12.584141721,
+                    12.571855863,
+                    12.610585675,
+                    12.522812313,
+                    12.518275997,
+                    12.599760228,
+                    12.560790553,
+                    12.636166776,
+                    12.514301296,
+                    12.540673176,
+                    12.60868858,
+                    12.600975227,
+                    12.560604246,
+                    12.549254852
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

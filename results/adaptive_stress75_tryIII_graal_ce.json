@@ -1,0 +1,85 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "fr.gjouneau.selfadaptable_minijava.lang.interpreter.benchmark.App.minijavaInterpreter",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/benchmarks/jvms/graalvm-ce-java11-20.2.0/bin/java",
+        "jvmArgs" : [
+            "-Xms4G",
+            "-Xmx4G"
+        ],
+        "jdkVersion" : "11.0.8",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "11.0.8+10-jvmci-20.2-b03",
+        "warmupIterations" : 10,
+        "warmupTime" : "10 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 30,
+        "measurementTime" : "10 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "program" : "/home/benchmarks/programs/minijava_sobel.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 8.241091322249996,
+            "scoreError" : 0.01451300295997894,
+            "scoreConfidence" : [
+                8.226578319290017,
+                8.255604325209976
+            ],
+            "scorePercentiles" : {
+                "0.0" : 8.1983102675,
+                "50.0" : 8.24002114225,
+                "90.0" : 8.278441996849999,
+                "95.0" : 8.287947092575001,
+                "99.0" : 8.2940290495,
+                "99.9" : 8.2940290495,
+                "99.99" : 8.2940290495,
+                "99.999" : 8.2940290495,
+                "99.9999" : 8.2940290495,
+                "100.0" : 8.2940290495
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    8.2360807115,
+                    8.249033744,
+                    8.239998481,
+                    8.2439217495,
+                    8.2399142545,
+                    8.242197223,
+                    8.282970946,
+                    8.2579552425,
+                    8.246571669,
+                    8.2311306435,
+                    8.221508425,
+                    8.2135768775,
+                    8.2213175565,
+                    8.2385467345,
+                    8.249526209,
+                    8.2190599205,
+                    8.236531262,
+                    8.240066053,
+                    8.2208494725,
+                    8.2574724155,
+                    8.2379127745,
+                    8.207939184,
+                    8.2400438035,
+                    8.24743529,
+                    8.1983102675,
+                    8.2797167185,
+                    8.266969502,
+                    8.2183713465,
+                    8.253782141,
+                    8.2940290495
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

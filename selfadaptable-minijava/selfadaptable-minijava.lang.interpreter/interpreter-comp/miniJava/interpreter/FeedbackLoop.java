@@ -17,12 +17,19 @@ public class FeedbackLoop {
 	private static List<AbstractAdaptationModule> modules = new ArrayList<>();
 	private static List<Boolean> activation = new ArrayList<>();
 	private static AdaptationContext context = new MiniJavaAdaptationContext();
-	private static long time = System.currentTimeMillis();
+	private static long time = 0;
 	
 	public static void registerModule(AbstractAdaptationModule module) {
 		modules.add(module);
 		activation.add(false);
 		context.registerModule(module);
+	}
+	
+	public static void reset() {
+		context = new MiniJavaAdaptationContext();
+		modules = new ArrayList<>();
+		activation = new ArrayList<>();
+		time = 0;
 	}
 	
 	public static final boolean updateBefore(IAdaptationNode s, Object[] args) {
@@ -62,7 +69,7 @@ public class FeedbackLoop {
 	
 	public final static boolean loopTrigger(IAdaptationNode s) {
 		long delta = System.currentTimeMillis()-time;
-		if(delta > 5000) {
+		if(delta > 3000) {
 			time = System.currentTimeMillis();
 			return true;
 		} else {
@@ -71,7 +78,7 @@ public class FeedbackLoop {
 	}
 	
 	public final static void loop() {
-		System.out.println("MAPE-K LOOP");
+		//System.out.println("MAPE-K LOOP");
 		monitor();
 		analyze();
 		plan();
@@ -84,14 +91,15 @@ public class FeedbackLoop {
 		for (Resource resource : resources) {
 			if (resource.ID.equals("CPU_PERCENT")) {
 				try {
-					String getCPUPercent = "/home/gjouneau/.getCPU.sh";
+					String getCPUPercent = "/home/benchmarks/.getCPU.sh";
 					Process getCPU = Runtime.getRuntime().exec(getCPUPercent);
 					getCPU.waitFor();
 					final BufferedReader is = new BufferedReader(new InputStreamReader(getCPU.getInputStream()));
 		            String percentageCPU = is.readLine();
-		            System.out.println("CPU : " + percentageCPU);
+		            //System.out.println("CPU : " + percentageCPU);
 					resource.setValue(Double.parseDouble(percentageCPU) / 100);
 				} catch (IOException | InterruptedException e) {
+					//System.out.println("PARSE ERROR");
 					resource.setValue(0);
 				}
 			} else {

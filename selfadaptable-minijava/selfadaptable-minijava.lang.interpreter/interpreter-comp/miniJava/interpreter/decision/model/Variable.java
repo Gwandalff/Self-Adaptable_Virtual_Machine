@@ -75,7 +75,7 @@ public final class Variable extends ModelingElement {
 	}
 	
 	public double value() {
-		return value;
+		return value == null ? equilibrium : value;
 	}
 
 }

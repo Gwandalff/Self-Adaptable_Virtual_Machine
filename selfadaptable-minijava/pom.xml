@@ -12,6 +12,7 @@
 		<module>selfadaptable-minijava.lang.services</module>
 		<module>selfadaptable-minijava.lang.interpreter</module>
 		<module>selfadaptable-minijava.lang.interpreter.execute</module>
+		<module>selfadaptable-minijava.lang.interpreter.benchmark</module>
 <!-- 		<module>selfadaptable-minijava.lang.visitor</module> -->
 <!-- 		<module>selfadaptable-minijava.lang.visitor.execute</module> -->
 	</modules>

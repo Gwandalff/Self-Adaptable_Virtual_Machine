@@ -45,7 +45,7 @@ public class App
 		final URI createFileURI = URI.createFileURI(program);
 		final Resource resource = resSet.getResource(createFileURI, true);
 		
-		FeedbackLoop.registerModule(new ApproximateModule());
+		//FeedbackLoop.registerModule(new ApproximateModule());
 
 		minijavaProgram = (Program) resource.getContents().get(0);
 		minijavaProgram.initialize(new BasicEList());

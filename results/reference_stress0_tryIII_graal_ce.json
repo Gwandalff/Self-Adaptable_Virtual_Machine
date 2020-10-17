@@ -1,0 +1,85 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "fr.gjouneau.selfadaptable_minijava.lang.interpreter.benchmark.App.minijavaInterpreter",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/benchmarks/jvms/graalvm-ce-java11-20.2.0/bin/java",
+        "jvmArgs" : [
+            "-Xms4G",
+            "-Xmx4G"
+        ],
+        "jdkVersion" : "11.0.8",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "11.0.8+10-jvmci-20.2-b03",
+        "warmupIterations" : 10,
+        "warmupTime" : "10 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 30,
+        "measurementTime" : "10 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "program" : "/home/benchmarks/programs/minijava_sobel.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 12.641918004999999,
+            "scoreError" : 0.04654376414785856,
+            "scoreConfidence" : [
+                12.59537424085214,
+                12.688461769147859
+            ],
+            "scorePercentiles" : {
+                "0.0" : 12.575067577,
+                "50.0" : 12.631882823,
+                "90.0" : 12.7975388373,
+                "95.0" : 12.8218072634,
+                "99.0" : 12.827477561,
+                "99.9" : 12.827477561,
+                "99.99" : 12.827477561,
+                "99.999" : 12.827477561,
+                "99.9999" : 12.827477561,
+                "100.0" : 12.827477561
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    12.634425742,
+                    12.653094227,
+                    12.656515213,
+                    12.579977137,
+                    12.593654109,
+                    12.650396772,
+                    12.635861827,
+                    12.579917724,
+                    12.592304784,
+                    12.653486861,
+                    12.639749713,
+                    12.647988057,
+                    12.64400982,
+                    12.615116184,
+                    12.803266798,
+                    12.827477561,
+                    12.592529061,
+                    12.610094501,
+                    12.665301118,
+                    12.575067577,
+                    12.588137168,
+                    12.599016373,
+                    12.817167929,
+                    12.583898176,
+                    12.745987191,
+                    12.629339904,
+                    12.659223729,
+                    12.579324602,
+                    12.582276331,
+                    12.622933961
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

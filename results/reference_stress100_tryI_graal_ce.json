@@ -1,0 +1,85 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "fr.gjouneau.selfadaptable_minijava.lang.interpreter.benchmark.App.minijavaInterpreter",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/benchmarks/jvms/graalvm-ce-java11-20.2.0/bin/java",
+        "jvmArgs" : [
+            "-Xms4G",
+            "-Xmx4G"
+        ],
+        "jdkVersion" : "11.0.8",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "11.0.8+10-jvmci-20.2-b03",
+        "warmupIterations" : 10,
+        "warmupTime" : "10 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 30,
+        "measurementTime" : "10 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "program" : "/home/benchmarks/programs/minijava_sobel.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 13.238317534,
+            "scoreError" : 0.12603193024514173,
+            "scoreConfidence" : [
+                13.112285603754858,
+                13.364349464245143
+            ],
+            "scorePercentiles" : {
+                "0.0" : 12.9578007,
+                "50.0" : 13.193825862,
+                "90.0" : 13.4978007983,
+                "95.0" : 13.673403418349999,
+                "99.0" : 13.683964344,
+                "99.9" : 13.683964344,
+                "99.99" : 13.683964344,
+                "99.999" : 13.683964344,
+                "99.9999" : 13.683964344,
+                "100.0" : 13.683964344
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    13.034739574,
+                    13.141368248,
+                    13.095242262,
+                    13.683964344,
+                    13.005578931,
+                    13.500431698,
+                    13.209765638,
+                    13.161832667,
+                    13.664762661,
+                    13.163299018,
+                    13.273293928,
+                    13.116495913,
+                    13.289744048,
+                    13.177886086,
+                    13.298716269,
+                    13.371517373,
+                    13.112086682,
+                    13.053098772,
+                    12.9578007,
+                    13.312000124,
+                    13.329606551,
+                    13.456545385,
+                    13.212632032,
+                    13.472035357,
+                    13.086075051,
+                    13.085082767,
+                    13.474122701,
+                    13.258110216,
+                    13.06539775,
+                    13.086293274
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

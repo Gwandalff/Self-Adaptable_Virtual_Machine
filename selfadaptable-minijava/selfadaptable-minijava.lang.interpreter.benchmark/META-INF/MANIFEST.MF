@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-SymbolicName: fr.gjouneau.selfadaptable_minijava;singleton:=true
+Automatic-Module-Name: org.tetrabox.minijava.xtext
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.apache.log4j
+Require-Bundle: org.tetrabox.minijava.xtext;bundle-version="1.0.0"

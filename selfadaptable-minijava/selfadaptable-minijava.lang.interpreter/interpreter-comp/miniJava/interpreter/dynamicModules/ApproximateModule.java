@@ -204,10 +204,18 @@ public class ApproximateModule extends AbstractAdaptationModule {
 	@Override
 	public void connectResource(Resource resource) {
 		if(resource.ID.equals("CPU_PERCENT")) {
-			smallPR.addTag(resource, TAG.SUPERIOR, 0.02);
-			PR.addTag(resource, TAG.SUPERIOR, 0.05);
-			bigPR.addTag(resource, TAG.SUPERIOR, 0.10);
+			smallPR.addTag(resource, TAG.SUPERIOR, 0.25);
+			PR.addTag(resource, TAG.SUPERIOR, 0.5);
+			bigPR.addTag(resource, TAG.SUPERIOR, 0.75);
 		}
+	}
+	
+	public void reset(AdaptationContext adaptationContext) {
+		bodies = new ArrayList();
+		arraysAssign = new HashMap();
+		arraysApproximate = new HashMap();
+		
+		count = 0;
 	}
 
 }

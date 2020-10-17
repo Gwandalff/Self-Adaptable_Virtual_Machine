@@ -1,0 +1,85 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "fr.gjouneau.selfadaptable_minijava.lang.interpreter.benchmark.App.minijavaInterpreter",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/home/benchmarks/jvms/graalvm-ce-java11-20.2.0/bin/java",
+        "jvmArgs" : [
+            "-Xms4G",
+            "-Xmx4G"
+        ],
+        "jdkVersion" : "11.0.8",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "11.0.8+10-jvmci-20.2-b03",
+        "warmupIterations" : 10,
+        "warmupTime" : "10 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 30,
+        "measurementTime" : "10 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "program" : "/home/benchmarks/programs/minijava_sobel.xmi"
+        },
+        "primaryMetric" : {
+            "score" : 16.330913423000002,
+            "scoreError" : 0.018327846933403138,
+            "scoreConfidence" : [
+                16.3125855760666,
+                16.349241269933405
+            ],
+            "scorePercentiles" : {
+                "0.0" : 16.284935111,
+                "50.0" : 16.329889662,
+                "90.0" : 16.3809716167,
+                "95.0" : 16.3879713704,
+                "99.0" : 16.388422905,
+                "99.9" : 16.388422905,
+                "99.99" : 16.388422905,
+                "99.999" : 16.388422905,
+                "99.9999" : 16.388422905,
+                "100.0" : 16.388422905
+            },
+            "scoreUnit" : "s/op",
+            "rawData" : [
+                [
+                    16.387601933,
+                    16.362794637,
+                    16.333968158,
+                    16.335098343,
+                    16.346686652,
+                    16.318322727,
+                    16.316056775,
+                    16.289106759,
+                    16.382722585,
+                    16.307756869,
+                    16.328345748,
+                    16.301365527,
+                    16.320828488,
+                    16.335978849,
+                    16.350829875,
+                    16.315066757,
+                    16.331433576,
+                    16.342650906,
+                    16.304268695,
+                    16.309148594,
+                    16.327294253,
+                    16.365212902,
+                    16.304474794,
+                    16.313191151,
+                    16.335487299,
+                    16.388422905,
+                    16.350264989,
+                    16.284935111,
+                    16.337652019,
+                    16.300434814
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+
