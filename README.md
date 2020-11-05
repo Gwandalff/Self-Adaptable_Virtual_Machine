@@ -16,23 +16,23 @@ In order to validate our approach, we have tested the adaptive Sobel filter on t
 
 ## Output images when applying the sobel filter on a small image (640x480)
 
-![Input image](img/input.png)
+![Input image](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/input.png)
 
 | Interpolation | Aproximated version          |  Reference version        |
 | :------------ | :--------------------------: | :-----------------------: | 
-| 1/2 pixels    | ![png](img/approximate2.png) | ![png](img/reference.png) |
-| 3/4 pixels    | ![png](img/approximate4.png) | ![png](img/reference.png) |
-| 7/8 pixels    | ![png](img/approximate8.png) | ![png](img/reference.png) |
+| 1/2 pixels    | ![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/approximate2.png) | ![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/reference.png) |
+| 3/4 pixels    | ![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/approximate4.png) | ![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/reference.png) |
+| 7/8 pixels    | ![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/approximate8.png) | ![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/reference.png) |
 
 ## Output images when applying the sobel filter on a bigger image (1920x1080)
 
-![Big input image](img/input-big.png)
+![Big input image](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/input-big.png)
 
 | Interpolation | Aproximated version              |  Reference version            |
 | :------------ | :------------------------------: | :---------------------------: |
-| 1/2 pixels    | ![png](img/approximate2-big.png) | ![png](img/reference-big.png) |
-| 3/4 pixels    | ![png](img/approximate4-big.png) | ![png](img/reference-big.png) |
-| 7/8 pixels    | ![png](img/approximate8-big.png) | ![png](img/reference-big.png) |
+| 1/2 pixels    | ![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/approximate2-big.png) | ![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/reference-big.png) |
+| 3/4 pixels    | ![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/approximate4-big.png) | ![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/reference-big.png) |
+| 7/8 pixels    | ![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/approximate8-big.png) | ![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/reference-big.png) |
 
 ## Discussion
 
@@ -592,7 +592,7 @@ sns.catplot(x="Stress", y="Absolute Effect Size", kind="bar", data=effectSize, l
 ```
 
 
-![png](img/output_25_0.png)
+![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/output_25_0.png)
 
 
 As we can see, the effect size decrease when the stress rise. However, the fact that there is no big difference between 75% and 100% can alarm us on the fact that our approximate loop unrolling adaptive module can be the root cause of the effect size decrease. Yet our data can not show the difference between both due to the strong correlation of those variables in our experiment.
@@ -605,7 +605,7 @@ sns.lineplot(data=df, x="idx", y="time", hue="vm", style="stress");
 ```
 
 
-![png](img/output_27_0.png)
+![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/output_27_0.png)
 
 
 
@@ -615,7 +615,7 @@ grid.map(sns.lineplot, "idx", "time");
 ```
 
 
-![png](img/output_28_0.png)
+![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/output_28_0.png)
 
 
 
@@ -624,7 +624,7 @@ sns.catplot(x="Stress", y="Mean", hue="vm", kind="bar", data=means, sharex=False
 ```
 
 
-![png](img/output_29_0.png)
+![png](https://anonymous.4open.science/r/5f92b1d8-0be1-4e19-8211-7b7e22cd85d1/img/output_29_0.png)
 
 
 ### Discussion
