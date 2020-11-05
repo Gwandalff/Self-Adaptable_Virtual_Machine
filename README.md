@@ -16,23 +16,23 @@ In order to validate our approach, we have tested the adaptive Sobel filter on t
 
 ## Output images when applying the sobel filter on a small image (640x480)
 
-![Input image](img/input.png)
+![Input image](https://user-images.githubusercontent.com/68585341/98281157-a9db1a80-1f9c-11eb-90c1-cec3294fe5c9.png)
 
 | Interpolation | Aproximated version          |  Reference version        |
 | :------------ | :--------------------------: | :-----------------------: | 
-| 1/2 pixels    | ![png](img/approximate2.png) | ![png](img/reference.png) |
-| 3/4 pixels    | ![png](img/approximate4.png) | ![png](img/reference.png) |
-| 7/8 pixels    | ![png](img/approximate8.png) | ![png](img/reference.png) |
+| 1/2 pixels    | ![png](https://user-images.githubusercontent.com/68585341/98281139-a6479380-1f9c-11eb-8b28-fef58af37ed0.png) | ![png](https://user-images.githubusercontent.com/68585341/98281168-ad6ea180-1f9c-11eb-966c-3e9179f26fe8.png) |
+| 3/4 pixels    | ![png](https://user-images.githubusercontent.com/68585341/98281151-a8115700-1f9c-11eb-8e31-3e4a21e45008.png) | ![png](https://user-images.githubusercontent.com/68585341/98281168-ad6ea180-1f9c-11eb-966c-3e9179f26fe8.png) |
+| 7/8 pixels    | ![png](https://user-images.githubusercontent.com/68585341/98281154-a9428400-1f9c-11eb-9e0e-f4fd72c2d0ed.png) | ![png](https://user-images.githubusercontent.com/68585341/98281168-ad6ea180-1f9c-11eb-966c-3e9179f26fe8.png) |
 
 ## Output images when applying the sobel filter on a bigger image (1920x1080)
 
-![Big input image](img/input-big.png)
+![Big input image](https://user-images.githubusercontent.com/68585341/98281159-aa73b100-1f9c-11eb-8272-559941f1f55b.png)
 
 | Interpolation | Aproximated version              |  Reference version            |
 | :------------ | :------------------------------: | :---------------------------: |
-| 1/2 pixels    | ![png](img/approximate2-big.png) | ![png](img/reference-big.png) |
-| 3/4 pixels    | ![png](img/approximate4-big.png) | ![png](img/reference-big.png) |
-| 7/8 pixels    | ![png](img/approximate8-big.png) | ![png](img/reference-big.png) |
+| 1/2 pixels    | ![png](https://user-images.githubusercontent.com/68585341/98281145-a6e02a00-1f9c-11eb-8e8a-e7de48818865.png) | ![png](https://user-images.githubusercontent.com/68585341/98281171-ae073800-1f9c-11eb-9f2a-9e0e5f98475c.png) |
+| 3/4 pixels    | ![png](https://user-images.githubusercontent.com/68585341/98281152-a8a9ed80-1f9c-11eb-868f-94ce85ad8fea.png) | ![png](https://user-images.githubusercontent.com/68585341/98281171-ae073800-1f9c-11eb-9f2a-9e0e5f98475c.png) |
+| 7/8 pixels    | ![png](https://user-images.githubusercontent.com/68585341/98281155-a9428400-1f9c-11eb-9e0e-2656372c5920.png) | ![png](https://user-images.githubusercontent.com/68585341/98281171-ae073800-1f9c-11eb-9f2a-9e0e5f98475c.png) |
 
 ## Discussion
 
@@ -591,8 +591,7 @@ Here we try to evaluate the impact of the stress put on the system on the reliab
 sns.catplot(x="Stress", y="Absolute Effect Size", kind="bar", data=effectSize, legend_out=True);
 ```
 
-
-![png](img/output_25_0.png)
+![png](https://user-images.githubusercontent.com/68585341/98281161-aba4de00-1f9c-11eb-9a6e-609be6d68ac2.png)
 
 
 As we can see, the effect size decrease when the stress rise. However, the fact that there is no big difference between 75% and 100% can alarm us on the fact that our approximate loop unrolling adaptive module can be the root cause of the effect size decrease. Yet our data can not show the difference between both due to the strong correlation of those variables in our experiment.
@@ -605,7 +604,7 @@ sns.lineplot(data=df, x="idx", y="time", hue="vm", style="stress");
 ```
 
 
-![png](img/output_27_0.png)
+![png](https://user-images.githubusercontent.com/68585341/98281163-ac3d7480-1f9c-11eb-9785-0d7d2aee2a63.png)
 
 
 
@@ -615,7 +614,7 @@ grid.map(sns.lineplot, "idx", "time");
 ```
 
 
-![png](img/output_28_0.png)
+![png](https://user-images.githubusercontent.com/68585341/98281164-acd60b00-1f9c-11eb-84c1-32d78f972eb1.png)
 
 
 
@@ -624,7 +623,7 @@ sns.catplot(x="Stress", y="Mean", hue="vm", kind="bar", data=means, sharex=False
 ```
 
 
-![png](img/output_29_0.png)
+![png](https://user-images.githubusercontent.com/68585341/98281166-acd60b00-1f9c-11eb-9ae7-ced8adaca3be.png)
 
 
 ### Discussion
