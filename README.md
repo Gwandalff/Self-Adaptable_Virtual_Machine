@@ -10,6 +10,34 @@ To make this project work correctly you need to clone [the ALE Language](https:/
 
 This project need to be compiled using Java 8.
 
+# Sobel filter output quality
+
+In order to validate our approach, we have tested the adaptive Sobel filter on two images, a small one with easily detectable edges, and a big image with less visible edges (the filter is less precise on the ground).
+
+## Output images when applying the sobel filter on a small image (640x480)
+
+![Input image](img/input.png)
+
+| Interpolation | Aproximated version          |  Reference version        |
+| :------------ | :--------------------------: | :-----------------------: | 
+| 1/2 pixels    | ![png](img/approximate2.png) | ![png](img/reference.png) |
+| 3/4 pixels    | ![png](img/approximate4.png) | ![png](img/reference.png) |
+| 7/8 pixels    | ![png](img/approximate8.png) | ![png](img/reference.png) |
+
+## Output images when applying the sobel filter on a bigger image (1920x1080)
+
+![Big input image](img/input-big.png)
+
+| Interpolation | Aproximated version              |  Reference version            |
+| :------------ | :------------------------------: | :---------------------------: |
+| 1/2 pixels    | ![png](img/approximate2-big.png) | ![png](img/reference-big.png) |
+| 3/4 pixels    | ![png](img/approximate4-big.png) | ![png](img/reference-big.png) |
+| 7/8 pixels    | ![png](img/approximate8-big.png) | ![png](img/reference-big.png) |
+
+## Discussion
+
+One of the conclusion on the quality of the produced images, is that the number of interpolated pixels should also depend on the size of the images. In fact, while the high definition image seems to be lightly impacted by the maximum interpolation, the output of the small image seems to be at the limit of being usable in image processing algorithms. However, the result on smaller interpolation ratio show that the impact on the quality of the resulting output is totally acceptable. Moreover, the interpolation ratio of three-quarter of the pixels show the interest of our approach by showing speedup comparing to the reference imprementation of the Virtual Machine while giving as output a degraded but usable edge detection.
+
 # Evaluation Notebook
 
 The following content is an export of the statistic analysis done for the evaluation of the Self-Adaptable implementation of MiniJava for image processing. This snapshot of the results was made the 2020-10-17.
@@ -567,7 +595,7 @@ sns.catplot(x="Stress", y="Absolute Effect Size", kind="bar", data=effectSize, l
 ![png](img/output_25_0.png)
 
 
-As we can see, the effect size decrease when the stress rise. However, the fact that there is no big difference between 75% and 100% can alarm us on the fact that our approwimate loop unrolling adaptive module can be the root cause of the effect size decrease. Yet our data can not show the difference between both due to the strong correlation of those variables in our experiment.
+As we can see, the effect size decrease when the stress rise. However, the fact that there is no big difference between 75% and 100% can alarm us on the fact that our approximate loop unrolling adaptive module can be the root cause of the effect size decrease. Yet our data can not show the difference between both due to the strong correlation of those variables in our experiment.
 
 #### Summary of the benchmarks
 

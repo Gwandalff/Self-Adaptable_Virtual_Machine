@@ -91,7 +91,7 @@ public class FeedbackLoop {
 		for (Resource resource : resources) {
 			if (resource.ID.equals("CPU_PERCENT")) {
 				try {
-					String getCPUPercent = "/home/benchmarks/.getCPU.sh";
+					String getCPUPercent = "/home/gjouneau/.getCPU.sh";
 					Process getCPU = Runtime.getRuntime().exec(getCPUPercent);
 					getCPU.waitFor();
 					final BufferedReader is = new BufferedReader(new InputStreamReader(getCPU.getInputStream()));
